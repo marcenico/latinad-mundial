@@ -1,0 +1,27 @@
+<main class="main-resultados">
+  <section class="section-resultados">
+    <figure class="sponsor"><img src="" alt="Sponsor" /></figure>
+    <div class="resultados" *ngFor="let resultado of resultados ">
+      <h2 class="tiempo">{{resultado.fixture.status.elapsed}}</h2>
+      <div class="teams-container">
+        <ul class="team home">
+          <li>{{resultado.teams.home.name}}</li>
+          <li class="li-img">
+            <img class="escudo" src="" alt="logo local" />
+          </li>
+          <li class="marcador">{{resultado.goals.home}}</li>
+        </ul>
+        <ul class="team away">
+          <li>{{resultado.teams.away.name}}</li>
+          <li class="li-img">
+            <img class="escudo" src="" alt="logo visitante" />
+          </li>
+          <li class="marcador">{{resultado.goals.away}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="world-cup">
+      <img src="" alt="World cup">
+    </div>
+  </section>
+</main>
