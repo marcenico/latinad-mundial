@@ -4,7 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MarcadorModule } from './Components/marcador.module';
+import { MarcadorModule } from './Components/marcador/marcador.module';
+import { ResultadosModule } from './Components/resultados/resultados.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MarcadorModule } from './Components/marcador.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MarcadorModule
+    MarcadorModule,
+    ResultadosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
