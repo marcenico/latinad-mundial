@@ -5,6 +5,7 @@ import { WorldCupService } from '../../../services/world-cup.service';
   selector: 'app-resultados',
   templateUrl: './resultados.component.html',
   styleUrls: ['./resultados.component.scss'],
+  providers: [WorldCupService]
 })
 export class ResultadosComponent implements OnInit {
   resultados: any = [];
