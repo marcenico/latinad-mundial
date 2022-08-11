@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { WorldCupService } from '../../services/world-cup.service';
+import { WorldCupService } from '../../../services/world-cup.service';
 @Component({
   selector: 'app-marcador',
   templateUrl: './marcador.component.html',
+  styleUrls: ['./marcador.component.scss'],
   providers: [WorldCupService],
 })
 export class MarcadorComponent implements OnInit {
   title = 'latinad-mundial';
-  info: any = [];
-  
+  partidos: any = [];
   constructor(private service: WorldCupService) {}
 
   ngOnInit(): any {
-    this.service.getFixture('?league=1&season=2022').subscribe(
-      (info) => {
-        this.info = info.response;
-        console.log(info);
+    this.service.getPartidoEnVivo('?live=all').subscribe(
+      (partidos) => {
+        this.partidos = partidos.response;
+        console.log(partidos);
       },
       (e) => console.error(e)
     );
