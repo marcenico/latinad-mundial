@@ -19,8 +19,11 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "ng-particles": "2.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "tsparticles": "1.22.1",
+    "tsparticles-shape-confetti": "1.7.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
