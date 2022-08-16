@@ -45,5 +45,3 @@ testem.log
 Thumbs.db
 #vscode
 .vscode/
-#Json 
-backend/
