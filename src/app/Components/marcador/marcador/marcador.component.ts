@@ -12,9 +12,9 @@ export class MarcadorComponent implements OnInit {
   constructor(private service: WorldCupService) {}
 
   ngOnInit(): any {
-    this.service.getPartidoEnVivo('?live=all').subscribe(
+    this.service.getFixtureDemo().subscribe(
       (partidos) => {
-        this.partidos = partidos.response;
+        this.partidos = partidos.response.slice(0,4);
         console.log(partidos);
       },
       (e) => console.error(e)

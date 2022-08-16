@@ -1,27 +1,32 @@
 <main class="main-resultados">
   <section class="section-resultados">
-    <figure class="sponsor"><img src="" alt="Sponsor" /></figure>
-    <div class="resultados" *ngFor="let resultado of resultados ">
-      <h2 class="tiempo">{{resultado.fixture.status.elapsed}}</h2>
-      <div class="teams-container">
-        <ul class="team home">
-          <li>{{resultado.teams.home.name}}</li>
-          <li class="li-img">
-            <img class="escudo" src="" alt="logo local" />
-          </li>
-          <li class="marcador">{{resultado.goals.home}}</li>
-        </ul>
-        <ul class="team away">
-          <li>{{resultado.teams.away.name}}</li>
-          <li class="li-img">
-            <img class="escudo" src="" alt="logo visitante" />
-          </li>
-          <li class="marcador">{{resultado.goals.away}}</li>
-        </ul>
+    <figure class="sponsor-resultados"><img src="" alt="Sponsor" /></figure>
+    <h2 class="title-partidos">PRÓXIMOS PARTIDOS</h2>
+    <div class="resultados" *ngFor="let resultado of resultados">
+      <div class="team-name team-home">
+        {{ resultado.teams.home.name | slice: 0:3 }}
       </div>
-    </div>
-    <div class="world-cup">
-      <img src="" alt="World cup">
+      <figure class="container-img">
+        <img
+          class="escudo-img"
+          src="{{ resultado.teams.home.logo }}"
+          alt="logo local"
+        />
+      </figure>
+      <h2 class="tiempo-resultados">
+        {{ resultado.fixture.date | date: "hh:mm" }}
+      </h2>
+      <figure class="container-img">
+        <img
+          class="escudo-img"
+          src="{{ resultado.teams.away.logo }}"
+          alt="logo visitante"
+        />
+      </figure>
+      <div class="team-name team-away">
+        {{ resultado.teams.away.name | slice: 0:3 }}
+      </div>
+      <div class="border"></div>
     </div>
   </section>
 </main>

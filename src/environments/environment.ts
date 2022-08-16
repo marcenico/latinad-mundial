@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiSports: 'https://v3.football.api-sports.io',
+  timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
 };
 
 /*

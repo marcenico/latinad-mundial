@@ -1,25 +1,35 @@
 <main class="main-partidos">
-  <h1>Partidos en vivo</h1>
-  <section class="envivo">
-    <div *ngFor="let partido of partidos">
-      <div >
-        <h2>{{ partido.fixture.date }}</h2>
-        <ul>
-          <li>
-            {{ partido.fixture.status.elapsed }}
+  <section class="section-partidos">
+    <figure class="sponsor-marcador"><img src="" alt="Sponsor" /></figure>
+    <div class="partidos" *ngFor="let partido of partidos">
+      <!-- <h2 class="tiempo">{{partido.fixture.status.elapsed}}</h2> -->
+      <h2 class="tiempo">{{ "00:00" }}</h2>
+      <div class="teams-container">
+        <ul class="team home">
+          <img
+            class="escudo"
+            src="{{ partido.teams.home.logo }}"
+            alt="logo local"
+          />
+          <li class="name">
+            {{ partido.teams.home.name | uppercase | slice: 0:3 }}
           </li>
-          <li>
-            {{ partido.fixture.status.long }}
-          </li>
+
+          <!-- <li class="marcador">{{partido.goals.home}}</li> -->
+          <li class="marcador">{{ "0" }}</li>
         </ul>
-      </div>
-      <div>
-        {{ partido.teams.away.name }}
-        <img src="{{ partido.teams.away.logo }}" alt="" />
-        {{ partido.goals.away }}
-        {{ partido.teams.home.name }}
-        <img src="{{ partido.teams.home.logo }}" alt="" />
-        {{ partido.goals.home }}
+        <ul class="team away">
+          <img
+            class="escudo"
+            src="{{ partido.teams.away.logo }}"
+            alt="logo visitante"
+          />
+          <li class="name">
+            {{ partido.teams.away.name | uppercase | slice: 0:3 }}
+          </li>
+          <!-- <li class="marcador">{{partido.goals.away}}</li> -->
+          <li class="marcador">{{ "0" }}</li>
+        </ul>
       </div>
     </div>
   </section>

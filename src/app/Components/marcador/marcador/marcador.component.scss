@@ -1,0 +1,200 @@
+.main-partidos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    min-width: 320px;
+}
+
+.section-partido {
+    padding: 50px 0 0 0;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sponsor-marcador {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: var(--lg);
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.partidos {
+    min-width: 320px;
+    position: relative;
+    height: max-content;
+    margin-top: 40px;
+}
+
+.tiempo {
+    font-family: Bahnschrift;
+    position: absolute;
+    top: -10px;
+    font-size: var(--sm);
+    left: calc(50% - 2.45rem);
+}
+
+
+.teams-container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-auto-rows: minmax(50px, 100px);
+    place-content: center;
+    gap: 70px;
+}
+
+.team {
+    display: grid;
+    grid-template-rows: 80px 10px;
+    position: relative;
+    place-items: center;
+    gap: 10px;
+}
+
+.team li {
+    list-style: none;
+}
+
+.escudo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: solid 1px gray;
+}
+
+.name {
+    text-align: center;
+    font-family: Bahnschrift;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+}
+
+
+.team .marcador {
+    font-weight: lighter;
+    font-family: Bahnschrift;
+    font-size: var(--lg);
+    position: absolute;
+    bottom: 2px;
+}
+
+.team.home .marcador {
+    right: -10px;
+}
+
+.team.away .marcador {
+    left: -10px;
+}
+
+@media (min-width: 320px) and (min-width: 480px) {
+    .partidos {
+        margin-top: 20px;
+    }
+
+    .teams-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50px);
+        grid-auto-rows: minmax(40px, 50px);
+        place-content: center;
+        gap: 70px;
+    }
+
+    .team {
+        display: grid;
+        grid-template-rows: 30px 10px;
+        position: relative;
+        place-items: center;
+        gap: 10px;
+    }
+
+    .team .marcador {
+        font-size: var(--sm);
+        bottom: 12px;
+    }
+}
+
+@media (min-width: 901px) {
+    .teams-container {
+        display: grid;
+        grid-template-columns: repeat(2, 140px);
+        grid-auto-rows: minmax(100px, 140px);
+        place-content: center;
+        gap: 70px;
+    }
+
+    .team {
+        display: grid;
+        grid-template-rows: 110px 20px;
+        position: relative;
+        place-items: center;
+        gap: 10px;
+    }
+
+    .name {
+        font-size: var(--md);
+    }
+
+    .tiempo {
+        font-size: var(--md);
+        left: calc(50% - 3.75rem);
+    }
+
+}
+
+@media only screen and (device-height: 481px) and (max-width: 767px) {
+    .teams-container {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-auto-rows: minmax(100px, 100px);
+        place-content: center;
+        gap: 70px;
+    }
+
+    .team {
+        display: grid;
+        grid-template-rows: 70px 20px;
+        position: relative;
+        place-items: center;
+        gap: 10px;
+    }
+}
+
+@media only screen and (device-height: 600px) and (orientation: landscape) {
+    .partidos {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (device-height: 1084px) and (orientation: portrait) {
+    .teams-container {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-auto-rows: minmax(100px, 200px);
+        place-content: center;
+        gap: 70px;
+    }
+
+    .team {
+        display: grid;
+        grid-template-rows: 160px 20px;
+        position: relative;
+        place-items: center;
+        gap: 20px;
+    }
+
+    .name {
+        font-size: var(--md);
+    }
+
+    .tiempo {
+        font-size: var(--md);
+        left: calc(50% - 3.75rem);
+    }
+
+}
