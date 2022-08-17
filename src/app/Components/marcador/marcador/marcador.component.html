@@ -1,36 +1,28 @@
 <main class="main-partidos">
   <div class="background">
     <section class="section-partidos">
-      <figure class="sponsor-marcador"><img src="" alt="Sponsor" /></figure>
+      <!-- LOGO -->
+      <figure class="sponsor-marcador"><img src="assets/logos/coca-cola.png" alt="Sponsor" /></figure>
       <div class="partidos" *ngFor="let partido of partidos">
-        <!-- <h2 class="tiempo">{{partido.fixture.status.elapsed}}</h2> -->
-        <h2 class="tiempo">{{ "00:00" }}</h2>
+        <!-- TIEMPO PARTIDO -->
+        <h2 class="tiempo">{{ '00:00' }}</h2>
         <div class="teams-container">
-          <ul class="team home">
-            <img
-              class="escudo"
-              src="{{ partido.teams.home.logo }}"
-              alt="logo local"
-            />
-            <li class="name">
+          <!-- LOCAL -->
+          <div class="team home">
+            <img class="escudo" src="assets/flags/{{ partido.teams.home.logo }}" alt="logo local" />
+            <div class="name">
               {{ partido.teams.home.name | uppercase | slice: 0:3 }}
-            </li>
-
-            <!-- <li class="marcador">{{partido.goals.home}}</li> -->
-            <li class="marcador">{{ "0" }}</li>
-          </ul>
-          <ul class="team away">
-            <img
-              class="escudo"
-              src="{{ partido.teams.away.logo }}"
-              alt="logo visitante"
-            />
-            <li class="name">
+            </div>
+          </div>
+          <!-- VISITANTE -->
+          <div class="team away">
+            <img class="escudo" src="assets/flags/{{ partido.teams.away.logo }}" alt="logo visitante" />
+            <div class="name">
               {{ partido.teams.away.name | uppercase | slice: 0:3 }}
-            </li>
-            <!-- <li class="marcador">{{partido.goals.away}}</li> -->
-            <li class="marcador">{{ "0" }}</li>
-          </ul>
+            </div>
+          </div>
+          <!-- MARCADOR DEL PARTIDO -->
+          <div class="marcador">{{ 0 }}-{{ 0 }}</div>
         </div>
       </div>
     </section>
