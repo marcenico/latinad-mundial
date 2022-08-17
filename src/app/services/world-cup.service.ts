@@ -29,6 +29,12 @@ export class WorldCupService {
   //     this.options
   //   );
   // }
+  public getTable(filters: string = ''): Observable<any> {
+    return this.http.get(
+      `${environment.apiSports}/${filters}`,
+      this.options
+    );
+  }
 
   /*Método para JSON. Fake server -----------------------------------------------*/
 
