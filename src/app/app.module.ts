@@ -7,10 +7,10 @@ import { AppComponent } from './app.component';
 import { MarcadorModule } from './Components/marcador/marcador.module';
 import { ResultadosModule } from './Components/resultados/resultados.module';
 import { ConfettiComponent } from './Components/confetti/confetti.component';
-
+import { TablaPuntosModule } from './Components/tabla-puntos/tabla-puntos.module';
 @NgModule({
   declarations: [AppComponent, ConfettiComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MarcadorModule, ResultadosModule, NgParticlesModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MarcadorModule, ResultadosModule, TablaPuntosModule, NgParticlesModule],
   providers: [],
   bootstrap: [AppComponent]
 })
