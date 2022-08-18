@@ -9,14 +9,18 @@
         <div class="teams-container">
           <!-- LOCAL -->
           <div class="team home">
-            <img class="escudo" src="assets/flags/{{ partido.teams.home.logo }}" alt="logo local" />
+            <div class="escudo">
+              <img src="assets/flags/{{ partido.teams.home.logo }}" alt="logo local" />
+            </div>
             <div class="name">
               {{ partido.teams.home.name | uppercase | slice: 0:3 }}
             </div>
           </div>
           <!-- VISITANTE -->
           <div class="team away">
-            <img class="escudo" src="assets/flags/{{ partido.teams.away.logo }}" alt="logo visitante" />
+            <div class="escudo">
+              <img src="assets/flags/{{ partido.teams.away.logo }}" alt="logo visitante" />
+            </div>
             <div class="name">
               {{ partido.teams.away.name | uppercase | slice: 0:3 }}
             </div>

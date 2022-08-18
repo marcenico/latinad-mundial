@@ -54,13 +54,13 @@
 .team {
   width: 50%;
   .escudo {
-    width: 65%;
-    height: 100%;
     display: flex;
-    border-radius: 50%;
-    border: solid 1px gray;
-    margin: auto;
-    object-fit: fill;
+    clip-path: circle();
+    img {
+      width: 100%;
+      margin: auto;
+      border: solid 1px gray;
+    }
   }
   .name {
     text-align: center;
@@ -75,7 +75,7 @@
 .marcador {
   position: absolute;
   text-align: center;
-  top: 60%;
+  top: 45%;
   left: 0;
   right: 0;
   font-family: Bahnschrift;
