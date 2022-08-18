@@ -1,0 +1,31 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-points {
+    background-image: url("../../../../assets/background/background-lineas-vertical.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.table-points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-points--ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.team-points--ul li {
+    list-style: none;
+    font-size: 20px;
+    color: black;
+}

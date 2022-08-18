@@ -37,5 +37,5 @@ export const flags: Flags[] = [
   { src: 'serbia.svg', id: 14 },
   { src: 'suiza.svg', id: 15 },
   { src: 'tunez.svg', id: 28 },
-  { src: 'uruguay.svg', id: 7 }
+  { src: 'uruguay.svg', id: 7 },
 ];
