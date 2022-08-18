@@ -1,48 +1,83 @@
 <main class="table-container">
   <div class="background-points">
-    <section class="table-points">
-      <div class="team-points">
-        <div class="team-points--ul" *ngFor="let item of tablePointsOne">
-          <div class="escudo">
-            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+    <!-- LOGO -->
+    <figure class="sponsor-table">
+      <img src="assets/logos/coca-cola.png" alt="Sponsor" />
+    </figure>
+    <!-- CONTENEDOR DE TABLAS -->
+    <div class="container-tables">
+      <!-- TABLA DE PUNTOS -->
+      <section class="table-container">
+        <div class="table-container__points">
+          <h1 class="groups-title">GRUPO A</h1>
+          <div class="table-teams teamA">
+            <div class="table-teams--ul" *ngFor="let item of tablePointsOne">
+              <div class="border-table"></div>
+              <div class="escudo">
+                <img
+                  src="assets/flags/{{ item?.team.logo }}"
+                  alt="{{ item?.team.logo }}"
+                />
+              </div>
+              <div class="title-name">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="points">{{ item?.points }} 'pts'</div>
+            </div>
           </div>
-          <div>{{ item?.team.name }}</div>
-          <div>{{ item?.points }} 'pts'</div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="team-points">
-        <div class="team-points--ul" *ngFor="let item of tablePointsTwo">
-          <div class="escudo">
-            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+        <!-- TABLA DE PUNTOS -->
+        <div class="table-container__points">
+          <h1 class="groups-title">GRUPO B</h1>
+          <div class="table-teams teamB">
+            <div class="table-teams--ul" *ngFor="let item of tablePointsTwo">
+              <div class="border-table"></div>
+              <div class="escudo">
+                <img
+                  src="assets/flags/{{ item?.team.logo }}"
+                  alt="{{ item?.team.logo }}"
+                />
+              </div>
+              <div class="title-name">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="points">{{ item?.points }} 'pts'</div>
+            </div>
           </div>
-          <div>{{ item?.team.name }}</div>
-          <div>{{ item?.points }} 'pts'</div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="team-points">
-        <div class="team-points--ul" *ngFor="let item of tablePointsThree">
-          <div class="escudo">
-            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+      </section>
+      <!-- TABLA DE PUNTOS -->
+      <section class="table-container">
+        <div class="table-container__points">
+          <h1 class="groups-title">GRUPO C</h1>
+          <div class="table-teams teamC">
+            <div class="table-teams--ul" *ngFor="let item of tablePointsThree">
+              <div class="border-table"></div>
+              <div class="escudo">
+                <img
+                  src="assets/flags/{{ item?.team.logo }}"
+                  alt="{{ item?.team.logo }}"
+                />
+              </div>
+              <div class="points">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="title-name">{{ item?.points }} 'pts'</div>
+            </div>
           </div>
-          <div>{{ item?.team.name }}</div>
-          <div>{{ item?.points }} 'pts'</div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="team-points">
-        <div class="team-points--ul" *ngFor="let item of tablePointsFour">
-          <div class="escudo">
-            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+        <!-- TABLA DE PUNTOS -->
+        <div class="table-container__points">
+          <h1 class="groups-title">GRUPO D</h1>
+          <div class="table-teams teamD">
+            <div class="table-teams--ul" *ngFor="let item of tablePointsFour">
+              <div class="border-table"></div>
+              <div class="escudo">
+                <img
+                  src="assets/flags/{{ item?.team.logo }}"
+                  alt="{{ item?.team.logo }}"
+                />
+              </div>
+              <div class="title-name">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="points">{{ item?.points }} pts</div>
+            </div>
           </div>
-          <div>{{ item?.team.name }}</div>
-          <div>{{ item?.points }} 'pts'</div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </main>

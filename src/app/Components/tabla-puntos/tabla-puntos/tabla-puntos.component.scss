@@ -1,39 +1,111 @@
-.main {
+.table-container {
+  display: flex;
   width: 100vw;
   height: 100vh;
 }
 
 .background-points {
-  background-image: url('../../../../assets/background/background-lineas-vertical.svg');
+  background-image: url('../../../../assets/background/background-lineas-cuadrado.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.table-points {
+.sponsor-table {
   display: flex;
+  width: 100%;
   justify-content: center;
-  align-items: center;
+
+  img {
+    width: 20%;
+    height: 20%;
+    padding-top: 2%;
+    margin-bottom: 2%;
+  }
 }
 
-.team-points--ul {
+.container-tables {
   display: flex;
-  flex-direction: row;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  place-content: center;
+  color: white;
+  gap: 5%;
+}
+
+.table-container {
+  width: 100%;
+  font-family: Bahnschrift;
+  gap: 5%;
+}
+
+.table-container__points {
+  width: 100%;
+}
+
+.table-teams {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  place-content: center;
+  width: 100%;
+  gap: 1rem;
+  background-image: radial-gradient(closest-side, #ffffff00, #ffffff26);
+  border-radius: 10px;
+}
+
+.groups-title {
+  display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.table-teams--ul {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 90%;
+  gap: 10%;
+  z-index: 1;
+
+  div {
+    width: 50%;
+  }
+
   .escudo {
     display: flex;
     clip-path: circle();
+    position: relative;
+
     img {
       width: 100%;
       margin: auto;
       border: solid 1px gray;
     }
   }
-}
 
-.team-points--ul li {
-  list-style: none;
-  font-size: 20px;
-  color: black;
+  .title-name {
+    font-size: 3.5rem;
+  }
+
+  .points {
+    font-size: 4rem;
+  }
+
+  .border-table {
+    position: absolute;
+    z-index: 0;
+    width: 90%;
+    right: 0;
+    height: 80%;
+    border-radius: 1rem;
+    background-image: radial-gradient(closest-side, #ffffff00, #ffffff);
+    opacity: 0.6;
+  }
 }
