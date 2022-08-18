@@ -32,4 +32,10 @@ export class TablaPuntosComponent implements OnInit {
       console.log(table);
     });    
   }
+  cambioImagenBandera(teams: any) {
+    for (let i = 0; i < flags.length; i++) {
+      if (flags[i].id === teams.home.id) teams.home.logo = flags[i].src;
+      if (flags[i].id === teams.away.id) teams.away.logo = flags[i].src;
+    }
+  }
 }
