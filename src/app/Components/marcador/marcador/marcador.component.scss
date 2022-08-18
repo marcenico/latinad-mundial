@@ -1,182 +1,109 @@
 .main-partidos {
-    overflow-y: hidden;
-    width: 100vw;
-    height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 .background {
-    background-image: url('../../../../assets/background/background-cancha-cuadrado.svg');
-    background-size: cover;
-    min-width: 320px;
-    height: 100vh;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../../assets/background/background-cancha-cuadrado.svg');
 }
 
 .section-partidos {
-    display: grid;
-    min-width: 320px;
-    height: 100%;
-    margin: 0 auto;
-    place-items: center;
+  display: grid;
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+  place-items: center;
 }
 
 .sponsor-marcador {
+  width: 60%;
+  place-self: center;
+  justify-content: center;
+  display: grid;
+  img {
     width: 100%;
-    height: 20%;
-    font-size: var(--lg);
-    place-self: center;
-    justify-content: center;
-    display: grid;
+  }
 }
 
 .partidos {
-    min-width: 320px;
-    position: relative;
-}
-
-.tiempo {
-    font-family: Bahnschrift;
+  position: relative;
+  width: 100%;
+  .tiempo {
     position: absolute;
-    top: -10px;
-    font-size: var(--sm);
-    left: calc(50% - 2.45rem);
+    text-align: center;
+    top: -15%;
+    left: 0;
+    right: 0;
+    font-family: Bahnschrift;
+    font-size: 12rem;
     color: white;
-}
-
-
-.teams-container {
-    display: grid;
-    grid-template-columns: repeat(2, 100px);
-    grid-auto-rows: minmax(50px, 100px);
-    place-content: center;
-    gap: 70px;
-    height: 20%;
+  }
+  .teams-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .team {
-    display: grid;
-    grid-template-rows: 80px 10px;
-    position: relative;
-    place-items: center;
-    gap: 10px;
-}
-
-.team li {
-    list-style: none;
-}
-
-.escudo {
-    width: 100%;
-    border-radius: 50%;
-    border: solid 1px gray;
-    object-fit: cover;
-}
-
-.name {
+  width: 50%;
+  .escudo {
+    display: flex;
+    clip-path: circle();
+    img {
+      width: 100%;
+      margin: auto;
+      border: solid 1px gray;
+    }
+  }
+  .name {
     text-align: center;
     font-family: Bahnschrift;
-    font-size: 1.5rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.2rem;
-    font-weight: 900;
+    font-size: 8rem;
+    line-height: 12rem;
+    font-weight: bold;
     color: white;
+  }
 }
 
-
-.team .marcador {
-    font-weight: lighter;
-    font-family: Bahnschrift;
-    font-size: var(--md);
-    position: absolute;
-    bottom: 10%;
-    color: white;
+.marcador {
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  left: 0;
+  right: 0;
+  font-family: Bahnschrift;
+  font-size: 18rem;
+  font-weight: bold;
+  color: white;
 }
 
-.team.home .marcador {
-    right: 0;
+/* Aspect ratio Vertical */
+@media (max-aspect-ratio: 3/4) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-vertical.svg');
+  }
+
+  .sponsor-marcador {
+    width: 25%;
+    place-self: center;
+    justify-content: center;
+    display: grid;
+    img {
+      width: 100%;
+    }
+  }
 }
 
-.team.away .marcador {
-    left: 0;
-}
-
-/*---------------------------------------------- MEDIA QUERIES -------------------------------------------------------*/
-
-// @media screen and (min-aspect-ratio: 1/1) {
-//     .background {
-//         background: gray;
-//     }
-
-// }
-
-// @media screen and (min-aspect-ratio: 16/9) {
-//     .background {
-//         background: gray;
-//     }
-
-// }
-
-// @media (aspect-ratio:3/2) {
-//     .background {
-//         background: brown;
-//     }
-// }
-// @media screen and (min-aspect-ratio: 9/16) {
-//     .background {
-//         background: gray;
-//     }
-
-// }
-
-
-@media only screen and(min-width:280px) and (max-device-width:319px) {
-    .background {
-        min-width: 280px;
-    }
-
-    .section-partidos {
-        min-width: 280px;
-    }
-
-    .partidos {
-        min-width: 280px;
-    }
-
-    .teams-container {
-        grid-template-columns: repeat(2, 80px);
-        grid-auto-rows: minmax(40px, 80px);
-        gap: 70px;
-    }
-
-    .team {
-        grid-template-rows: 60px 10px;
-        gap: 10px;
-    }
-}
-
-@media (device-height: 375px) and (orientation:landscape) {
-    .teams-container {
-        grid-template-columns: repeat(2, 50px);
-        grid-auto-rows: minmax(40px, 50px);
-        gap: 70px;
-    }
-
-    .team {
-        grid-template-rows: 30px 10px;
-        gap: 10px;
-    }
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .teams-container {
-        grid-template-columns: repeat(2, 120px);
-        grid-auto-rows: minmax(40px, 120px);
-        gap: 100px;
-    }
-
-    .team {
-        display: grid;
-        grid-template-rows: 100px 10px;
-        gap: 10px;
-    }
+/* Aspect ratio Horizontal */
+@media (min-aspect-ratio: 4/3) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
 }
