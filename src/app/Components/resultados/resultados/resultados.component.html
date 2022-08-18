@@ -1,32 +1,40 @@
 <main class="main-resultados">
-  <section class="section-resultados">
-    <figure class="sponsor-resultados"><img src="assets/logos/coca-cola.png" alt="Sponsor" /></figure>
-    <h2 class="title-partidos">PRÓXIMOS PARTIDOS</h2>
-    <div class="resultados" *ngFor="let resultado of resultados">
-      <div class="team-name team-home">
-        {{ resultado.teams.home.name | slice: 0:3 }}
-      </div>
-      <figure class="container-img">
-        <img
-          class="escudo-img"
-          src="{{ resultado.teams.home.logo }}"
-          alt="logo local"
-        />
+  <div class="background-resultados">
+    <div class="container-resultados">
+      <figure class="sponsor-resultados">
+        <img src="assets/logos/coca-cola.png" alt="Sponsor" />
       </figure>
-      <h2 class="tiempo-resultados">
-        {{ resultado.fixture.date | date: "hh:mm" }}
-      </h2>
-      <figure class="container-img">
-        <img
-          class="escudo-img"
-          src="{{ resultado.teams.away.logo }}"
-          alt="logo visitante"
-        />
-      </figure>
-      <div class="team-name team-away">
-        {{ resultado.teams.away.name | slice: 0:3 }}
-      </div>
-      <div class="border"></div>
+      <section class="section-resultados">
+        <h2 class="title-partidos">PRÓXIMOS PARTIDOS</h2>
+        <div class="resultados-container">
+          <div class="resultados" *ngFor="let resultado of resultados">
+            <div class="team-name team-home">
+              {{ resultado.teams.home.name | slice: 0:3 }}
+            </div>
+            <figure class="container-img">
+              <img
+                class="escudo-img"
+                src="assets/flags/{{ resultado.teams.home.logo }}"
+                alt="logo local"
+              />
+            </figure>
+            <h2 class="tiempo-resultados">
+              {{ resultado.fixture.date | date: "hh:mm" }}
+            </h2>
+            <figure class="container-img">
+              <img
+                class="escudo-img"
+                src="assets/flags/{{ resultado.teams.away.logo }}"
+                alt="logo visitante"
+              />
+            </figure>
+            <div class="team-name team-away">
+              {{ resultado.teams.away.name | slice: 0:3 }}
+            </div>
+            <div class="border"></div>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 </main>
