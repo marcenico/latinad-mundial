@@ -17,8 +17,7 @@
   justify-content: center;
 
   img {
-    width: 20%;
-    height: 20%;
+    width: 30%;
     padding-top: 2%;
     margin-bottom: 2%;
   }
@@ -42,11 +41,14 @@
 }
 
 .table-container__points {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .table-teams {
   display: flex;
+  padding: 2% 0;
   flex-direction: column;
   height: 100%;
   place-content: center;
@@ -69,24 +71,23 @@
 .table-teams--ul {
   display: flex;
   position: relative;
+  place-self: center;
   align-items: center;
-  width: 90%;
-  gap: 10%;
+  width: 100%;
   z-index: 1;
 
   div {
-    width: 50%;
+    width: 30%;
   }
 
   .escudo {
     display: flex;
     clip-path: circle();
-    position: relative;
+    height: 80px;
 
     img {
+      object-fit: cover;
       width: 100%;
-      margin: auto;
-      border: solid 1px gray;
     }
   }
 
@@ -101,11 +102,76 @@
   .border-table {
     position: absolute;
     z-index: 0;
-    width: 90%;
-    right: 0;
+    width: 80%;
+    right: 6%;
     height: 80%;
     border-radius: 1rem;
     background-image: radial-gradient(closest-side, #ffffff00, #ffffff);
     opacity: 0.6;
+  }
+}
+
+@media (max-aspect-ratio: 3/4) {
+  .background-points {
+    background-image: url('../../../../assets/background/background-cancha-vertical.svg');
+  }
+}
+
+@media (min-aspect-ratio: 4/3) {
+  .background-points {
+    background-image: url('../../../../assets/background/background-lineas-horizontal.svg');
+  }
+}
+
+@media screen and (device-height: 1920px) {
+  .sponsor-table {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    img {
+      width: 60%;
+      padding-top: 2%;
+      margin-bottom: 2%;
+    }
+  }
+
+  .groups-title {
+    font-size: 10rem;
+  }
+
+  .table-teams--ul {
+    height: 100%;
+
+    .escudo {
+      height: 120px;
+    }
+
+    .title-name,
+    .points {
+      font-size: 6rem;
+    }
+
+
+    .border-table {
+      height: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .sponsor-table img {
+    width: 20%;
+  }
+
+  .table-container {
+    gap: 10%;
+  }
+
+  .table-container {
+    place-content: center;
+  }
+  .table-container__points {
+    width: 30%;
   }
 }
