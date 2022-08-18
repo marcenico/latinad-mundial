@@ -1,51 +1,68 @@
-.main-resultados {
+.nain-resultados {
     width: 100vw;
     height: 100vh;
-    object-fit: contain;
 }
 
-.section-resultados {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 50px 0 0 0;
+.background-resultados {
+    background-image: url('../../../../assets/background/background-lineas-cuadrado.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container-resultados {
     height: 100%;
-    width: 80%;
-    min-width: 320px;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
 }
 
 .sponsor-resultados {
     display: flex;
     width: 100%;
-    height: 50px;
     font-size: var(--lg);
     justify-content: center;
-    margin-bottom: 20px;
+    padding: 3%;
+}
+
+.sponsor-resultados img {
+    width: 70%;
+}
+
+.section-resultados {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    place-self: center;
 }
 
 .title-partidos {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    height: max-content;
     text-align: center;
-    font-size: var(--sm);
+    font-size: 6rem;
     line-height: 2.5rem;
     letter-spacing: 0.2rem;
     font-weight: 700;
+    color: white;
+}
+
+.resultados-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .resultados {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(30px, 120px)) 20px repeat(2, minmax(30px, 120px));
-    grid-auto-rows: minmax(auto, 100px);
-    place-self: center;
+    display: flex;
     place-items: center;
-    gap: 20px;
-    z-index: 1;
-    margin: 10px 10px 0px 10px;
+    height: 100%;
+
+    .team-name, .container-img, .tiempo-resultados {
+        width: 20%;
+    }
 }
 
 .tiempo-resultados {
@@ -55,16 +72,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    font-size: 1.2rem;
+    font-size: 6rem;
     letter-spacing: 0.2rem;
+    color: white;
 }
 
 .team-name {
     font-family: Bahnschrift;
     text-align: center;
     justify-items: center;
-    font-size: 1.4rem;
+    font-size: 6rem;
+    color: white;
     line-height: 1rem;
     letter-spacing: 0.3rem;
     font-weight: lighter;
@@ -72,53 +90,24 @@
 
 .container-img {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.container-img .escudo-img {
-    border: solid 1px gray;
-    background-color: white;
-    border-radius: 50%;
+    width: 40%;
+    clip-path: circle();
+    border: solid 1px white;
     z-index: 1;
-    width: 60%;
-    height: 60%;
+    height: 120px;
+
+    .escudo-img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .border {
-    border: solid 1px gray;
     border-radius: 40px;
     width: 100%;
     height: 50%;
     z-index: 0;
     position: absolute;
-    opacity: 0.9;
-      background-image: linear-gradient(to top, rgba(5, 31, 68, 0.88), #fff);
+    opacity: 0.7;
+    background-image: radial-gradient(closest-side, #ffffff00, #ffffff9c);
 }
-
-@media screen and (min-width: 720px) {
-    .resultados {
-        grid-template-columns: repeat(2, minmax(50px, 100px)) 50px repeat(2, minmax(50px, 100px));
-        grid-auto-rows: minmax(auto, 100px);
-        margin-top: 10px;
-    }
-
-    .team-name {
-        font-size: var(--md);
-        line-height: 1.2rem;
-    }
-
-    .title-partidos {
-        margin-bottom: 10px;
-        font-size: var(--lg);
-        font-family: Bahnschrift;
-        font-weight: 900;
-    }
-
-    .tiempo-resultados {
-        font-size: var(--md);
-    }
-}
-
