@@ -17,7 +17,7 @@ export class TablaPuntosComponent implements OnInit {
   constructor(private service: WorldCupService) {}
 
   ngOnInit(): void {
-    // this.service.getTable('standings?league=1&season=2022').subscribe(
+    // this.service.getTable('equipos?league=1&season=2022').subscribe(
     //   (table) => {
     //     this.tablePoints = table.response;
     //     console.log(table);
@@ -25,23 +25,22 @@ export class TablaPuntosComponent implements OnInit {
     //   (e) => console.error(e)
     // );
     this.service.getTableDemo().subscribe((table) => {
+      table[0].standings.forEach((standing: any) => {
+        this.cambioImagenBandera(standing);
+      });
+      this.cambioImagenBandera(table[0].standings);
       this.tablePointsOne = table?.[0].standings[0];
       this.tablePointsTwo = table?.[0].standings[1];
       this.tablePointsThree = table?.[0].standings[2];
       this.tablePointsFour = table?.[0].standings[3];
-      console.log(table);
-    });    
-  }
-  cambioImagenBandera(teams: any) {
-    for (let i = 0; i < flags.length; i++) {
-      if (flags[i].id === teams.home.id) teams.home.logo = flags[i].src;
-      if (flags[i].id === teams.away.id) teams.away.logo = flags[i].src;
-    }
+    });
   }
 
-  cambioImagenBandera(teams: any) {
-    for (let i = 0; i < flags.length; i++) {
-      if (flags[i].id === teams.home.id) teams.home.logo = flags[i].src;
-    }
+  cambioImagenBandera(standing: any) {
+    standing.forEach((equipo: any) => {
+      for (let i = 0; i < flags.length; i++) {
+        if (flags[i].id === equipo.team?.id) equipo.team.logo = flags[i].src;
+      }
+    });
   }
 }

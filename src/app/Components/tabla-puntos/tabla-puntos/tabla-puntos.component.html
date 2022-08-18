@@ -2,46 +2,46 @@
   <div class="background-points">
     <section class="table-points">
       <div class="team-points">
-        <ul class="team-points--ul" *ngFor="let item of tablePointsOne">
-          <li>
-            <img src="{{ item?.team.logo }}" alt="" />
-          </li>
-          <li>{{ item?.team.name }}</li>
-          <li>{{ item?.points }} 'pts'</li>
-        </ul>
+        <div class="team-points--ul" *ngFor="let item of tablePointsOne">
+          <div class="escudo">
+            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+          </div>
+          <div>{{ item?.team.name }}</div>
+          <div>{{ item?.points }} 'pts'</div>
+        </div>
       </div>
     </section>
     <section>
       <div class="team-points">
-        <ul class="team-points--ul" *ngFor="let item of tablePointsTwo">
-          <li>
-            <img src="{{ item?.team.logo }}" alt="" />
-          </li>
-          <li>{{ item?.team.name }}</li>
-          <li>{{ item?.points }} 'pts'</li>
-        </ul>
+        <div class="team-points--ul" *ngFor="let item of tablePointsTwo">
+          <div class="escudo">
+            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+          </div>
+          <div>{{ item?.team.name }}</div>
+          <div>{{ item?.points }} 'pts'</div>
+        </div>
       </div>
     </section>
     <section>
       <div class="team-points">
-        <ul class="team-points--ul" *ngFor="let item of tablePointsThree">
-          <li>
-            <img src="{{ item?.team.logo }}" alt="" />
-          </li>
-          <li>{{ item?.team.name }}</li>
-          <li>{{ item?.points }} 'pts'</li>
-        </ul>
+        <div class="team-points--ul" *ngFor="let item of tablePointsThree">
+          <div class="escudo">
+            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+          </div>
+          <div>{{ item?.team.name }}</div>
+          <div>{{ item?.points }} 'pts'</div>
+        </div>
       </div>
     </section>
     <section>
       <div class="team-points">
-        <ul class="team-points--ul" *ngFor="let item of tablePointsFour">
-          <li>
-            <img src="{{ item?.team.logo }}" alt="" />
-          </li>
-          <li>{{ item?.team.name }}</li>
-          <li>{{ item?.points }} 'pts'</li>
-        </ul>
+        <div class="team-points--ul" *ngFor="let item of tablePointsFour">
+          <div class="escudo">
+            <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+          </div>
+          <div>{{ item?.team.name }}</div>
+          <div>{{ item?.points }} 'pts'</div>
+        </div>
       </div>
     </section>
   </div>
