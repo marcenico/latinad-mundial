@@ -14,18 +14,17 @@
 }
 
 .section-partidos {
-  display: grid;
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
-  margin: 0 auto;
-  place-items: center;
 }
 
 .sponsor-marcador {
+  display: flex;
   width: 60%;
+  margin-bottom: 130px;
   place-self: center;
-  justify-content: center;
-  display: grid;
   img {
     width: 100%;
   }
@@ -91,7 +90,7 @@
   }
 
   .sponsor-marcador {
-    width: 25%;
+    width: 60%;
     place-self: center;
     justify-content: center;
     display: grid;
