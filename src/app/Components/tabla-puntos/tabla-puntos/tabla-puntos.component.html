@@ -1,5 +1,5 @@
-<main class="table-container">
-  <div class="background-points">
+<main class="content-box">
+  <div class="background">
     <!-- LOGO -->
     <figure class="sponsor-table">
       <img src="assets/logos/coca-cola.png" alt="Sponsor" />
@@ -14,12 +14,9 @@
             <div class="table-teams--ul" *ngFor="let item of tablePointsOne">
               <div class="border-table"></div>
               <div class="escudo">
-                <img
-                  src="assets/flags/{{ item?.team.logo }}"
-                  alt="{{ item?.team.logo }}"
-                />
+                <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
               </div>
-              <div class="title-name">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="title-name">{{ item?.team.name.toUpperCase() | slice: 0:3 }}</div>
               <div class="points">{{ item?.points }} pts</div>
             </div>
           </div>
@@ -31,12 +28,9 @@
             <div class="table-teams--ul" *ngFor="let item of tablePointsTwo">
               <div class="border-table"></div>
               <div class="escudo">
-                <img
-                  src="assets/flags/{{ item?.team.logo }}"
-                  alt="{{ item?.team.logo }}"
-                />
+                <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
               </div>
-              <div class="title-name">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="title-name">{{ item?.team.name.toUpperCase() | slice: 0:3 }}</div>
               <div class="points">{{ item?.points }} pts</div>
             </div>
           </div>
@@ -50,13 +44,10 @@
             <div class="table-teams--ul" *ngFor="let item of tablePointsThree">
               <div class="border-table"></div>
               <div class="escudo">
-                <img
-                  src="assets/flags/{{ item?.team.logo }}"
-                  alt="{{ item?.team.logo }}"
-                />
+                <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
               </div>
-              <div class="points">{{ item?.team.name | slice: 0:3 }}</div>
-              <div class="title-name">{{ item?.points }} pts</div>
+              <div class="title-name">{{ item?.team.name.toUpperCase() | slice: 0:3 }}</div>
+              <div class="points">{{ item?.points }} pts</div>
             </div>
           </div>
         </div>
@@ -67,12 +58,9 @@
             <div class="table-teams--ul" *ngFor="let item of tablePointsFour">
               <div class="border-table"></div>
               <div class="escudo">
-                <img
-                  src="assets/flags/{{ item?.team.logo }}"
-                  alt="{{ item?.team.logo }}"
-                />
+                <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
               </div>
-              <div class="title-name">{{ item?.team.name | slice: 0:3 }}</div>
+              <div class="title-name">{{ item?.team.name.toUpperCase() | slice: 0:3 }}</div>
               <div class="points">{{ item?.points }} pts</div>
             </div>
           </div>
