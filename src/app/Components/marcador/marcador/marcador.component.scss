@@ -25,6 +25,7 @@
   width: 60%;
   margin-bottom: 130px;
   place-self: center;
+
   img {
     width: 100%;
   }
@@ -33,6 +34,7 @@
 .partidos {
   position: relative;
   width: 100%;
+
   .tiempo {
     position: absolute;
     text-align: center;
@@ -43,6 +45,7 @@
     font-size: 12rem;
     color: white;
   }
+
   .teams-container {
     display: flex;
     justify-content: center;
@@ -52,15 +55,18 @@
 
 .team {
   width: 50%;
+
   .escudo {
     display: flex;
     clip-path: circle();
+
     img {
       width: 100%;
       margin: auto;
       border: solid 1px gray;
     }
   }
+
   .name {
     text-align: center;
     font-family: Bahnschrift;
@@ -94,6 +100,7 @@
     place-self: center;
     justify-content: center;
     display: grid;
+
     img {
       width: 100%;
     }
@@ -104,5 +111,32 @@
 @media (min-aspect-ratio: 4/3) {
   .background {
     background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    width: 50%;
+    place-content: center;
+    margin-bottom: 2%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .partidos {
+    display: flex;
+    place-content: center;
+
+    .teams-container {
+      width: 80%;
+    }
+
+    .tiempo {
+      top: 0;
+    }
+  }
+
+  .marcador {
+    font-size: 25rem;
   }
 }
