@@ -3,15 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MarcadorComponent } from './marcador/marcador.component';
 
 @NgModule({
-    declarations: [
-        MarcadorComponent
-    ],
-    exports: [
-        MarcadorComponent
-    ],
-    imports: [
-        CommonModule
-    ]
+  declarations: [MarcadorComponent],
+  exports: [MarcadorComponent],
+  imports: [CommonModule]
 })
-
-export class MarcadorModule{}
+export class MarcadorModule {}

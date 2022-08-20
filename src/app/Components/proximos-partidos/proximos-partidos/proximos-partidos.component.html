@@ -14,21 +14,13 @@
               {{ resultado.teams.home.name.toUpperCase() | slice: 0:3 }}
             </div>
             <figure class="container-img">
-              <img
-                class="escudo-img"
-                src="assets/flags/{{ resultado.teams.home.logo }}"
-                alt="logo local"
-              />
+              <img class="escudo-img" src="assets/flags/{{ resultado.teams.home.logo }}" alt="logo local" />
             </figure>
             <h2 class="tiempo-resultados">
-              {{ resultado.fixture.date | date: "hh:mm" }}
+              {{ resultado.fixture.date | date: 'hh:mm' }}
             </h2>
             <figure class="container-img">
-              <img
-                class="escudo-img"
-                src="assets/flags/{{ resultado.teams.away.logo }}"
-                alt="logo visitante"
-              />
+              <img class="escudo-img" src="assets/flags/{{ resultado.teams.away.logo }}" alt="logo visitante" />
             </figure>
             <div class="team-name team-away">
               {{ resultado.teams.away.name.toUpperCase() | slice: 0:3 }}
