@@ -126,70 +126,67 @@
     width: 90%;
   }
 
-  .title-partidos {
-    font-size: 12rem;
-    line-height: 16rem;
-    margin-bottom: 0;
-  }
+  .section-proximos-partidos {
+    margin-top: 6rem;
 
-  .proximos-partidos-container {
-    place-content: center;
-  }
-
-  .proximos-partidos {
-    padding: 1%;
-    margin: 0;
-    place-content: center;
-    height: 20%;
-
-    .team-name,
-    .tiempo-proximos-partidos {
-      padding: 1%;
+    .container-title-partidos {
+      .title-partidos {
+        font-size: 12rem;
+        margin-bottom: 1rem;
+      }
     }
-  }
 
-  .team-name {
-    font-size: 8rem;
-  }
+    .proximos-partidos-container {
+      .proximos-partidos {
+        margin: 3.5rem 0;
+        padding: 0 4rem;
+        .tiempo-proximos-partidos {
+          font-size: 7.5rem;
+        }
+        .team-name {
+          font-size: 8rem;
+        }
+        .container-img {
+          height: 12.5rem;
+          width: 12.5rem;
+        }
+      }
+    }
 
-  .tiempo-proximos-partidos {
-    font-size: 7rem;
-  }
-
-  .container-img {
-    height: 80%;
+    .border {
+      height: 10rem;
+    }
   }
 }
 
+/*Aspect ratio Horizontal*/
 @media (min-aspect-ratio: 4/3) {
   .background-proximos-partidos {
     background-image: url('../../../../assets/background/background-lineas-horizontal.svg');
   }
 
   .sponsor-proximos-partidos {
-    width: 100%;
-    padding: 1%;
-
+    margin-top: 4rem;
     img {
-      width: 50%;
+      width: 45%;
     }
   }
 
-  .proximos-partidos-container {
-    width: 60%;
-    place-self: center;
+  .container-title-partidos {
+    .title-partidos {
+      font-size: 8.5rem;
+    }
   }
 
-  .title-partidos {
-    font-size: 7rem;
-  }
+  .section-proximos-partidos {
+    .proximos-partidos-container {
+      width: 55%;
+      place-self: center;
 
-  .proximos-partidos {
-    margin: 0;
-    padding: 2%;
-
-    .container-img {
-      max-width: 10%;
+      .proximos-partidos {
+        padding: 0 5rem;
+        margin: 2.5rem;
+      }
     }
   }
 }
