@@ -1,6 +1,7 @@
-.nain-resultados {
+.main-resultados {
     width: 100vw;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .background-resultados {
@@ -39,11 +40,18 @@
     place-self: center;
 }
 
+.container-title-partidos {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    height: 20%;
+}
+
 .title-partidos {
     text-align: center;
     font-size: 6rem;
-    line-height: 2.5rem;
     letter-spacing: 0.2rem;
+    margin-bottom: 2%;
     font-weight: 700;
     color: white;
 }
@@ -59,8 +67,10 @@
     display: flex;
     place-items: center;
     height: 100%;
+    margin: 2%;
 
-    .team-name, .container-img, .tiempo-resultados {
+    .team-name,
+    .tiempo-resultados {
         width: 20%;
     }
 }
@@ -90,13 +100,15 @@
 
 .container-img {
     display: flex;
-    width: 40%;
-    clip-path: circle();
-    border: solid 1px white;
+    width: 15%;
+    margin: auto;
+    border: solid 0.4rem white;
     z-index: 1;
-    height: 120px;
+    height: 100%;
+    border-radius: 50%;
 
     .escudo-img {
+        border-radius: 50%;
         object-fit: cover;
         width: 100%;
     }
@@ -107,7 +119,85 @@
     width: 100%;
     height: 50%;
     z-index: 0;
+    left: 0;
     position: absolute;
     opacity: 0.7;
-    background-image: radial-gradient(closest-side, #ffffff00, #ffffff9c);
+    box-shadow: 0px 0px 30px 8px #ffffffd7 inset;
+    -webkit-box-shadow: 0px 0px 30px 8px #ffffffd7 inset;
+    -moz-box-shadow: 0px 0px 30px 8px #ffffffd7 inset;
+}
+
+/*Aspect ratio Vertical*/
+
+@media (max-aspect-ratio: 3/4) {
+    .background-resultados {
+        background-image: url('../../../../assets/background/background-lineas-vertical.svg');
+    }
+
+    .sponsor-resultados img {
+        width: 90%;
+    }
+
+    .title-partidos {
+        font-size: 12rem;
+        line-height: 16rem;
+        margin-bottom: 0;
+    }
+
+    .resultados-container {
+        place-content: center;
+    }
+
+    .resultados {
+        padding: 1%;
+        margin: 0;
+        place-content: center;
+        height: 20%;
+
+        .team-name,
+        .tiempo-resultados {
+            padding: 1%;
+        }
+    }
+
+    .team-name {
+        font-size: 8rem;
+    }
+
+    .tiempo-resultados {
+        font-size: 7rem;
+    }
+
+    .container-img {
+        height: 80%;
+    }
+}
+
+@media (min-aspect-ratio: 4/3) {
+    .background-resultados {
+        background-image: url('../../../../assets/background/background-lineas-horizontal.svg');
+    }
+
+    .sponsor-resultados {
+        width: 100%;
+        padding: 1%;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .resultados-container {
+        width: 60%;
+        place-self: center;
+    }
+
+    .resultados {
+        margin: 0;
+        padding: 2%;
+
+        .container-img {
+            min-width: 10%;
+        }
+    }
 }
