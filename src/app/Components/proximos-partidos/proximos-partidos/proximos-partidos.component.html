@@ -1,29 +1,29 @@
-<main class="main-resultados">
-  <div class="background-resultados">
-    <div class="container-resultados">
-      <figure class="sponsor-resultados">
+<main class="main-proximos-partidos">
+  <div class="background-proximos-partidos">
+    <div class="container-proximos-partidos">
+      <figure class="sponsor-proximos-partidos">
         <img src="assets/logos/coca-cola.png" alt="Sponsor" />
       </figure>
-      <section class="section-resultados">
+      <section class="section-proximos-partidos">
         <div class="container-title-partidos">
-          <h2 class="title-partidos">PRÓXIMOS PARTIDOS</h2>
+          <h2 class="title-partidos">PROXIMOS PARTIDOS</h2>
         </div>
-        <div class="resultados-container">
-          <div class="resultados" *ngFor="let resultado of resultados">
+        <div class="proximos-partidos-container">
+          <div class="proximos-partidos" *ngFor="let proximoPartido of proximosPartidos">
             <div class="team-name team-home">
-              {{ resultado.teams.home.name.toUpperCase() | slice: 0:3 }}
+              {{ proximoPartido.teams.home.name.toUpperCase() | slice: 0:3 }}
             </div>
             <figure class="container-img">
-              <img class="escudo-img" src="assets/flags/{{ resultado.teams.home.logo }}" alt="logo local" />
+              <img class="escudo-img" src="assets/flags/{{ proximoPartido.teams.home.logo }}" alt="logo local" />
             </figure>
-            <h2 class="tiempo-resultados">
-              {{ resultado.fixture.date | date: 'hh:mm' }}
+            <h2 class="tiempo-proximos-partidos">
+              {{ proximoPartido.fixture.date | date: 'hh:mm' }}
             </h2>
             <figure class="container-img">
-              <img class="escudo-img" src="assets/flags/{{ resultado.teams.away.logo }}" alt="logo visitante" />
+              <img class="escudo-img" src="assets/flags/{{ proximoPartido.teams.away.logo }}" alt="logo visitante" />
             </figure>
             <div class="team-name team-away">
-              {{ resultado.teams.away.name.toUpperCase() | slice: 0:3 }}
+              {{ proximoPartido.teams.away.name.toUpperCase() | slice: 0:3 }}
             </div>
             <div class="border"></div>
           </div>

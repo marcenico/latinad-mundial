@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorldCupService } from '../../../services/world-cup.service';
-import { environment } from '../../../../environments/environment';
 import { flags } from 'src/app/mocks/object-images';
+
 @Component({
   selector: 'app-proximos-partidos',
   templateUrl: './proximos-partidos.component.html',
@@ -9,12 +9,11 @@ import { flags } from 'src/app/mocks/object-images';
   providers: [WorldCupService]
 })
 export class ProximosPartidosComponent implements OnInit {
-  resultados: any = [];
+  proximosPartidos: any = [];
+
   constructor(private service: WorldCupService) {}
 
   ngOnInit(): void {
-    console.log(environment.timezone);
-
     // this.service.getEndpoint('?league=1&next=4').subscribe((resultados) => {
     //   this.resultados = resultados.response;
     //   console.log(resultados);
@@ -23,8 +22,7 @@ export class ProximosPartidosComponent implements OnInit {
       (resultados: any) => {
         resultados.response = resultados.response.slice(0, 4);
         resultados.response.forEach((res: any) => this.cambioImagenBandera(res.teams));
-        this.resultados = resultados.response;
-        console.log(resultados);
+        this.proximosPartidos = resultados.response;
       },
       (e) => console.error(e)
     );
