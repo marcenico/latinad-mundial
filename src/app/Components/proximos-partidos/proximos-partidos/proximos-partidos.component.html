@@ -1,6 +1,7 @@
 <main class="main-proximos-partidos">
   <div class="background-proximos-partidos">
     <div class="container-proximos-partidos">
+      <!-- IMAGEN SPONSOR -->
       <figure class="sponsor-proximos-partidos">
         <img src="assets/logos/coca-cola.png" alt="Sponsor" />
       </figure>
@@ -10,22 +11,22 @@
         </div>
         <div class="proximos-partidos-container">
           <div class="proximos-partidos" *ngFor="let proximoPartido of proximosPartidos">
+            <div class="border"></div>
             <div class="team-name team-home">
               {{ proximoPartido.teams.home.name.toUpperCase() | slice: 0:3 }}
             </div>
-            <figure class="container-img">
-              <img class="escudo-img" src="assets/flags/{{ proximoPartido.teams.home.logo }}" alt="logo local" />
-            </figure>
             <h2 class="tiempo-proximos-partidos">
               {{ proximoPartido.fixture.date | date: 'hh:mm' }}
             </h2>
-            <figure class="container-img">
-              <img class="escudo-img" src="assets/flags/{{ proximoPartido.teams.away.logo }}" alt="logo visitante" />
-            </figure>
             <div class="team-name team-away">
               {{ proximoPartido.teams.away.name.toUpperCase() | slice: 0:3 }}
             </div>
-            <div class="border"></div>
+            <figure class="container-img img-home">
+              <img src="assets/flags/{{ proximoPartido.teams.home.logo }}" alt="logo local" />
+            </figure>
+            <figure class="container-img img-away">
+              <img src="assets/flags/{{ proximoPartido.teams.away.logo }}" alt="logo visitante" />
+            </figure>
           </div>
         </div>
       </section>
