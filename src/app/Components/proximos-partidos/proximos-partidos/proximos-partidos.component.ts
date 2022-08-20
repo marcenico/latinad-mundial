@@ -3,12 +3,12 @@ import { WorldCupService } from '../../../services/world-cup.service';
 import { environment } from '../../../../environments/environment';
 import { flags } from 'src/app/object-images/object-images';
 @Component({
-  selector: 'app-resultados',
-  templateUrl: './resultados.component.html',
-  styleUrls: ['./resultados.component.scss'],
-  providers: [WorldCupService],
+  selector: 'app-proximos-partidos',
+  templateUrl: './proximos-partidos.component.html',
+  styleUrls: ['./proximos-partidos.component.scss'],
+  providers: [WorldCupService]
 })
-export class ResultadosComponent implements OnInit {
+export class ProximosPartidosComponent implements OnInit {
   resultados: any = [];
   constructor(private service: WorldCupService) {}
 
@@ -22,9 +22,7 @@ export class ResultadosComponent implements OnInit {
     this.service.getFixtureDemo().subscribe(
       (resultados: any) => {
         resultados.response = resultados.response.slice(0, 4);
-        resultados.response.forEach((res: any) =>
-          this.cambioImagenBandera(res.teams)
-        );
+        resultados.response.forEach((res: any) => this.cambioImagenBandera(res.teams));
         this.resultados = resultados.response;
         console.log(resultados);
       },
