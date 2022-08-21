@@ -10,7 +10,7 @@ import { ConfettiComponent } from './components/confetti/confetti.component';
 import { TablaPuntosModule } from './components/tabla-puntos/tabla-puntos.module';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Autoplay } from 'swiper';
-
+import { AnimacionModule } from './components/animacion/animacion.module';
 @NgModule({
   declarations: [AppComponent, ConfettiComponent],
   imports: [
@@ -18,6 +18,7 @@ import SwiperCore, { Autoplay } from 'swiper';
     AppRoutingModule,
     HttpClientModule,
     MarcadorModule,
+    AnimacionModule,
     ProximosPartidosModule,
     TablaPuntosModule,
     NgParticlesModule,
