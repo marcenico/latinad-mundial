@@ -53,7 +53,6 @@ export class WorldCupService {
           groupsPartOne.push({ standings: group.league.standings.slice(0, 4) });
           groupsPartTwo.push({ standings: group.league.standings.slice(4, 8) });
           groups = [...groupsPartOne, ...groupsPartTwo];
-          console.log('GRUPOS', groups);
         });
         return groups;
       })

@@ -1,13 +1,21 @@
 import { SwiperOptions } from 'swiper';
 
 export const swiperConfig1: SwiperOptions = {
-  initialSlide: 0,
   direction: 'vertical',
-  slidesPerView: 1,
-  spaceBetween: 0,
-  navigation: true,
+  navigation: false,
   pagination: false,
   scrollbar: false,
   loop: true,
-  autoplay: { delay: 2000, disableOnInteraction: false }
+  autoplay: { delay: 1000 * 4, disableOnInteraction: false },
+  speed: 1000
+};
+
+export const swiperConfigMarcador: SwiperOptions = {
+  direction: 'horizontal',
+  navigation: false,
+  pagination: false,
+  scrollbar: false,
+  loop: true,
+  autoplay: { delay: 1000 * 2, disableOnInteraction: false },
+  speed: 1000
 };

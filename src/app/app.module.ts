@@ -11,6 +11,8 @@ import { TablaPuntosModule } from './components/tabla-puntos/tabla-puntos.module
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Autoplay } from 'swiper';
 import { AnimacionModule } from './components/animacion/animacion.module';
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [AppComponent, ConfettiComponent],
   imports: [
@@ -22,13 +24,9 @@ import { AnimacionModule } from './components/animacion/animacion.module';
     ProximosPartidosModule,
     TablaPuntosModule,
     NgParticlesModule,
-    SwiperModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor() {
-    SwiperCore.use([Autoplay]);
-  }
-}
+export class AppModule {}
