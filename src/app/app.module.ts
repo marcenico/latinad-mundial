@@ -8,8 +8,7 @@ import { MarcadorModule } from './components/marcador/marcador.module';
 import { ProximosPartidosModule } from './components/proximos-partidos/proximos-partidos.module';
 import { ConfettiComponent } from './components/confetti/confetti.component';
 import { TablaPuntosModule } from './components/tabla-puntos/tabla-puntos.module';
-import { SwiperModule } from 'swiper/angular';
-import SwiperCore, { Autoplay } from 'swiper';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, ConfettiComponent],
@@ -21,13 +20,9 @@ import SwiperCore, { Autoplay } from 'swiper';
     ProximosPartidosModule,
     TablaPuntosModule,
     NgParticlesModule,
-    SwiperModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor() {
-    SwiperCore.use([Autoplay]);
-  }
-}
+export class AppModule {}
