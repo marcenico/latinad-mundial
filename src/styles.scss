@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+@import 'swiper/scss';
 
 :root {
   --black: #000000;
@@ -30,4 +31,9 @@
 
 body {
   overflow: hidden;
+}
+
+.swiper {
+  width: 100vw;
+  height: 100vh;
 }
