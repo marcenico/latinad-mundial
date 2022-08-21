@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { flags } from 'src/app/mocks/object-images';
+import { flags } from 'src/app/mocks/object-images.mocks';
 import { WorldCupService } from '../../../services/world-cup.service';
 
 @Component({

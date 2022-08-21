@@ -4,16 +4,17 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class WorldCupService {
   options = {
     headers: new HttpHeaders()
       .set('x-rapidapi-key', '80c1cdfd17c336d9ec08d8a1abde4992')
-      .set('x-rapidapi-host', 'https://v3.football.api-sports.io'),
+      .set('x-rapidapi-host', 'https://v3.football.api-sports.io')
   };
 
   private apiUrl = 'http://localhost:5000/data';
+  private apiUrl2 = 'http://localhost:5005/data';
 
   constructor(private http: HttpClient) {}
 
@@ -43,7 +44,7 @@ export class WorldCupService {
   }
 
   public getTableDemo(): Observable<any> {
-    return this.http.get(this.apiUrl).pipe(
+    return this.http.get(this.apiUrl2).pipe(
       map((table: any) => {
         let groupsPartOne: any = [];
         let groupsPartTwo: any = [];
@@ -52,8 +53,7 @@ export class WorldCupService {
           groupsPartOne.push({ standings: group.league.standings.slice(0, 4) });
           groupsPartTwo.push({ standings: group.league.standings.slice(4, 8) });
           groups = [...groupsPartOne, ...groupsPartTwo];
-          console.log("GRUPOS",groups);
-          
+          console.log('GRUPOS', groups);
         });
         return groups;
       })

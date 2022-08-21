@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorldCupService } from '../../../services/world-cup.service';
-import { flags } from 'src/app/mocks/object-images';
+import { flags } from 'src/app/mocks/object-images.mocks';
 
 @Component({
   selector: 'app-proximos-partidos',

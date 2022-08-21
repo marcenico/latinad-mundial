@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "backend": "json-server --port 5000 --watch ./src/app/backend/fixtureDemo.json",
-    "backendDos": "json-server --port 5000 --watch ./src/app/backend/tableDemo.json"
+    "backendDos": "json-server --port 5005 --watch ./src/app/backend/tableDemo.json"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "@angular/router": "~12.2.0",
     "ng-particles": "2.5.1",
     "rxjs": "~6.6.0",
+    "swiper": "^8.3.2",
     "tslib": "^2.3.0",
     "tsparticles": "1.22.1",
     "tsparticles-shape-confetti": "1.7.1",

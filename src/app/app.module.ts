@@ -8,6 +8,8 @@ import { MarcadorModule } from './components/marcador/marcador.module';
 import { ProximosPartidosModule } from './components/proximos-partidos/proximos-partidos.module';
 import { ConfettiComponent } from './components/confetti/confetti.component';
 import { TablaPuntosModule } from './components/tabla-puntos/tabla-puntos.module';
+import { SwiperModule } from 'swiper/angular';
+
 @NgModule({
   declarations: [AppComponent, ConfettiComponent],
   imports: [
@@ -17,7 +19,8 @@ import { TablaPuntosModule } from './components/tabla-puntos/tabla-puntos.module
     MarcadorModule,
     ProximosPartidosModule,
     TablaPuntosModule,
-    NgParticlesModule
+    NgParticlesModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
