@@ -9,6 +9,7 @@ import { ProximosPartidosModule } from './components/proximos-partidos/proximos-
 import { ConfettiComponent } from './components/confetti/confetti.component';
 import { TablaPuntosModule } from './components/tabla-puntos/tabla-puntos.module';
 import { SwiperModule } from 'swiper/angular';
+import SwiperCore, { Autoplay } from 'swiper';
 
 @NgModule({
   declarations: [AppComponent, ConfettiComponent],
@@ -25,4 +26,8 @@ import { SwiperModule } from 'swiper/angular';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    SwiperCore.use([Autoplay]);
+  }
+}
