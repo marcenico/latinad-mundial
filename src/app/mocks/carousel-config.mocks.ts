@@ -1,24 +1,17 @@
 import { SwiperOptions } from 'swiper';
 
 export const swiperConfig1: SwiperOptions = {
-  initialSlide: 0,
   direction: 'vertical',
-  slidesPerView: 1,
-  spaceBetween: 0,
-  navigation: true,
+  navigation: false,
   pagination: false,
   scrollbar: false,
   loop: true,
-  rewind: true,
-  autoplay: { delay: 1000 * 10, disableOnInteraction: false }
+  autoplay: { delay: 1000 * 100, disableOnInteraction: false }
 };
 
 export const swiperConfigMarcador: SwiperOptions = {
-  initialSlide: 0,
   direction: 'horizontal',
-  slidesPerView: 1,
-  spaceBetween: 0,
-  navigation: true,
+  navigation: false,
   pagination: false,
   scrollbar: false,
   loop: true,

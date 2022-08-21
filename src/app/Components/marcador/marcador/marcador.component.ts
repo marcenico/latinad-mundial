@@ -3,6 +3,7 @@ import { WorldCupService } from '../../../services/world-cup.service';
 import { flags } from 'src/app/mocks/object-images.mocks';
 import { swiperConfigMarcador } from '../../../mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
+
 @Component({
   selector: 'app-marcador',
   templateUrl: './marcador.component.html',
@@ -10,7 +11,6 @@ import { SwiperOptions } from 'swiper';
   providers: [WorldCupService]
 })
 export class MarcadorComponent implements OnInit {
-  title = 'latinad-mundial';
   partidos: any = [];
   swiperConfigMarcador: SwiperOptions = swiperConfigMarcador;
 
@@ -19,7 +19,7 @@ export class MarcadorComponent implements OnInit {
   ngOnInit(): any {
     this.service.getFixtureDemo().subscribe(
       (partidos: any) => {
-        partidos.response = partidos.response.slice(0, 5);
+        partidos.response = partidos.response.slice(0, 4);
         partidos.response.forEach((res: any) => this.cambioImagenBandera(res.teams));
         this.partidos = partidos.response;
       },
