@@ -45,16 +45,10 @@ export class WorldCupService {
 
   public getTableDemo(): Observable<any> {
     return this.http.get(this.apiUrl2).pipe(
-      map((table: any) => {
-        let groupsPartOne: any = [];
-        let groupsPartTwo: any = [];
-        let groups: any = [];
-        table.response.map((group: any) => {
-          groupsPartOne.push({ standings: group.league.standings.slice(0, 4) });
-          groupsPartTwo.push({ standings: group.league.standings.slice(4, 8) });
-          groups = [...groupsPartOne, ...groupsPartTwo];
-        });
-        return groups;
+      map((data: any) => {
+        let groupsPartOne: any = data.response[0].league.standings.slice(0, 4);
+        let groupsPartTwo: any = data.response[0].league.standings.slice(4, 8);
+        return [groupsPartOne, groupsPartTwo];
       })
     );
   }

@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.swiper {
+  width: 50%;
+}
+
 .content-box {
   overflow: hidden;
   width: 100vw;
@@ -31,7 +35,8 @@
 
 .container-tables {
   display: flex;
-  width: 80%;
+  flex-direction: column;
+  width: 100%;
   margin: 0 auto;
   color: white;
 }

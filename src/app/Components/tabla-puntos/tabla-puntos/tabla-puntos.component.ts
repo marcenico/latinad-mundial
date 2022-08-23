@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { flags } from 'src/app/mocks/object-images.mocks';
+import { SwiperOptions } from 'swiper';
 import { WorldCupService } from '../../../services/world-cup.service';
+import { swiperConfigTabla } from '../../../mocks/carousel-config.mocks';
 
 @Component({
   selector: 'app-tabla-puntos',
@@ -9,10 +11,10 @@ import { WorldCupService } from '../../../services/world-cup.service';
   providers: [WorldCupService]
 })
 export class TablaPuntosComponent implements OnInit {
-  tablePointsOne: any = [];
-  tablePointsTwo: any = [];
-  tablePointsThree: any = [];
-  tablePointsFour: any = [];
+  tables = [];
+  tablePointsOne: any = []; //GRUPOS A, B, C, D
+  tablePointsTwo: any = []; //GRUPOS E, F, G, H
+  swiperConfig: SwiperOptions = swiperConfigTabla;
 
   constructor(private service: WorldCupService) {}
 
@@ -24,22 +26,28 @@ export class TablaPuntosComponent implements OnInit {
     //   },
     //   (e) => console.error(e)
     // );
-    this.service.getTableDemo().subscribe((table) => {
-      table[0].standings.forEach((standing: any) => {
-        this.cambioImagenBandera(standing);
+
+    this.getMocks(); // Solo para desarrollo
+  }
+
+  getMocks() {
+    this.service.getTableDemo().subscribe((tables: []) => {
+      let auxTables = tables;
+      auxTables.forEach((table: []) => {
+        table.forEach((grupo: []) => {
+          this.cambioImagenBandera(grupo);
+        });
       });
-      this.cambioImagenBandera(table[0].standings);
-      this.tablePointsOne = table?.[0].standings[0];
-      this.tablePointsTwo = table?.[0].standings[1];
-      this.tablePointsThree = table?.[0].standings[2];
-      this.tablePointsFour = table?.[0].standings[3];
+      console.log(auxTables);
+
+      this.tables = auxTables;
     });
   }
 
-  cambioImagenBandera(standing: any) {
-    standing.forEach((equipo: any) => {
+  cambioImagenBandera(grupos: any) {
+    grupos.forEach((grupo: any) => {
       for (let i = 0; i < flags.length; i++) {
-        if (flags[i].id === equipo.team?.id) equipo.team.logo = flags[i].src;
+        if (flags[i].id === grupo.team?.id) grupo.team.logo = flags[i].src;
       }
     });
   }

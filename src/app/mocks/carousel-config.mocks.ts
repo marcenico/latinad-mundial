@@ -19,3 +19,13 @@ export const swiperConfigMarcador: SwiperOptions = {
   autoplay: { delay: 1000 * 2, disableOnInteraction: false },
   speed: 1000
 };
+
+export const swiperConfigTabla: SwiperOptions = {
+  direction: 'horizontal',
+  navigation: false,
+  pagination: false,
+  scrollbar: false,
+  // loop: true,
+  // autoplay: { delay: 1000 * 2, disableOnInteraction: false },
+  speed: 1000
+};
