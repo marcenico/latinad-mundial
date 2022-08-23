@@ -4,7 +4,7 @@ import { flags } from 'src/app/mocks/object-images.mocks';
 import { swiperConfigMarcador } from '../../../mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import SwiperCore, { Swiper, Virtual } from 'swiper';
+import SwiperCore, { Virtual } from 'swiper';
 
 SwiperCore.use([Virtual]);
 
