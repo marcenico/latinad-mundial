@@ -4,7 +4,7 @@
       <!-- LOGO -->
       <figure class="sponsor-marcador"><img src="assets/logos/coca-cola.png" alt="Sponsor" /></figure>
 
-      <swiper *ngIf="partidos.length" [config]="swiperConfigMarcador">
+      <swiper *ngIf="partidos.length" [config]="swiperConfigMarcador" #swiper [virtual]="true">
         <ng-template swiperSlide *ngFor="let partido of partidos">
           <div class="partidos">
             <!-- TIEMPO PARTIDO -->

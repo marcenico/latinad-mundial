@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { WorldCupService } from '../../../services/world-cup.service';
 import { flags } from 'src/app/mocks/object-images.mocks';
 import { swiperConfigMarcador } from '../../../mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
+import { SwiperComponent } from 'swiper/angular';
+import SwiperCore, { Swiper, Virtual } from 'swiper';
+
+SwiperCore.use([Virtual]);
 
 @Component({
   selector: 'app-marcador',
@@ -11,6 +15,7 @@ import { SwiperOptions } from 'swiper';
   providers: [WorldCupService]
 })
 export class MarcadorComponent implements OnInit {
+  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   partidos: any = [];
   swiperConfigMarcador: SwiperOptions = swiperConfigMarcador;
 
