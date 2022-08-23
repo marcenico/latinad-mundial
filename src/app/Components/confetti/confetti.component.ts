@@ -11,13 +11,11 @@ import { loadConfettiShape } from 'tsparticles-shape-confetti';
 })
 export class ConfettiComponent implements OnInit {
   @Input() duracionConfetti = 0;
-  mostrarConfetti = true;
   options: IParticlesProps = particlesOptions;
 
   ngOnInit(): void {}
 
   particlesInit(main: Main): void {
     loadConfettiShape(main);
-    if (this.duracionConfetti > 0) setTimeout(() => (this.mostrarConfetti = false), this.duracionConfetti * 1000);
   }
 }
