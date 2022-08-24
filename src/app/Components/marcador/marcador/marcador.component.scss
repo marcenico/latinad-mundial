@@ -530,3 +530,56 @@
   }
 
 }
+@media (min-height: 7680px) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    margin-bottom: 60rem;
+
+    img {
+      max-width: 3000px;
+    }
+  }
+
+  .partidos {
+    width: 100%;
+    max-width: 4000px;
+    
+    .teams-container {
+      gap: 100rem;
+      width: max-content;
+    }
+
+    .tiempo {
+      top: -30rem;
+      font-size: 55rem;
+    }
+  }
+
+  .team {
+    width: 40%;
+
+    .escudo {
+      border: 3rem solid white;
+      height: 150rem;
+      width: 150rem;
+
+      img {
+        filter: drop-shadow(38px 39px 30px #000000b3);
+      }
+    }
+
+    .name {
+      font-size: 40rem;
+      margin-top: 30rem;
+    }
+  }
+
+  .marcador {
+    font-size: 100rem;
+    top: 80rem;
+  }
+
+}
