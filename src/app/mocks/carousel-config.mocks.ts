@@ -26,6 +26,6 @@ export const swiperConfigTabla: SwiperOptions = {
   pagination: false,
   scrollbar: false,
   loop: true,
-  // autoplay: { delay: 1000 * 2, disableOnInteraction: false },
-  // speed: 1000
+  autoplay: { delay: 1000 * 2, disableOnInteraction: false },
+  speed: 1000
 };
