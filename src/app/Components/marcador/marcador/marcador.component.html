@@ -6,8 +6,10 @@
         <img src="assets/logos/coca-cola.png" alt="Sponsor" />
       </figure>
 
-      <swiper *ngIf="partidos.length" [config]="swiperConfigMarcador">
-      <ng-template class="iterator" swiperSlide *ngFor="let partido of partidos">
+      <!-- <swiper *ngIf="partidos.length" [config]="swiperConfigMarcador">
+      <ng-template class="iterator" swiperSlide *ngFor="let partido of partidos"> -->
+      <div class="iterator" swiperSlide *ngFor="let partido of partidos">
+        -->
         <div class="partidos">
           <!-- TIEMPO PARTIDO -->
           <h2 class="tiempo">{{ "00:00" }}</h2>
@@ -40,8 +42,9 @@
             <div class="marcador">{{ 0 }}-{{ 0 }}</div>
           </div>
         </div>
-      </ng-template>
-      </swiper>
+      </div>
+      <!-- </ng-template>
+      </swiper> -->
     </section>
   </div>
 </main>
