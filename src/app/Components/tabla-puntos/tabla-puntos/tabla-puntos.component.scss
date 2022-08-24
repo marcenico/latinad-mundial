@@ -178,6 +178,12 @@
 
 /* Aspect ratio Horizontal */
 @media (min-aspect-ratio: 4/3) {
+  .swiper {
+    width: 45%;
+    height: auto;
+    overflow: hidden;
+  }
+
   .background {
     background-image: url('../../../../assets/background/background-lineas-horizontal.svg');
     flex-direction: row;
@@ -185,24 +191,28 @@
   }
 
   .sponsor-table {
+    justify-content: end;
     width: 45%;
     img {
-      width: 80%;
+      width: 85%;
       margin: 0;
     }
   }
 
   .container-tables {
-    width: 50%;
+    width: 100%;
   }
 
   .groups-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .table-container__points {
     width: auto;
     margin: 5%;
+    .table-teams {
+      padding: 5% 6%;
+    }
   }
 
   .table-teams--ul {
@@ -211,16 +221,16 @@
     }
 
     .escudo {
-      height: 8rem;
-      width: 8rem;
+      height: 8.5rem;
+      width: 8.5rem;
     }
 
     .title-name {
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
 
     .points {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
   }
 }
