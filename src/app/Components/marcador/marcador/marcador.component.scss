@@ -372,7 +372,7 @@
 /*---------------------- 3840px x 2610px landscape and portrait ----------------------------*/
 @media screen and (min-width: 3840px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
   }
 
   .sponsor-marcador {
@@ -424,7 +424,7 @@
 
 @media screen and (min-height: 3840px) and (orientation: portrait) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-vertical.svg');
+    background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
   }
 
   .sponsor-marcador {
@@ -479,7 +479,7 @@
 
 @media (min-width: 7680px) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
   }
 
   .sponsor-marcador {
@@ -532,7 +532,7 @@
 }
 @media (min-height: 7680px) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
   }
 
   .sponsor-marcador {
