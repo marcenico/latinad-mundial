@@ -7,11 +7,11 @@
 
     <swiper *ngIf="tables.length" [config]="swiperConfig">
       <!-- CONTENEDOR DE TABLAS -->
-      <ng-template swiperSlide *ngFor="let tabla of tables">
+      <ng-template swiperSlide *ngFor="let tabla of tables; index as i">
         <div class="container-tables">
-          <section class="table-container" *ngFor="let grupos of tabla">
+          <section class="table-container" *ngFor="let grupos of tabla; index as j">
             <div class="table-container__points">
-              <h1 class="groups-title">GRUPO A</h1>
+              <h1 class="groups-title">{{ nombreDeGrupo(i, j) }}</h1>
               <div class="table-teams teamA">
                 <div class="table-teams--ul" *ngFor="let item of grupos">
                   <div class="border-table"></div>

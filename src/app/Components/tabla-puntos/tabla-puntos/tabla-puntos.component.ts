@@ -7,22 +7,21 @@ import { swiperConfigTabla } from '../../../mocks/carousel-config.mocks';
 @Component({
   selector: 'app-tabla-puntos',
   templateUrl: './tabla-puntos.component.html',
-  styleUrls: ['./tabla-puntos.component.scss'],
-  providers: [WorldCupService]
+  styleUrls: ['./tabla-puntos.component.scss']
 })
 export class TablaPuntosComponent implements OnInit {
-  tables = [];
-  tablePointsOne: any = []; //GRUPOS A, B, C, D
-  tablePointsTwo: any = []; //GRUPOS E, F, G, H
   swiperConfig: SwiperOptions = swiperConfigTabla;
-
+  tables = [];
+  grupos = [
+    ['A', 'B', 'C', 'D'],
+    ['E', 'F', 'G', 'H']
+  ];
   constructor(private service: WorldCupService) {}
 
   ngOnInit(): void {
     // this.service.getTable('equipos?league=1&season=2022').subscribe(
     //   (table) => {
     //     this.tablePoints = table.response;
-    //     console.log(table);
     //   },
     //   (e) => console.error(e)
     // );
@@ -38,8 +37,6 @@ export class TablaPuntosComponent implements OnInit {
           this.cambioImagenBandera(grupo);
         });
       });
-      console.log(auxTables);
-
       this.tables = auxTables;
     });
   }
@@ -50,5 +47,12 @@ export class TablaPuntosComponent implements OnInit {
         if (flags[i].id === grupo.team?.id) grupo.team.logo = flags[i].src;
       }
     });
+  }
+
+  nombreDeGrupo(indexTabla: number, indexGrupo: number) {
+    let nombreGrupo = 'GRUPO ';
+    nombreGrupo +=
+      indexTabla === 0 ? `${this.grupos[indexTabla][indexGrupo]}` : `${this.grupos[indexTabla][indexGrupo]}`;
+    return nombreGrupo;
   }
 }

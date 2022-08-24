@@ -3,7 +3,8 @@
 }
 
 .swiper {
-  width: 50%;
+  width: 100%;
+  height: auto;
 }
 
 .content-box {
@@ -34,9 +35,10 @@
 }
 
 .container-tables {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 80%;
   margin: 0 auto;
   color: white;
 }
@@ -50,7 +52,7 @@
   flex-direction: column;
   justify-content: center;
   width: 85%;
-  margin: 5% auto;
+  margin: 2% auto;
 }
 
 .table-teams {
@@ -70,7 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 4rem;
   flex-direction: column;
   width: 100%;
 }
@@ -88,7 +90,7 @@
     z-index: 0;
     width: 90%;
     right: 2%;
-    height: 70%;
+    height: 85%;
     border-radius: 1rem;
     box-shadow: 0px 0px 30px 8px #ffffffd7 inset;
     -webkit-box-shadow: 0px 0px 30px 8px #ffffffd7 inset;
@@ -99,8 +101,8 @@
     z-index: 1;
     display: flex;
     margin-right: auto;
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
     border: 0.2rem solid white;
     border-radius: 50%;
     img {
@@ -112,14 +114,14 @@
   }
 
   .title-name {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     line-height: 100%;
     margin: auto;
   }
 
   .points {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 100%;
     margin: auto;
