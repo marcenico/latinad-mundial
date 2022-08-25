@@ -1,5 +1,5 @@
 /* Media Query for Mobile Devices */
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 539px) and (orientation: portrait) {
 
     .section-proximos-partidos {
         justify-content: unset;
@@ -177,18 +177,20 @@
                 .container-img {
                     height: 10rem;
                     width: 10rem;
+
                     img {
                         height: 100%;
                         width: 100%;
                     }
                 }
+
                 .img-home {
                     left: 15%;
-                  }
-            
-                  .img-away {
+                }
+
+                .img-away {
                     right: 15%;
-                  }
+                }
             }
         }
     }
@@ -197,3 +199,27 @@
         height: 140%;
     }
 }
+
+/*Media Query for Tablet in orientation: portrait */
+
+@media(min-width:540px) and (orientation: portrait) {
+    .section-proximos-partidos {
+        justify-content: unset;
+        max-width: 400px;
+
+        .container-title-partidos {
+            height: max-content;
+            margin: 5px 0;
+
+            .title-partidos {
+                font-size: 4.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+/* iPad Mini and Air orientation: portrait */
