@@ -3,7 +3,7 @@ import { swiperConfig1 } from './mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import SwiperCore, { Virtual } from 'swiper';
-import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';
+import { MarcadorComponent } from './components/marcador/marcador/marcador.component';
 
 @Component({
   selector: 'app-root',
