@@ -1,1 +1,199 @@
 /* Media Query for Mobile Devices */
+@media (min-width: 320px) {
+
+    .section-proximos-partidos {
+        justify-content: unset;
+
+        .container-title-partidos {
+            height: max-content;
+            margin: 5px 0;
+
+            .title-partidos {
+                font-size: 2.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+/*Media Query for Mobile in landscape orientation  */
+
+@media only screen and (min-height: 280px) and (max-height: 539px) and (min-width: 600px) and(orientation: landscape) {
+    .sponsor-proximos-partidos {
+        margin-top: 5%;
+        padding: 2%;
+
+        img {
+            min-width: 180px;
+            max-width: 240px;
+        }
+    }
+
+    .section-proximos-partidos {
+        justify-content: center;
+        height: 85%;
+        width: 100vw;
+        min-width: 540px;
+        max-width: 600px;
+        gap: 2%;
+
+        .container-title-partidos {
+            height: max-content;
+            margin-bottom: 2%;
+
+            .title-partidos {
+                font-size: 2.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+            justify-content: space-evenly;
+            flex-flow: wrap;
+
+            .proximos-partidos {
+                width: 48%;
+                min-width: 247px;
+            }
+        }
+    }
+
+    .border {
+        height: 100%;
+    }
+
+}
+
+/*Media Query for Tablet in orientation: landscape */
+
+@media(min-height: 540px) and (max-height: 767px) and (orientation: landscape) {
+    .sponsor-proximos-partidos {
+        margin-top: 5%;
+        padding: 2%;
+
+        img {
+            min-width: 180px;
+            max-width: 400px;
+        }
+    }
+
+    .section-proximos-partidos {
+        justify-content: center;
+        height: 85%;
+        width: 100vw;
+        min-width: 540px;
+        max-width: 650px;
+        gap: 2%;
+
+        .container-title-partidos {
+            height: max-content;
+            margin-bottom: 2%;
+
+            .title-partidos {
+                font-size: 5.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+            justify-content: space-between;
+            flex-flow: wrap;
+
+            .proximos-partidos {
+                width: 48%;
+                min-width: 247px;
+
+                .tiempo-proximos-partidos {
+                    font-size: 1.5rem;
+                }
+
+                .team-name {
+                    font-size: 1.5rem;
+                }
+
+                .container-img {
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .border {
+        height: 100%;
+    }
+}
+
+/* iPad Mini and Air orientation: landscape */
+
+@media (min-height: 768px) and (max-height: 820px) and (orientation: landscape) {
+    .sponsor-proximos-partidos {
+        margin-top: 0;
+        padding: 2%;
+
+        img {
+            min-width: 180px;
+            max-width: 600px;
+        }
+    }
+
+    .section-proximos-partidos {
+        justify-content: center;
+        height: 85%;
+        width: 100vw;
+        min-width: 650px;
+        max-width: 900px;
+        gap: 2%;
+
+        .container-title-partidos {
+            height: max-content;
+            margin-bottom: 2%;
+
+            .title-partidos {
+                font-size: 6.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+            justify-content: space-between;
+            flex-flow: wrap;
+            align-items: center;
+
+            .proximos-partidos {
+                width: 48%;
+                margin: 2rem 0;
+
+                .tiempo-proximos-partidos {
+                    font-size: 2rem;
+                }
+
+                .team-name {
+                    font-size: 2rem;
+                }
+
+                .container-img {
+                    height: 10rem;
+                    width: 10rem;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .img-home {
+                    left: 15%;
+                  }
+            
+                  .img-away {
+                    right: 15%;
+                  }
+            }
+        }
+    }
+
+    .border {
+        height: 140%;
+    }
+}
