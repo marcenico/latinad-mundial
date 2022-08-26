@@ -24,7 +24,7 @@ export class MarcadorComponent implements OnInit {
   ngOnInit(): any {
     this.service.getFixtureDemo().subscribe(
       (partidos: any) => {
-        partidos.response = partidos.response.slice(0, 4);
+        partidos.response = partidos.response.slice(0, 1);
         partidos.response.forEach((res: any) => this.cambioImagenBandera(res.teams));
         this.partidos = partidos.response;
       },
