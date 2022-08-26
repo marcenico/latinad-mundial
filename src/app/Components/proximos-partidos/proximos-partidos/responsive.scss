@@ -36,6 +36,10 @@
 /*Media Query for Mobile in landscape orientation  */
 
 @media only screen and (min-height: 280px) and (max-height: 539px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-horizontal.svg');
+    }
+
     .sponsor-proximos-partidos {
         margin-top: 5%;
         padding: 2%;
@@ -83,6 +87,10 @@
 /*Media Query for Tablet in orientation: landscape */
 
 @media(min-height: 540px) and (max-height: 767px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-horizontal.svg');
+    }
+
     .sponsor-proximos-partidos {
         margin-top: 5%;
         padding: 2%;
@@ -144,6 +152,10 @@
 /* iPad Mini and Air orientation: landscape */
 
 @media (min-height: 768px) and (max-height: 911px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-horizontal.svg');
+    }
+
     .sponsor-proximos-partidos {
         margin-top: 0;
         padding: 2%;
@@ -218,6 +230,10 @@
 /*Media Query for Tablet in orientation: portrait */
 
 @media(min-width:540px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-vertical.svg');
+    }
+
     .sponsor-proximos-partidos {
         margin-top: 0;
         padding: 2%;
@@ -268,6 +284,10 @@
 
 /* iPad Mini and Air orientation: portrait + Notebook 1366px x 768px*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-vertical.svg');
+    }
+
     .sponsor-proximos-partidos {
         img {
             max-width: 550px;
@@ -307,6 +327,9 @@
 /*Surface Pro 7 orientation landscape */
 
 @media(min-height:912px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-horizontal.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 550px;
@@ -365,6 +388,9 @@
 /*Surface Pro 7 orientation portrait */
 
 @media only screen and (min-width:912px) and (min-height: 1368px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-vertical.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 700px;
@@ -426,6 +452,9 @@
 */
 
 @media (aspect-ratio: 1/1) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/background-lineas-cuadrado.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 650px;
@@ -456,6 +485,9 @@
                 .container-img {
                     height: 15rem;
                     width: 15rem;
+                    img {
+                        filter: drop-shadow(15px 16px 17px #000000b3);
+                    }
                 }
 
                 .img-home {
@@ -477,6 +509,9 @@
 /* Desktop for 1920px x 1080px portrait and landscape */
 
 @media(min-height: 1920px) and (max-height: 2559px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 800px;
@@ -509,6 +544,9 @@
                 .container-img {
                     height: 25rem;
                     width: 25rem;
+                    img {
+                        filter: drop-shadow(13px 14px 15px #000000b3);
+                    }
                 }
 
                 .img-home {
@@ -529,6 +567,9 @@
 }
 
 @media(min-width: 1920px) and (max-width: 2559px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 800px;
@@ -561,6 +602,9 @@
                 .container-img {
                     height: 14rem;
                     width: 14rem;
+                    img {
+                        filter: drop-shadow(13px 14px 15px #000000b3);
+                    }
                 }
 
                 .img-home {
@@ -583,6 +627,9 @@
 /* Desktop for 2560px x 1440px portrait and landscape */
 
 @media(min-height: 2560px) and (max-height: 3839px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 1100px;
@@ -618,6 +665,7 @@
 
                     img {
                         border: 1rem solid;
+                        filter: drop-shadow(22px 23px 24px #000000b3);
                     }
                 }
 
@@ -642,6 +690,9 @@
 }
 
 @media(min-width: 2560px) and (max-width: 3839px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 1000px;
@@ -677,6 +728,7 @@
 
                     img {
                         border: 0.5rem solid;
+                        filter: drop-shadow(22px 23px 24px #000000b3);
                     }
                 }
 
@@ -702,6 +754,9 @@
 
 /* 4k landscape and portrait */
 @media(min-height: 3840px) and (max-height: 7679px) and (min-width: 2560px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 1800px;
@@ -737,6 +792,7 @@
 
                     img {
                         border: 1rem solid;
+                        filter: drop-shadow(32px 33px 34px #000000b3);
                     }
                 }
 
@@ -761,6 +817,9 @@
 }
 
 @media(min-width: 3840px) and (max-width: 7679px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 2000px;
@@ -796,6 +855,7 @@
 
                     img {
                         border: 0.5rem solid;
+                        filter: drop-shadow(32px 33px 34px #000000b3);
                     }
                 }
 
@@ -821,6 +881,9 @@
 
 /* 8k landscape and portrait*/
 @media(min-height: 7680px) and (max-height: 9999px) and (min-width: 4320px) and (orientation: portrait) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 3000px;
@@ -856,6 +919,7 @@
 
                     img {
                         border: 3rem solid;
+                        filter: drop-shadow(42px 43px 44px #000000b3);
                     }
                 }
 
@@ -880,6 +944,9 @@
 }
 
 @media(min-width: 7680px) and (max-width: 9999px) and (min-height:4320px) and (orientation: landscape) {
+    .background-proximos-partidos {
+        background-image: url('./../../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
     .sponsor-proximos-partidos {
         img {
             max-width: 4000px;
@@ -915,6 +982,7 @@
 
                     img {
                         border: 2rem solid;
+                        filter: drop-shadow(42px 43px 44px #000000b3);
                     }
                 }
 

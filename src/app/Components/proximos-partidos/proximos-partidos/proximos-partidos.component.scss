@@ -10,7 +10,7 @@
 }
 
 .background-proximos-partidos {
-  background-image: url('../../../../assets/background/background-lineas-cuadrado.svg');
+  background-image: url('../../../../assets/background/background-lineas-vertical.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -95,6 +95,7 @@
           border: solid 0.2rem white;
           border-radius: 50%;
           object-fit: cover;
+          filter: drop-shadow(2px 3px 4px #000000b3);
           height: 90%;
           width: 90%;
         }
