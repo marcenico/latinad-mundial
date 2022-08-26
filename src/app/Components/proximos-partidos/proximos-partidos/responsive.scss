@@ -143,7 +143,7 @@
 
 /* iPad Mini and Air orientation: landscape */
 
-@media (min-height: 768px) and (max-height: 820px) and (orientation: landscape) {
+@media (min-height: 768px) and (max-height: 911px) and (orientation: landscape) {
     .sponsor-proximos-partidos {
         margin-top: 0;
         padding: 2%;
@@ -179,6 +179,7 @@
             .proximos-partidos {
                 width: 48%;
                 margin: 2rem 0;
+                padding: 0 1rem;
 
                 .tiempo-proximos-partidos {
                     font-size: 2rem;
@@ -266,7 +267,7 @@
 }
 
 /* iPad Mini and Air orientation: portrait */
-@media (min-width: 768px) and (max-width: 820px) {
+@media (min-width: 768px) and (max-width: 820px) and (orientation: portrait) {
     .sponsor-proximos-partidos {
         img {
             max-width: 550px;
@@ -300,5 +301,118 @@
 
     .border {
         height: 80%;
+    }
+}
+
+/*Surface Pro 7 orientation landscape */
+
+@media(min-height:912px) and (orientation: landscape){
+    .sponsor-proximos-partidos {
+        img {
+            max-width: 550px;
+        }
+    }
+
+    .section-proximos-partidos {
+        max-width: 700px;
+        .container-title-partidos {
+
+            .title-partidos {
+                font-size: 6.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+
+            .proximos-partidos {
+                margin: 3rem 0;
+                padding: 0 2rem;
+
+                .tiempo-proximos-partidos {
+                    font-size: 4rem;
+                }
+
+                .team-name {
+                    font-size: 4rem;
+                }
+
+                .container-img {
+                    height: 12rem;
+                    width: 12rem;
+                    img {
+                        border: 0.5rem solid;
+                    }
+                }
+
+                .img-home {
+                    left: 18%;
+                }
+
+                .img-away {
+                    right: 18%;
+                }
+            }
+        }
+    }
+
+    .border {
+        height: 100%;
+    }
+}
+
+
+/*Surface Pro 7 orientation portrait */
+
+@media(min-width:821px) and (max-width:1080px) and (orientation: portrait){
+    .sponsor-proximos-partidos {
+        img {
+            max-width: 700px;
+        }
+    }
+
+    .section-proximos-partidos {
+        max-width: 800px;
+        .container-title-partidos {
+
+            .title-partidos {
+                font-size: 6.5rem;
+            }
+        }
+
+        .proximos-partidos-container {
+
+            .proximos-partidos {
+                margin: 6rem 0;
+                padding: 0 2rem;
+
+                .tiempo-proximos-partidos {
+                    font-size: 4rem;
+                }
+
+                .team-name {
+                    font-size: 4rem;
+                }
+
+                .container-img {
+                    height: 20rem;
+                    width: 20rem;
+                    img {
+                        border: 0.5rem solid;
+                    }
+                }
+
+                .img-home {
+                    left: 14%;
+                }
+
+                .img-away {
+                    right: 14%;
+                }
+            }
+        }
+    }
+
+    .border {
+        height: 140%;
     }
 }
