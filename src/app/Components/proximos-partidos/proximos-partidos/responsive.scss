@@ -266,7 +266,7 @@
     }
 }
 
-/* iPad Mini and Air orientation: portrait */
+/* iPad Mini and Air orientation: portrait + Notebook 1366px x 768px*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
     .sponsor-proximos-partidos {
         img {
@@ -473,3 +473,4 @@
         height: 120%;
     }
 }
+
