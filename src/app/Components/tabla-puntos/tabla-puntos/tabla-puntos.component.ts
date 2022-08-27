@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { flags } from 'src/app/mocks/object-images.mocks';
+import { WorldCupService } from 'src/app/services/world-cup.service';
+import { swiperConfigTabla } from 'src/assets/mocks/carousel-config.mocks';
+import { flags } from 'src/assets/mocks/object-images.mocks';
 import { SwiperOptions } from 'swiper';
-import { WorldCupService } from '../../../services/world-cup.service';
-import { swiperConfigTabla } from '../../../mocks/carousel-config.mocks';
 
 @Component({
   selector: 'app-tabla-puntos',

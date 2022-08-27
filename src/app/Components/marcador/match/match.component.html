@@ -1,0 +1,26 @@
+<div *ngIf="match" class="partidos">
+  <!-- TIEMPO PARTIDO -->
+  <h2 class="tiempo">{{ getMinutes() }}:{{ gameSeconds }}</h2>
+  <div class="teams-container">
+    <!-- LOCAL -->
+    <div class="team home">
+      <div class="escudo">
+        <img [src]="getFlag(match.teams.home)" alt="logo local" />
+      </div>
+      <div class="name">
+        {{ match.teams.home.name | uppercase | slice: 0:3 }}
+      </div>
+    </div>
+    <!-- VISITANTE -->
+    <div class="team away">
+      <div class="escudo">
+        <img [src]="getFlag(match.teams.away)" alt="logo visitante" />
+      </div>
+      <div class="name">
+        {{ match.teams.away.name | uppercase | slice: 0:3 }}
+      </div>
+    </div>
+    <!-- MARCADOR DEL PARTIDO -->
+    <div class="marcador">{{ match.goals.home }}-{{ match.goals.away }}</div>
+  </div>
+</div>

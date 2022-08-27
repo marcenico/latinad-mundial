@@ -1,14 +1,16 @@
-<swiper [config]="swiperConfig" #swiper [virtual]="true">
-  <!-- <ng-template swiperSlide>
-    <app-marcador #marcador></app-marcador>
-  </ng-template> -->
-  <!-- <ng-template swiperSlide>
-    <app-proximos-partidos></app-proximos-partidos>
-  </ng-template> -->
-  <ng-template swiperSlide>
-    <app-tabla-puntos></app-tabla-puntos>
-  </ng-template>
-</swiper>
+<div>
+  <swiper [config]="swiperConfig" #swiper>
+    <ng-template swiperSlide>
+      <app-marcador></app-marcador>
+    </ng-template>
+    <ng-template swiperSlide>
+      <app-proximos-partidos></app-proximos-partidos>
+    </ng-template>
+    <ng-template swiperSlide>
+      <app-tabla-puntos></app-tabla-puntos>
+    </ng-template>
+  </swiper>
+</div>
 
-<app-confetti *ngIf="hayGol" [duracionConfetti]="7"></app-confetti>
-<app-animacion *ngIf="hayGol"></app-animacion>
+<app-confetti *ngIf="thereIsAGoal" [duracionConfetti]="timeGoalCelebration"></app-confetti>
+<app-animacion *ngIf="thereIsAGoal"></app-animacion>
