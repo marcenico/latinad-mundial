@@ -1,5 +1,5 @@
 <div>
-  <swiper [config]="swiperConfig">
+  <swiper [config]="swiperConfig" #swiper>
     <ng-template swiperSlide>
       <app-marcador></app-marcador>
     </ng-template>
@@ -12,5 +12,5 @@
   </swiper>
 </div>
 
-<app-confetti *ngIf="hayGol" [duracionConfetti]="7"></app-confetti>
-<app-animacion *ngIf="hayGol"></app-animacion>
+<app-confetti *ngIf="thereIsAGoal" [duracionConfetti]="timeGoalCelebration"></app-confetti>
+<app-animacion *ngIf="thereIsAGoal"></app-animacion>

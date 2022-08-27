@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { WorldCupService } from '../../../services/world-cup.service';
-import { flags } from 'src/app/mocks/object-images.mocks';
+import { WorldCupService } from 'src/app/services/world-cup.service';
+import { flags } from 'src/assets/mocks/object-images.mocks';
 
 @Component({
   selector: 'app-proximos-partidos',
   templateUrl: './proximos-partidos.component.html',
-  styleUrls: ['./proximos-partidos.component.scss'],
-  providers: [WorldCupService]
+  styleUrls: ['./proximos-partidos.component.scss']
 })
 export class ProximosPartidosComponent implements OnInit {
   proximosPartidos: any = [];

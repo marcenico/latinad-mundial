@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { WorldCupService } from '../../../services/world-cup.service';
-import { flags } from 'src/app/mocks/object-images.mocks';
-import { swiperConfigMarcador } from '../../../mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
+import { interval } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
+import { swiperConfigMarcador } from 'src/assets/mocks/carousel-config.mocks';
+import { WorldCupService } from 'src/app/services/world-cup.service';
+import { LiveMatches, Match } from 'src/app/models/live-matches.model';
 import SwiperCore, { Virtual } from 'swiper';
 
 SwiperCore.use([Virtual]);
@@ -11,31 +13,35 @@ SwiperCore.use([Virtual]);
 @Component({
   selector: 'app-marcador',
   templateUrl: './marcador.component.html',
-  styleUrls: ['./marcador.component.scss'],
-  providers: [WorldCupService]
+  styleUrls: ['./marcador.component.scss']
 })
 export class MarcadorComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
-  partidos: any = [];
+  matches: Match[] = [];
   swiperConfigMarcador: SwiperOptions = swiperConfigMarcador;
 
-  constructor(private service: WorldCupService) {}
+  constructor(private worldCupService: WorldCupService) {}
 
   ngOnInit(): any {
-    this.service.getFixtureDemo().subscribe(
-      (partidos: any) => {
-        partidos.response = partidos.response.slice(0, 1);
-        partidos.response.forEach((res: any) => this.cambioImagenBandera(res.teams));
-        this.partidos = partidos.response;
+    this.getLiveMatches();
+  }
+
+  getLiveMatches() {
+    this.worldCupService.getMockLiveMatches('?live=all&league=281').subscribe(
+      (res: LiveMatches) => {
+        this.matches = res.response;
+        this.getMockLiveMatchesInterval();
       },
       (e) => console.error(e)
     );
   }
 
-  cambioImagenBandera(teams: any) {
-    for (let i = 0; i < flags.length; i++) {
-      if (flags[i].id === teams.home.id) teams.home.logo = flags[i].src;
-      if (flags[i].id === teams.away.id) teams.away.logo = flags[i].src;
-    }
+  getMockLiveMatchesInterval() {
+    interval(1800000) // 30 Minutes
+      .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2()))
+      .subscribe(
+        (res: LiveMatches) => (this.matches = res.response),
+        (e) => console.error(e)
+      );
   }
 }

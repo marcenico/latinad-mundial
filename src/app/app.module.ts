@@ -8,8 +8,6 @@ import { MarcadorModule } from './Components/marcador/marcador.module';
 import { ProximosPartidosModule } from './Components/proximos-partidos/proximos-partidos.module';
 import { ConfettiComponent } from './Components/confetti/confetti.component';
 import { TablaPuntosModule } from './Components/tabla-puntos/tabla-puntos.module';
-import { SwiperModule } from 'swiper/angular';
-import SwiperCore, { Autoplay } from 'swiper';
 import { AnimacionModule } from './Components/animacion/animacion.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -26,7 +24,6 @@ import { SharedModule } from './shared/shared.module';
     NgParticlesModule,
     SharedModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

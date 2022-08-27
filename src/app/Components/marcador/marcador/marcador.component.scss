@@ -77,7 +77,7 @@
     height: 32rem;
     width: 32rem;
 
-    img {
+    .escudo__img {
       border-radius: 50%;
       filter: drop-shadow(2px 3px 4px #000000b3);
       object-fit: cover;
@@ -106,7 +106,7 @@
 }
 
 /* ------------------------- 1366px x 768px ---------------------------------*/
-@media  (min-width:1366px) {
+@media (min-width: 1366px) {
   .background {
     background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
@@ -155,8 +155,6 @@
     top: 16rem;
   }
 }
-
-
 
 /* Aspect ratio Vertical */
 @media (min-width: 1920px) {
@@ -272,7 +270,7 @@
     margin: 0 0 18rem 0;
 
     img {
-      width: 40%; 
+      width: 40%;
       max-width: 1160px;
     }
   }
@@ -385,7 +383,6 @@
   }
 
   .partidos {
-
     .teams-container {
       width: 100%;
     }
@@ -419,7 +416,6 @@
     font-size: 45rem;
     top: 50rem;
   }
-
 }
 
 @media screen and (min-height: 3840px) and (orientation: portrait) {
@@ -437,7 +433,6 @@
   }
 
   .partidos {
-
     .teams-container {
       width: 100%;
       gap: 45rem;
@@ -472,7 +467,6 @@
     font-size: 45rem;
     top: 40rem;
   }
-
 }
 
 /*---------------------- 7680px x 4320px landscape and portrait ----------------------------*/
@@ -493,7 +487,7 @@
   .partidos {
     width: 100%;
     max-width: 4000px;
-    
+
     .teams-container {
       gap: 100rem;
       width: max-content;
@@ -528,7 +522,6 @@
     font-size: 120rem;
     top: 140rem;
   }
-
 }
 @media (min-height: 7680px) {
   .background {
@@ -546,7 +539,7 @@
   .partidos {
     width: 100%;
     max-width: 4000px;
-    
+
     .teams-container {
       gap: 100rem;
       width: max-content;
@@ -581,5 +574,4 @@
     font-size: 100rem;
     top: 80rem;
   }
-
 }

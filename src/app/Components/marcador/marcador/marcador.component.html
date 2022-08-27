@@ -6,36 +6,9 @@
         <img src="assets/logos/coca-cola.png" alt="Sponsor" />
       </figure>
 
-      <swiper *ngIf="partidos.length" [config]="swiperConfigMarcador">
-        <ng-template class="iterator" swiperSlide *ngFor="let partido of partidos">
-          <div class="iterator" swiperSlide *ngFor="let partido of partidos">
-            <div class="partidos">
-              <!-- TIEMPO PARTIDO -->
-              <h2 class="tiempo">{{ '00:00' }}</h2>
-              <div class="teams-container">
-                <!-- LOCAL -->
-                <div class="team home">
-                  <div class="escudo">
-                    <img src="assets/flags/{{ partido.teams.home.logo }}" alt="logo local" />
-                  </div>
-                  <div class="name">
-                    {{ partido.teams.home.name | uppercase | slice: 0:3 }}
-                  </div>
-                </div>
-                <!-- VISITANTE -->
-                <div class="team away">
-                  <div class="escudo">
-                    <img src="assets/flags/{{ partido.teams.away.logo }}" alt="logo visitante" />
-                  </div>
-                  <div class="name">
-                    {{ partido.teams.away.name | uppercase | slice: 0:3 }}
-                  </div>
-                </div>
-                <!-- MARCADOR DEL PARTIDO -->
-                <div class="marcador">{{ 0 }}-{{ 0 }}</div>
-              </div>
-            </div>
-          </div>
+      <swiper [config]="swiperConfigMarcador" #swiper>
+        <ng-template class="iterator" swiperSlide *ngFor="let match of matches; let i = index">
+          <app-match [match]="match" [slideIndex]="i"></app-match>
         </ng-template>
       </swiper>
     </section>
