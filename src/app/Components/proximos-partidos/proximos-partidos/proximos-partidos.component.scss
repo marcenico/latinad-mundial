@@ -10,7 +10,7 @@
 }
 
 .background-proximos-partidos {
-  background-image: url('../../../../assets/background/background-lineas-cuadrado.svg');
+  background-image: url('../../../../assets/background/background-lineas-vertical.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +24,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4.5rem;
 }
 
 .sponsor-proximos-partidos {
@@ -32,26 +31,30 @@
   justify-content: center;
   width: 100%;
   font-size: var(--lg);
+  padding: 3%;
   img {
-    width: 72%;
+    min-width: 200px;
+    max-width: 220px;
   }
 }
 
 .section-proximos-partidos {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: 3rem;
+  justify-content: center;
+  width: 90%;
+  min-width: 250px;
+  place-self: center;
 
   .container-title-partidos {
     display: flex;
-    place-content: center;
-    place-items: center;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
     .title-partidos {
       text-align: center;
-      font-size: 9.5rem;
+      font-size: 3rem;
       letter-spacing: 0.2rem;
-      margin-bottom: 1rem;
     }
   }
 
@@ -62,17 +65,18 @@
       position: relative;
       display: flex;
       align-items: center;
-      margin: 3.5rem 0;
-      padding: 0 4rem;
+      height: 22%;
+      width: 100%;
+      padding: 0 1rem;
       .tiempo-proximos-partidos {
         text-align: center;
-        font-size: 7rem;
+        font-size: 1.3rem;
         letter-spacing: 0.2rem;
         width: 33.3%;
       }
       .team-name {
         width: 33.3%;
-        font-size: 7.5rem;
+        font-size: 1.3rem;
         line-height: 9rem;
         letter-spacing: 0.4rem;
       }
@@ -81,23 +85,27 @@
       }
       .container-img {
         position: absolute;
-        border: solid 0.4rem white;
-        height: 12rem;
-        width: 12rem;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        height: 6rem;
+        width: 6rem;
         border-radius: 50%;
         img {
+          border: solid 0.2rem white;
           border-radius: 50%;
           object-fit: cover;
-          height: 100%;
-          width: 100%;
+          filter: drop-shadow(2px 3px 4px #000000b3);
+          height: 90%;
+          width: 90%;
         }
       }
       .img-home {
-        left: 25%;
+        left: 18%;
       }
 
       .img-away {
-        right: 25%;
+        right: 18%;
       }
     }
   }
@@ -107,7 +115,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 9rem;
+  height: 40%;
   border-radius: 40px;
   z-index: 0;
   opacity: 0.7;
@@ -116,77 +124,4 @@
   -moz-box-shadow: 0px 0px 15px 4px #ffffffd7 inset;
 }
 
-/*Aspect ratio Vertical*/
-@media (max-aspect-ratio: 3/4) {
-  .background-proximos-partidos {
-    background-image: url('../../../../assets/background/background-lineas-vertical.svg');
-  }
-
-  .sponsor-proximos-partidos img {
-    width: 90%;
-  }
-
-  .section-proximos-partidos {
-    margin-top: 6rem;
-
-    .container-title-partidos {
-      .title-partidos {
-        font-size: 12rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .proximos-partidos-container {
-      .proximos-partidos {
-        margin: 3.5rem 0;
-        padding: 0 4rem;
-        .tiempo-proximos-partidos {
-          font-size: 7.5rem;
-        }
-        .team-name {
-          font-size: 8rem;
-        }
-        .container-img {
-          height: 12.5rem;
-          width: 12.5rem;
-        }
-      }
-    }
-
-    .border {
-      height: 10rem;
-    }
-  }
-}
-
-/*Aspect ratio Horizontal*/
-@media (min-aspect-ratio: 4/3) {
-  .background-proximos-partidos {
-    background-image: url('../../../../assets/background/background-lineas-horizontal.svg');
-  }
-
-  .sponsor-proximos-partidos {
-    margin-top: 4rem;
-    img {
-      width: 45%;
-    }
-  }
-
-  .container-title-partidos {
-    .title-partidos {
-      font-size: 8.5rem;
-    }
-  }
-
-  .section-proximos-partidos {
-    .proximos-partidos-container {
-      width: 55%;
-      place-self: center;
-
-      .proximos-partidos {
-        padding: 0 5rem;
-        margin: 2.5rem;
-      }
-    }
-  }
-}
+@import './responsive.scss'
