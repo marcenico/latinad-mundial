@@ -1,6 +1,7 @@
-<!-- <div>
+<div>
   <swiper [config]="swiperConfig">
     <ng-template swiperSlide>
+      <app-marcador></app-marcador>
     </ng-template>
     <ng-template swiperSlide>
       <app-proximos-partidos></app-proximos-partidos>
@@ -9,8 +10,7 @@
       <app-tabla-puntos></app-tabla-puntos>
     </ng-template>
   </swiper>
-</div> -->
+</div>
 
-<app-marcador></app-marcador>
 <app-confetti *ngIf="hayGol" [duracionConfetti]="7"></app-confetti>
 <app-animacion *ngIf="hayGol"></app-animacion>
