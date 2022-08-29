@@ -12,7 +12,7 @@ export class UtilsService {
     let matches: Match[] = [];
     response.forEach((match: any) => {
       matches.push({
-        fixture: { id: match.fixture.id, status: match.fixture.status },
+        fixture: { id: match.fixture.id, status: match.fixture.status, date: match.fixture.date },
         teams: match.teams,
         goals: match.goals
       });

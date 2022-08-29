@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Away, Home, Match } from 'src/app/models/live-matches.model';
+import { UtilsService } from 'src/app/services/utlis.service';
 import { WorldCupService } from 'src/app/services/world-cup.service';
-import { flags } from 'src/assets/mocks/object-images.mocks';
+import { LiveMatches } from '../../../models/live-matches.model';
 
 @Component({
   selector: 'app-proximos-partidos',
@@ -8,29 +10,21 @@ import { flags } from 'src/assets/mocks/object-images.mocks';
   styleUrls: ['./proximos-partidos.component.scss']
 })
 export class ProximosPartidosComponent implements OnInit {
-  proximosPartidos: any = [];
+  proximosPartidos: Match[] = [];
 
-  constructor(private service: WorldCupService) {}
+  constructor(private service: WorldCupService, private utilsService: UtilsService) {}
 
   ngOnInit(): void {
-    // this.service.getEndpoint('?league=1&next=4').subscribe((resultados) => {
-    //   this.resultados = resultados.response;
-    //   console.log(resultados);
-    // });
-    this.service.getFixtureDemo().subscribe(
-      (resultados: any) => {
-        resultados.response = resultados.response.slice(0, 4);
-        resultados.response.forEach((res: any) => this.cambioImagenBandera(res.teams));
-        this.proximosPartidos = resultados.response;
+    this.service.getMockProximosPartidos('?league=1&next=4').subscribe(
+      (res: LiveMatches) => {
+        res.response = res.response.slice(0, 4);
+        this.proximosPartidos = res.response;
       },
       (e) => console.error(e)
     );
   }
 
-  cambioImagenBandera(teams: any) {
-    for (let i = 0; i < flags.length; i++) {
-      if (flags[i].id === teams.home.id) teams.home.logo = flags[i].src;
-      if (flags[i].id === teams.away.id) teams.away.logo = flags[i].src;
-    }
+  getFlag(team: Home | Away) {
+    return this.utilsService.cambioImagenBandera(team);
   }
 }

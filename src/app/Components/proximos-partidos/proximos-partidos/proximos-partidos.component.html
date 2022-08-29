@@ -22,10 +22,10 @@
               {{ proximoPartido.teams.away.name.toUpperCase() | slice: 0:3 }}
             </div>
             <figure class="container-img img-home">
-              <img src="assets/flags/{{ proximoPartido.teams.home.logo }}" alt="logo local" />
+              <img [src]="getFlag(proximoPartido.teams.home)" alt="logo local" />
             </figure>
             <figure class="container-img img-away">
-              <img src="assets/flags/{{ proximoPartido.teams.away.logo }}" alt="logo visitante" />
+              <img [src]="getFlag(proximoPartido.teams.away)" alt="logo visitante" />
             </figure>
           </div>
         </div>

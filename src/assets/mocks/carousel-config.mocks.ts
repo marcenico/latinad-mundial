@@ -5,9 +5,9 @@ export const swiperConfig1: SwiperOptions = {
   navigation: false,
   pagination: false,
   scrollbar: false,
-  loop: true,
-  autoplay: { delay: 1000 * 8, disableOnInteraction: false },
-  speed: 1000
+  // loop: true,
+  // autoplay: { delay: 1000 * 8, disableOnInteraction: false },
+  // speed: 1000
 };
 
 export const swiperConfigMarcador: SwiperOptions = {
