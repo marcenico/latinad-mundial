@@ -108,7 +108,7 @@
 /* ------------------------- 1366px x 768px ---------------------------------*/
 @media  (min-width:1366px) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
   }
 
   .sponsor-marcador {
@@ -158,10 +158,10 @@
 
 
 
-/* Aspect ratio Vertical */
+  /* Media querie desktop in landscape orientation */
 @media (min-width: 1920px) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-vertical.svg');
+    background-image: url('../../../../assets/background/ultrawide-horizontal-lineas.svg');
   }
 
   .sponsor-marcador {
@@ -210,10 +210,10 @@
   }
 }
 
-/* Aspect ratio Horizontal */
+/* Media querie desktop in portrait orientation */
 @media (min-height: 1920px) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
   }
 
   .sponsor-marcador {
@@ -265,7 +265,7 @@
 
 @media screen and (min-width: 2560px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
   }
 
   .sponsor-marcador {
@@ -318,7 +318,7 @@
 
 @media screen and (min-height: 2560px) and (orientation: portrait) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-vertical.svg');
+    background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
   }
 
   .sponsor-marcador {
