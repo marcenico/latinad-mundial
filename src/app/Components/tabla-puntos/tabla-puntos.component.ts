@@ -4,8 +4,8 @@ import { Team } from 'src/app/models/table.model';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { swiperConfigTabla } from 'src/app/mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
-import { UtilsService } from '../../../services/utlis.service';
 import { mergeMap } from 'rxjs/operators';
+import { UtilsService } from 'src/app/services/utlis.service';
 
 @Component({
   selector: 'app-tabla-puntos',

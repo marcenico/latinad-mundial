@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { Away, Goals, Home, LiveMatches, Match } from 'src/app/models/live-matches.model';
-import { WorldCupService } from '../../../services/world-cup.service';
-import { UtilsService } from '../../../services/utlis.service';
+import { UtilsService } from 'src/app/services/utlis.service';
+import { WorldCupService } from 'src/app/services/world-cup.service';
 
 @Component({
   selector: 'app-match',

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Away, Home, Match } from 'src/app/models/live-matches.model';
+import { Away, Home, LiveMatches, Match } from 'src/app/models/live-matches.model';
 import { UtilsService } from 'src/app/services/utlis.service';
 import { WorldCupService } from 'src/app/services/world-cup.service';
-import { LiveMatches } from '../../../models/live-matches.model';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 
