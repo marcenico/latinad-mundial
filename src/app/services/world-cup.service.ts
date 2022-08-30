@@ -16,7 +16,6 @@ export class WorldCupService {
       .set('x-rapidapi-key', '80c1cdfd17c336d9ec08d8a1abde4992')
       .set('x-rapidapi-host', 'https://v3.football.api-sports.io')
   };
-  private apiUrl2 = 'http://localhost:5005/data';
 
   public thereIsAGoal$ = new EventEmitter<{ isGoal: boolean; slideIndex: number }>();
 
