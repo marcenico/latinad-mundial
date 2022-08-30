@@ -16,7 +16,7 @@
                 <div class="table-teams--ul" *ngFor="let item of grupos">
                   <div class="border-table"></div>
                   <div class="escudo">
-                    <img src="assets/flags/{{ item?.team.logo }}" alt="{{ item?.team.logo }}" />
+                    <img [src]="getFlag(item.team)" alt="{{ item }}" />
                   </div>
                   <div class="title-name">{{ item?.team.name.toUpperCase() | slice: 0:3 }}</div>
                   <div class="points">{{ item?.points }} pts</div>

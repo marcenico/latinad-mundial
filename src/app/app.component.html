@@ -1,13 +1,13 @@
 <swiper [config]="swiperConfig" #swiper>
   <!-- <ng-template swiperSlide>
     <app-marcador></app-marcador>
-  </ng-template> -->
+  </ng-template>
   <ng-template swiperSlide>
     <app-proximos-partidos></app-proximos-partidos>
-  </ng-template>
-  <!-- <ng-template swiperSlide>
-    <app-tabla-puntos></app-tabla-puntos>
   </ng-template> -->
+  <ng-template swiperSlide>
+    <app-tabla-puntos></app-tabla-puntos>
+  </ng-template>
 </swiper>
 
 <app-confetti *ngIf="thereIsAGoal" [duracionConfetti]="timeGoalCelebration"></app-confetti>
