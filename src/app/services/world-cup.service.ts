@@ -11,10 +11,9 @@ import { Table } from '../models/table.model';
   providedIn: 'root'
 })
 export class WorldCupService {
+  private token = '80c1cdfd17c336d9ec08d8a1abde4992';
   private options = {
-    headers: new HttpHeaders()
-      .set('x-rapidapi-key', '80c1cdfd17c336d9ec08d8a1abde4992')
-      .set('x-rapidapi-host', 'https://v3.football.api-sports.io')
+    headers: new HttpHeaders().set('x-rapidapi-key', this.token).set('x-rapidapi-host', environment.apiSports)
   };
 
   public thereIsAGoal$ = new EventEmitter<{ isGoal: boolean; slideIndex: number }>();

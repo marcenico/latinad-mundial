@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { Team } from 'src/app/models/table.model';
 import { WorldCupService } from 'src/app/services/world-cup.service';
-import { swiperConfigTabla } from 'src/assets/mocks/carousel-config.mocks';
+import { swiperConfigTabla } from 'src/app/mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
 import { UtilsService } from '../../../services/utlis.service';
 import { mergeMap } from 'rxjs/operators';

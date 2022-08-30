@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { swiperConfig1 } from '../assets/mocks/carousel-config.mocks';
+import { swiperConfig1 } from './mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';

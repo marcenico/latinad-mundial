@@ -3,7 +3,7 @@ import { Autoplay, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { swiperConfigMarcador } from 'src/assets/mocks/carousel-config.mocks';
+import { swiperConfigMarcador } from 'src/app/mocks/carousel-config.mocks';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { LiveMatches, Match } from 'src/app/models/live-matches.model';
 import SwiperCore, { Virtual } from 'swiper';

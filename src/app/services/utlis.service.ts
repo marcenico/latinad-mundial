@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { flags } from 'src/assets/mocks/object-images.mocks';
+import { flags } from 'src/app/mocks/object-images.mocks';
 import { Away, Home, Match } from '../models/live-matches.model';
 import { Table, Team } from '../models/table.model';
 
