@@ -18,7 +18,6 @@ export class ProximosPartidosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProximosPartidos();
-    this.getProximosPartidosInterval(6 * 1000 * 60 * 60); // 6 Horas
   }
 
   getProximosPartidos() {
@@ -26,6 +25,7 @@ export class ProximosPartidosComponent implements OnInit {
       (res: LiveMatches) => {
         res.response = res.response.slice(0, 4);
         this.proximosPartidos = res.response;
+        this.getProximosPartidosInterval(6 * 1000 * 60 * 60); // 6 Horas
       },
       (e) => console.error(e)
     );

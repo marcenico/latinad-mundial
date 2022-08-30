@@ -21,7 +21,7 @@ export class MatchComponent implements OnInit {
 
   ngOnInit(): void {
     this.startWatch();
-    interval(10 * 1000) // 1 * 1000 = 1 segundo
+    interval(1 * 1000 * 60) // 1 Minuto
       .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {

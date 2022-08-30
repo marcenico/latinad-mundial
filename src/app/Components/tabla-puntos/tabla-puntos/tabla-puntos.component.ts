@@ -23,13 +23,13 @@ export class TablaPuntosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTablePoints();
-    this.getTablePointsInterval(6 * 1000 * 60 * 60); // 6 Horas
   }
 
   getTablePoints() {
     this.service.getMockTablePoints('?league=1&season=2022').subscribe(
       (res) => {
         this.tables = res;
+        this.getTablePointsInterval(6 * 1000 * 60 * 60); // 6 Horas
       },
       (e) => console.error(e)
     );

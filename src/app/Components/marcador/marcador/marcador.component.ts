@@ -30,14 +30,14 @@ export class MarcadorComponent implements OnInit {
     this.worldCupService.getMockLiveMatches('?live=all&league=281').subscribe(
       (res: LiveMatches) => {
         this.matches = res.response;
-        this.getMockLiveMatchesInterval();
+        this.getMockLiveMatchesInterval(30 * 1000 * 60); // 30 Minutos
       },
       (e) => console.error(e)
     );
   }
 
-  getMockLiveMatchesInterval() {
-    interval(1800000) // 30 Minutes
+  getMockLiveMatchesInterval(delay: number) {
+    interval(delay) // 30 Minutes
       .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2()))
       .subscribe(
         (res: LiveMatches) => (this.matches = res.response),
