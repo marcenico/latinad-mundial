@@ -17,11 +17,21 @@ export class ProximosPartidosComponent implements OnInit {
   constructor(private service: WorldCupService, private utilsService: UtilsService) {}
 
   ngOnInit(): void {
-    this.getProximosPartidos(0);
-    this.getProximosPartidos(6 * 1000 * 60 * 60); // 6 Horas
+    this.getProximosPartidos();
+    this.getProximosPartidosInterval(6 * 1000 * 60 * 60); // 6 Horas
   }
 
-  getProximosPartidos(delay: number) {
+  getProximosPartidos() {
+    this.service.getMockProximosPartidos('?league=1&next=4').subscribe(
+      (res: LiveMatches) => {
+        res.response = res.response.slice(0, 4);
+        this.proximosPartidos = res.response;
+      },
+      (e) => console.error(e)
+    );
+  }
+
+  getProximosPartidosInterval(delay: number) {
     interval(delay)
       .pipe(mergeMap(() => this.service.getMockProximosPartidos('?league=1&next=4')))
       .subscribe(

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 import { Team } from 'src/app/models/table.model';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { swiperConfigTabla } from 'src/assets/mocks/carousel-config.mocks';
 import { SwiperOptions } from 'swiper';
 import { UtilsService } from '../../../services/utlis.service';
+import { mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tabla-puntos',
@@ -20,12 +22,28 @@ export class TablaPuntosComponent implements OnInit {
   constructor(private service: WorldCupService, private utilsService: UtilsService) {}
 
   ngOnInit(): void {
+    this.getTablePoints();
+    this.getTablePointsInterval(6 * 1000 * 60 * 60); // 6 Horas
+  }
+
+  getTablePoints() {
     this.service.getMockTablePoints('?league=1&season=2022').subscribe(
       (res) => {
         this.tables = res;
       },
       (e) => console.error(e)
     );
+  }
+
+  getTablePointsInterval(delay: number) {
+    interval(delay)
+      .pipe(mergeMap(() => this.service.getMockTablePoints('?league=1&season=2022')))
+      .subscribe(
+        (res) => {
+          this.tables = res;
+        },
+        (e) => console.error(e)
+      );
   }
 
   nombreDeGrupo(indexTabla: number, indexGrupo: number) {
