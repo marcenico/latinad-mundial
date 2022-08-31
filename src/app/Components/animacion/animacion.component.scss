@@ -9,7 +9,7 @@
 }
 
 .background {
-  background-image: url('../../../assets/background/background-cancha-cuadrado.svg');
+  background-image: url('../../../assets/background/ultrawide-vertical-cancha.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@
   justify-content: center;
 
   .letter {
-    font-size: 30rem;
+    font-size: 6rem;
     color: white;
     top: 0px;
     text-align: center;
@@ -109,9 +109,123 @@
   }
 }
 
-@media (max-aspect-ratio: 3/4) {
+/*Media Query Mobile Devices*/
+
+@media(min-width:360px) and (max-width: 539px) and (orientation: portrait) {
+  .container-sponsor {
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .container-letter {
+    .letter {
+      font-size: 10rem;
+    }
+  }
+}
+
+@media(min-height: 280px) and (max-height: 414px) and (orientation: landscape) {
+  .container-sponsor {
+    img {
+      width: 40%;
+
+    }
+  }
+  .container-letter {
+    .letter {
+      font-size: 12rem;
+    }
+  }
+}
+
+/*Media Query Tablets Devices*/
+
+
+/*Surface Duo*/
+@media(min-width:540px) and (max-width: 769px) and (orientation: portrait) {
+  .container-sponsor {
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .container-letter {
+    .letter {
+      font-size: 14rem;
+    }
+  }
+}
+
+@media(min-height:540px) and (orientation: landscape) {
+  .container-sponsor {
+
+    img {
+      width: 60%;
+    }
+  }
+
+  .container-letter {
+    .letter {
+      font-size: 18rem;
+    }
+  }
+}
+
+/*iPad Mini, Air and Surface Pro*/
+
+@media(min-width: 768px) and (max-width: 912px) and (orientation: portrait) {
+  .container-sponsor {
+
+    img {
+      width: 60%;
+    }
+  }
+
+  .container-letter {
+    .letter {
+      font-size: 20rem;
+    }
+  }
+}
+
+@media(min-height: 768px) and (max-height: 912px) and (orientation: landscape) {
+  .container-sponsor {
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .container-letter {
+    .letter {
+      font-size: 25rem;
+    }
+  }
+}
+
+
+
+@media(aspect-ratio: 1/1) {
+  .container-sponsor {
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .container-letter {
+    .letter {
+      font-size: 30rem;
+    }
+  }
+}
+
+@media (min-height: 1920px) and (orientation: portrait) {
   .background {
-    background-image: url('../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../assets/background/background-cancha-vertical.svg');
   }
 
   .container-sponsor {
@@ -123,9 +237,9 @@
   }
 }
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-width: 1920px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../assets/background/background-cancha-vertical.svg');
+    background-image: url('../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .container-sponsor {

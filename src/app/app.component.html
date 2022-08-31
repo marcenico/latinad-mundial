@@ -1,4 +1,4 @@
-<swiper [config]="swiperConfig" #swiper>
+<!-- <swiper [config]="swiperConfig" #swiper>
   <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlide1">
     <app-marcador></app-marcador>
   </ng-template>
@@ -8,7 +8,8 @@
   <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlide3">
     <app-tabla-puntos></app-tabla-puntos>
   </ng-template>
-</swiper>
+</swiper> -->
 
 <app-confetti *ngIf="thereIsAGoal" [duracionConfetti]="timeGoalCelebration"></app-confetti>
 <app-animacion *ngIf="thereIsAGoal"></app-animacion>
+<app-animacion></app-animacion>
