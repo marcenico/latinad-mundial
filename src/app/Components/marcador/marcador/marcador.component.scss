@@ -108,13 +108,17 @@
 
 .marcador {
   position: absolute;
+  display: flex;
+  justify-content: center;
   text-align: center;
   top: 36%;
   left: 0;
   right: 0;
-  font-size: 6rem;
-  font-weight: bold;
-  color: white;
+  div {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+  }
 }
 
 /*--------------------Media querie Mobile Devices----------------------------*/
@@ -166,7 +170,9 @@
 
   .marcador {
     top: 48%;
-    font-size: 11rem;
+    div {
+      font-size: 11rem;
+    }
   }
 }
 
@@ -206,7 +212,9 @@
 
   .marcador {
     top: 48%;
-    font-size: 15rem;
+    div {
+      font-size: 15rem;
+    }
   }
 }
 
@@ -246,7 +254,9 @@
 
   .marcador {
     top: 48%;
-    font-size: 15rem;
+    div {
+      font-size: 15rem;
+    }
   }
 }
 
@@ -294,8 +304,10 @@
   }
 
   .marcador {
-    font-size: 16rem;
     top: 20rem;
+    div {
+      font-size: 16rem;
+    }
   }
 }
 
@@ -346,8 +358,10 @@
   }
 
   .marcador {
-    font-size: 22rem;
     top: 25rem;
+    div {
+      font-size: 22rem;
+    }
   }
 }
 
@@ -402,7 +416,9 @@
 
   .marcador {
     top: 56%;
-    font-size: 20rem;
+    div {
+      font-size: 20rem;
+    }
   }
 }
 
@@ -460,8 +476,10 @@
   }
 
   .marcador {
-    font-size: 35rem;
     top: 35rem;
+    div {
+      font-size: 35rem;
+    }
   }
 }
 
@@ -517,8 +535,10 @@
   }
 
   .marcador {
-    font-size: 25rem;
     top: 25rem;
+    div {
+      font-size: 25rem;
+    }
   }
 }
 
@@ -572,8 +592,10 @@
   }
 
   .marcador {
-    font-size: 45rem;
     top: 60rem;
+    div {
+      font-size: 45rem;
+    }
   }
 }
 
@@ -628,8 +650,10 @@
   }
 
   .marcador {
-    font-size: 50rem;
     top: 60rem;
+    div {
+      font-size: 50rem;
+    }
   }
 }
 
@@ -687,8 +711,10 @@
   }
 
   .marcador {
-    font-size: 120rem;
     top: 140rem;
+    div {
+      font-size: 120rem;
+    }
   }
 }
 
@@ -744,7 +770,44 @@
   }
 
   .marcador {
-    font-size: 100rem;
     top: 80rem;
+    div {
+      font-size: 100rem;
+    }
+  }
+}
+
+.marcador--anim {
+  -webkit-animation: text-anim 1s linear both;
+  animation: text-anim 1s linear both;
+}
+
+@-webkit-keyframes text-anim {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+
+@keyframes text-anim {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
   }
 }

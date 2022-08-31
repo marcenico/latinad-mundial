@@ -3,10 +3,10 @@ import { Autoplay, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { swiperConfigMarcador } from 'src/app/mocks/carousel-config.mocks';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { LiveMatches, Match } from 'src/app/models/live-matches.model';
 import SwiperCore, { Virtual } from 'swiper';
+import { ConfigLoaderService } from 'src/app/config-loader.service';
 
 SwiperCore.use([Virtual]);
 
@@ -18,16 +18,18 @@ SwiperCore.use([Virtual]);
 export class MarcadorComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   matches: Match[] = [];
-  swiperConfigMarcador: SwiperOptions = swiperConfigMarcador;
+  swiperConfigMarcador: SwiperOptions;
 
-  constructor(private worldCupService: WorldCupService) {}
+  constructor(private worldCupService: WorldCupService, private configLoaderService: ConfigLoaderService) {
+    this.swiperConfigMarcador = this.configLoaderService.swiperConfigMarcador;
+  }
 
   ngOnInit(): any {
     this.getLiveMatches();
   }
 
   getLiveMatches() {
-    this.worldCupService.getMockLiveMatches('?live=all&league=239').subscribe(
+    this.worldCupService.getMatches('?live=all').subscribe(
       (res: LiveMatches) => {
         this.swiperConfigMarcador.autoplay = this.setAutoplay(res.response);
         this.matches = res.response;

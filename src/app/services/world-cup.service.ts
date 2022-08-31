@@ -6,19 +6,27 @@ import { map } from 'rxjs/operators';
 import { LiveMatches } from '../models/live-matches.model';
 import { UtilsService } from './utlis.service';
 import { Table } from '../models/table.model';
+import { ConfigLoaderService } from '../config-loader.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WorldCupService {
-  private token = '80c1cdfd17c336d9ec08d8a1abde4992';
-  private options = {
-    headers: new HttpHeaders().set('x-rapidapi-key', this.token).set('x-rapidapi-host', environment.apiSports)
-  };
+  private token = '';
+  private options: any;
 
   public thereIsAGoal$ = new EventEmitter<{ isGoal: boolean; slideIndex: number }>();
 
-  constructor(private http: HttpClient, private utilsService: UtilsService) {}
+  constructor(
+    private http: HttpClient,
+    private utilsService: UtilsService,
+    private configLoaderService: ConfigLoaderService
+  ) {
+    this.token = this.configLoaderService.token;
+    this.options = {
+      headers: new HttpHeaders().set('x-rapidapi-key', this.token).set('x-rapidapi-host', environment.apiSports)
+    };
+  }
 
   thereIsAGoal(value: any) {
     this.thereIsAGoal$.emit(value);

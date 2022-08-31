@@ -13,6 +13,8 @@ import { WorldCupService } from 'src/app/services/world-cup.service';
 export class MatchComponent implements OnInit {
   @Input() match: Match;
   @Input() slideIndex: number;
+  isGoalHome = false;
+  isGoalAway = false;
   public gameSeconds = '00';
   private gameMinutes = 0;
   private intervalSeconds: any;
@@ -23,7 +25,7 @@ export class MatchComponent implements OnInit {
     this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
-    interval(2 * 1000 * 60) // 2 Minutos
+    interval(5 * 1000) // 2 Minutos
       .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
@@ -73,16 +75,20 @@ export class MatchComponent implements OnInit {
   private checkGoal(previousGoals: Goals, current: Goals) {
     if (JSON.stringify(previousGoals) === JSON.stringify(current)) return;
 
+    if (previousGoals.home < current.home) {
+      setTimeout(() => (this.isGoalHome = true), 5.5 * 1000);
+      setTimeout(() => (this.isGoalHome = false), 7.5 * 1000);
+    }
+
+    if (previousGoals.away < current.away) {
+      setTimeout(() => (this.isGoalAway = true), 5.5 * 1000);
+      setTimeout(() => (this.isGoalAway = false), 7.5 * 1000);
+    }
+
     this.worldCupService.thereIsAGoal({ isGoal: true, slideIndex: this.slideIndex });
   }
 
   private checkMatchTime(status: Status) {
-    if (status.short === 'HT') {
-      status.elapsed = 0;
-    }
-
-    if (status.short === '2H') {
-      status.elapsed += 45;
-    }
+    if (status.short === 'HT') status.elapsed = 0;
   }
 }

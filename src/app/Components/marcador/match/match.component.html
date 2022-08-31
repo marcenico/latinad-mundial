@@ -21,6 +21,10 @@
       </div>
     </div>
     <!-- MARCADOR DEL PARTIDO -->
-    <div class="marcador">{{ match.goals.home }}-{{ match.goals.away }}</div>
+    <div class="marcador">
+      <div [ngClass]="{ 'marcador--anim': isGoalHome }">{{ match.goals.home }}</div>
+      <div>-</div>
+      <div [ngClass]="{ 'marcador--anim': isGoalAway }">{{ match.goals.away }}</div>
+    </div>
   </div>
 </div>
