@@ -1,7 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { swiperConfig1 } from './mocks/carousel-config.mocks';
 import { SwiperComponent } from 'swiper/angular';
-import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';
+import { MarcadorComponent } from './components/marcador/marcador/marcador.component';
 import { WorldCupService } from './services/world-cup.service';
 import SwiperCore, { Virtual } from 'swiper';
 
