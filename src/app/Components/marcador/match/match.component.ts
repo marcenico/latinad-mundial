@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { Away, Goals, Home, LiveMatches, Match } from 'src/app/models/live-matches.model';
+import { Away, Goals, Home, LiveMatches, Match, Status } from 'src/app/models/live-matches.model';
 import { UtilsService } from 'src/app/services/utlis.service';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 
@@ -20,16 +20,14 @@ export class MatchComponent implements OnInit {
   constructor(private worldCupService: WorldCupService, private utilsService: UtilsService) {}
 
   ngOnInit(): void {
+    this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
     interval(2 * 1000 * 60) // 2 Minutos
       .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
-          if (res.response[0].fixture.status.short === '2H') {
-            res.response[0].fixture.status.elapsed += 45;
-          }
-
+          this.checkMatchTime(res.response[0].fixture.status);
           this.checkGoal(this.match.goals, res.response[0].goals);
           this.match = res.response[0];
         },
@@ -52,6 +50,18 @@ export class MatchComponent implements OnInit {
     }, 1000);
   }
 
+  getMinutes() {
+    return this.agregarCero(this.gameMinutes.toString());
+  }
+
+  getFlag(team: Home | Away) {
+    return this.utilsService.cambioImagenBandera(team);
+  }
+
+  getStatusShort() {
+    return this.match.fixture.status.short;
+  }
+
   private stopWatch() {
     clearInterval(this.intervalSeconds);
   }
@@ -66,11 +76,13 @@ export class MatchComponent implements OnInit {
     this.worldCupService.thereIsAGoal({ isGoal: true, slideIndex: this.slideIndex });
   }
 
-  getMinutes() {
-    return this.agregarCero(this.gameMinutes.toString());
-  }
+  private checkMatchTime(status: Status) {
+    if (status.short === 'HT') {
+      status.elapsed = 0;
+    }
 
-  getFlag(team: Home | Away) {
-    return this.utilsService.cambioImagenBandera(team);
+    if (status.short === '2H') {
+      status.elapsed += 45;
+    }
   }
 }

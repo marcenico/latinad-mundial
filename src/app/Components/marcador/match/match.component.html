@@ -1,6 +1,6 @@
 <div *ngIf="match" class="partidos">
   <!-- TIEMPO PARTIDO -->
-  <h2 class="tiempo">{{ getMinutes() }}:{{ gameSeconds }}</h2>
+  <h2 class="tiempo" [ngClass]="{ 'tiempo--color': getStatusShort() == 'HT' }">{{ getMinutes() }}:{{ gameSeconds }}</h2>
   <div class="teams-container">
     <!-- LOCAL -->
     <div class="team home">
