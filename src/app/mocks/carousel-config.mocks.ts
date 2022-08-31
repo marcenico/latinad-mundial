@@ -1,16 +1,18 @@
 import { SwiperOptions } from 'swiper';
 
-export const swiperConfig1: SwiperOptions = {
+export const swiperConfig1: any = {
   direction: 'vertical',
   navigation: false,
   pagination: false,
   scrollbar: false,
-  loop: true,
+  rewind: true,
   autoplay: {
-    delay: 1000 * 8, // 8 Segundos
     disableOnInteraction: false
   },
-  speed: 1000
+  speed: 500,
+  delaySlide1: 1000 * 4, // Marcador
+  delaySlide2: 1000 * 4, // Proximos partidos
+  delaySlide3: 1000 * 4 // Tabla de puntos
 };
 
 export const swiperConfigMarcador: SwiperOptions = {
@@ -18,7 +20,7 @@ export const swiperConfigMarcador: SwiperOptions = {
   navigation: false,
   pagination: false,
   scrollbar: false,
-  loop: true,
+  rewind: true,
   speed: 1000
 };
 
@@ -27,7 +29,7 @@ export const swiperConfigTabla: SwiperOptions = {
   navigation: false,
   pagination: false,
   scrollbar: false,
-  loop: true,
+  rewind: true,
   autoplay: {
     delay: 1000 * 4, // $ Segundos
     disableOnInteraction: false
