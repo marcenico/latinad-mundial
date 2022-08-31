@@ -130,12 +130,12 @@
   .container-sponsor {
     img {
       width: 40%;
-
+      max-width: 150px;
     }
   }
   .container-letter {
     .letter {
-      font-size: 12rem;
+      font-size: 8rem;
     }
   }
 }
