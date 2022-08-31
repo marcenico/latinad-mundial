@@ -1,6 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { swiperConfig1 } from './mocks/carousel-config.mocks';
-import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';
 import { WorldCupService } from './services/world-cup.service';
@@ -31,7 +30,7 @@ export class AppComponent implements OnInit {
       this.thereIsAGoal = res.isGoal;
       setTimeout(() => {
         this.thereIsAGoal = false;
-        this.swiper?.swiperRef.slideTo(1);
+        this.swiper?.swiperRef.slideTo(0);
         this.marcador?.swiper?.swiperRef.slideTo(res.slideIndex);
       }, this.timeGoalCelebration * 1000);
     });
