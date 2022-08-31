@@ -10,7 +10,7 @@
 }
 
 .background-proximos-partidos {
-  background-image: url('../../../../assets/background/background-lineas-vertical.svg');
+  background-image: url('../../../assets/background/background-lineas-vertical.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,7 +31,6 @@
   justify-content: center;
   width: 100%;
   font-size: var(--lg);
-  padding: 3%;
   img {
     min-width: 200px;
     max-width: 220px;

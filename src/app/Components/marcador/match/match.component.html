@@ -1,6 +1,6 @@
 <div *ngIf="match" class="partidos">
   <!-- TIEMPO PARTIDO -->
-  <h2 class="tiempo">{{ getMinutes() }}:{{ gameSeconds }}</h2>
+  <h2 class="tiempo" [ngClass]="{ 'tiempo--color': getStatusShort() == 'HT' }">{{ getMinutes() }}:{{ gameSeconds }}</h2>
   <div class="teams-container">
     <!-- LOCAL -->
     <div class="team home">
@@ -21,6 +21,10 @@
       </div>
     </div>
     <!-- MARCADOR DEL PARTIDO -->
-    <div class="marcador">{{ match.goals.home }}-{{ match.goals.away }}</div>
+    <div class="marcador">
+      <div [ngClass]="{ 'marcador--anim': isGoalHome }">{{ match.goals.home }}</div>
+      <div>-</div>
+      <div [ngClass]="{ 'marcador--anim': isGoalAway }">{{ match.goals.away }}</div>
+    </div>
   </div>
 </div>

@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { Away, Goals, Home, LiveMatches, Match } from 'src/app/models/live-matches.model';
-import { WorldCupService } from '../../../services/world-cup.service';
-import { UtilsService } from '../../../services/utlis.service';
+import { Away, Goals, Home, LiveMatches, Match, Status } from 'src/app/models/live-matches.model';
+import { UtilsService } from 'src/app/services/utlis.service';
+import { WorldCupService } from 'src/app/services/world-cup.service';
 
 @Component({
   selector: 'app-match',
@@ -13,6 +13,8 @@ import { UtilsService } from '../../../services/utlis.service';
 export class MatchComponent implements OnInit {
   @Input() match: Match;
   @Input() slideIndex: number;
+  isGoalHome = false;
+  isGoalAway = false;
   public gameSeconds = '00';
   private gameMinutes = 0;
   private intervalSeconds: any;
@@ -20,11 +22,14 @@ export class MatchComponent implements OnInit {
   constructor(private worldCupService: WorldCupService, private utilsService: UtilsService) {}
 
   ngOnInit(): void {
+    this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
-    interval(10 * 1000) // 1 * 1000 = 1 segundo
+
+    interval(5 * 1000) // 2 Minutos
       .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
+          this.checkMatchTime(res.response[0].fixture.status);
           this.checkGoal(this.match.goals, res.response[0].goals);
           this.match = res.response[0];
         },
@@ -47,6 +52,18 @@ export class MatchComponent implements OnInit {
     }, 1000);
   }
 
+  getMinutes() {
+    return this.agregarCero(this.gameMinutes.toString());
+  }
+
+  getFlag(team: Home | Away) {
+    return this.utilsService.cambioImagenBandera(team);
+  }
+
+  getStatusShort() {
+    return this.match.fixture.status.short;
+  }
+
   private stopWatch() {
     clearInterval(this.intervalSeconds);
   }
@@ -58,14 +75,20 @@ export class MatchComponent implements OnInit {
   private checkGoal(previousGoals: Goals, current: Goals) {
     if (JSON.stringify(previousGoals) === JSON.stringify(current)) return;
 
+    if (previousGoals.home < current.home) {
+      setTimeout(() => (this.isGoalHome = true), 5.5 * 1000);
+      setTimeout(() => (this.isGoalHome = false), 7.5 * 1000);
+    }
+
+    if (previousGoals.away < current.away) {
+      setTimeout(() => (this.isGoalAway = true), 5.5 * 1000);
+      setTimeout(() => (this.isGoalAway = false), 7.5 * 1000);
+    }
+
     this.worldCupService.thereIsAGoal({ isGoal: true, slideIndex: this.slideIndex });
   }
 
-  getMinutes() {
-    return this.agregarCero(this.gameMinutes.toString());
-  }
-
-  getFlag(team: Home | Away) {
-    return this.utilsService.cambioImagenBandera(team);
+  private checkMatchTime(status: Status) {
+    if (status.short === 'HT') status.elapsed = 0;
   }
 }

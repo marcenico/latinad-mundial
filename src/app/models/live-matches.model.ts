@@ -12,9 +12,10 @@ export interface Match {
 interface Fixture {
   id: number;
   status: Status;
+  date: Date;
 }
 
-interface Status {
+export interface Status {
   long: string;
   short: string;
   elapsed: number;

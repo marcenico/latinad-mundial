@@ -9,7 +9,7 @@
 }
 
 .background {
-  background-image: url('../../../../assets/background/background-cancha-cuadrado.svg');
+  background-image: url('../../../assets/background/background-cancha-cuadrado.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,7 +111,7 @@
 
 @media (max-aspect-ratio: 3/4) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+    background-image: url('../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .container-sponsor {
@@ -125,7 +125,7 @@
 
 @media (min-aspect-ratio: 4/3) {
   .background {
-    background-image: url('../../../../assets/background/background-cancha-vertical.svg');
+    background-image: url('../../../assets/background/background-cancha-vertical.svg');
   }
 
   .container-sponsor {

@@ -5,10 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --optimization",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "backend": "json-server --port 5000 --watch ./src/app/backend/fixtureDemo.json",
-    "backendDos": "json-server --port 5005 --watch ./src/app/backend/tableDemo.json"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {

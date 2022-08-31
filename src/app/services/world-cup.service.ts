@@ -5,24 +5,35 @@ import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
 import { LiveMatches } from '../models/live-matches.model';
 import { UtilsService } from './utlis.service';
+import { Table } from '../models/table.model';
+import { ConfigLoaderService } from '../config-loader.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WorldCupService {
-  private options = {
-    headers: new HttpHeaders()
-      .set('x-rapidapi-key', '80c1cdfd17c336d9ec08d8a1abde4992')
-      .set('x-rapidapi-host', 'https://v3.football.api-sports.io')
-  };
-  private apiUrl = 'http://localhost:5000/data';
-  private apiUrl2 = 'http://localhost:5005/data';
+  private token = '';
+  private options: any;
 
   public thereIsAGoal$ = new EventEmitter<{ isGoal: boolean; slideIndex: number }>();
 
-  constructor(private http: HttpClient, private utilsService: UtilsService) {}
+  constructor(
+    private http: HttpClient,
+    private utilsService: UtilsService,
+    private configLoaderService: ConfigLoaderService
+  ) {
+    this.token = this.configLoaderService.token;
+    this.options = {
+      headers: new HttpHeaders().set('x-rapidapi-key', this.token).set('x-rapidapi-host', environment.apiSports)
+    };
+  }
 
-  public getLiveMatches(filters: string = ''): Observable<LiveMatches> {
+  thereIsAGoal(value: any) {
+    this.thereIsAGoal$.emit(value);
+  }
+
+  public getMatches(filters: string = ''): Observable<LiveMatches> {
+    filters += `&timezone=${environment.timezone}`;
     return this.http.get<LiveMatches>(`${environment.apiSports}/fixtures${filters}`, this.options).pipe(
       map((data: any) => {
         let filerData: LiveMatches = {
@@ -34,23 +45,17 @@ export class WorldCupService {
     );
   }
 
-  thereIsAGoal(value: any) {
-    this.thereIsAGoal$.emit(value);
+  public getTablePoints(filters: string = ''): Observable<any> {
+    return this.http.get(`${environment.apiSports}/standings${filters}`, this.options).pipe(
+      map((data: any) => {
+        let groupsPartOne: Table[] = data.response[0].league.standings.slice(0, 4);
+        let groupsPartTwo: Table[] = data.response[0].league.standings.slice(4, 8);
+        groupsPartOne = this.utilsService.filterTableData(groupsPartOne);
+        groupsPartTwo = this.utilsService.filterTableData(groupsPartTwo);
+        return [groupsPartOne, groupsPartTwo];
+      })
+    );
   }
-
-  // public getEndpoint(filters: string = ''): Observable<any> {
-  //   return this.http.get(
-  //     `${environment.apiSports}/fixtures${filters}`,
-  //     this.options
-  //   );
-  // }
-
-  // public getTable(filters: string = ''): Observable<any> {
-  //   return this.http.get(
-  //     `${environment.apiSports}/${filters}`,
-  //     this.options
-  //   );
-  // }
 
   //#region Fake Server
   public getMockLiveMatches(filters: string = ''): Observable<LiveMatches> {
@@ -79,15 +84,26 @@ export class WorldCupService {
     );
   }
 
-  public getFixtureDemo(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  public getMockProximosPartidos(filters: string = ''): Observable<LiveMatches> {
+    return this.http.get('assets/mocks/mock-proximos-partidos.json').pipe(
+      map((data: any) => {
+        let filerData: LiveMatches = {
+          errors: data.errors,
+          response: this.utilsService.filterMatchData(data.response)
+        };
+        return filerData;
+      })
+    );
   }
 
-  public getTableDemo(): Observable<any> {
-    return this.http.get(this.apiUrl2).pipe(
+  public getMockTablePoints(filters: string = ''): Observable<any[]> {
+    return this.http.get('assets/mocks/mock-tabla-puntos.json').pipe(
       map((data: any) => {
         let groupsPartOne: any = data.response[0].league.standings.slice(0, 4);
         let groupsPartTwo: any = data.response[0].league.standings.slice(4, 8);
+
+        groupsPartOne = this.utilsService.filterTableData(groupsPartOne);
+        groupsPartTwo = this.utilsService.filterTableData(groupsPartTwo);
         return [groupsPartOne, groupsPartTwo];
       })
     );

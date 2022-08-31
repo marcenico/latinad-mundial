@@ -5,8 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MatchComponent } from './match/match.component';
 
 @NgModule({
-  declarations: [MarcadorComponent, MatchComponent],
-  exports: [MarcadorComponent],
+  exports: [],
   imports: [CommonModule, SharedModule]
 })
 export class MarcadorModule {}
