@@ -14,7 +14,7 @@ import SwiperCore, { Virtual } from 'swiper';
 export class AppComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   @ViewChild('marcador', { static: false }) marcador?: MarcadorComponent;
-  swiperConfig: SwiperOptions = swiperConfig1;
+  swiperConfig: any = swiperConfig1;
   thereIsAGoal = false;
   timeGoalCelebration = 5; // En segundos
 
