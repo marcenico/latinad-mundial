@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Autoplay, SwiperOptions } from 'swiper';
+import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { LiveMatches, Match } from 'src/app/models/live-matches.model';
-import SwiperCore, { Virtual } from 'swiper';
 import { ConfigLoaderService } from 'src/app/config-loader.service';
+import SwiperCore, { Virtual } from 'swiper';
 
 SwiperCore.use([Virtual]);
 
@@ -29,7 +29,7 @@ export class MarcadorComponent implements OnInit {
   }
 
   getLiveMatches() {
-    this.worldCupService.getMatches('?live=all').subscribe(
+    this.worldCupService.getMatches('?live=all&league=1').subscribe(
       (res: LiveMatches) => {
         this.swiperConfigMarcador.autoplay = this.setAutoplay(res.response);
         this.matches = res.response;
@@ -41,7 +41,7 @@ export class MarcadorComponent implements OnInit {
 
   getMockLiveMatchesInterval(delay: number) {
     interval(delay) // 30 Minutes
-      .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2()))
+      .pipe(mergeMap(() => this.worldCupService.getMatches('?live=all&league=1')))
       .subscribe(
         (res: LiveMatches) => {
           this.swiperConfigMarcador.autoplay = this.setAutoplay(res.response);

@@ -25,8 +25,8 @@ export class MatchComponent implements OnInit {
     this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
-    interval(5 * 1000) // 2 Minutos
-      .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2(`?id=${this.match.fixture.id}`)))
+    interval(2 * 1000 * 60) // 2 Minutos
+      .pipe(mergeMap(() => this.worldCupService.getMatches(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
           this.checkMatchTime(res.response[0].fixture.status);

@@ -33,7 +33,7 @@ export class TablaPuntosComponent implements OnInit {
   }
 
   getTablePoints() {
-    this.service.getMockTablePoints('?league=1&season=2022').subscribe(
+    this.service.getTablePoints('?league=1&season=2022').subscribe(
       (res) => {
         this.tables = res;
         this.getTablePointsInterval(6 * 1000 * 60 * 60); // 6 Horas
@@ -44,7 +44,7 @@ export class TablaPuntosComponent implements OnInit {
 
   getTablePointsInterval(delay: number) {
     interval(delay)
-      .pipe(mergeMap(() => this.service.getMockTablePoints('?league=1&season=2022')))
+      .pipe(mergeMap(() => this.service.getTablePoints('?league=1&season=2022')))
       .subscribe(
         (res) => {
           this.tables = res;
