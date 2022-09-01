@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   timeGoalCelebration = 5; // En segundos
 
   constructor(private worldCupService: WorldCupService, private configLoaderService: ConfigLoaderService) {
-    this.swiperConfig = configLoaderService.mainSwiperConfig;
+    this.swiperConfig = this.configLoaderService.mainSwiperConfig;
     SwiperCore.use([Virtual]);
   }
 
