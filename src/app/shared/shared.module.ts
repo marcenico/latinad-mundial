@@ -10,6 +10,6 @@ import SwiperCore, { Autoplay } from 'swiper';
 })
 export class SharedModule {
   constructor() {
-    // SwiperCore.use([Autoplay]);
+    SwiperCore.use([Autoplay]);
   }
 }
