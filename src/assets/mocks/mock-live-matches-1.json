@@ -18,7 +18,7 @@
           "name": "Est\u00e1dio Dr. Jorge Ismael de Biasi",
           "city": "Novo Horizonte, S\u00e3o Paulo"
         },
-        "status": { "long": "Second Half", "short": "2H", "elapsed": 20 }
+        "status": { "long": "Halftime", "short": "HT", "elapsed": 45 }
       },
       "league": {
         "id": 72,
@@ -31,16 +31,16 @@
       },
       "teams": {
         "home": {
-          "id": 7834,
-          "name": "Novorizontino",
-          "logo": "https://media.api-sports.io/football/teams/7834.png",
-          "winner": true
+          "id": 1569,
+          "name": "Qatar",
+          "logo": "https://media.api-sports.io/football/teams/1569.png",
+          "winner": null
         },
         "away": {
-          "id": 139,
-          "name": "Ponte Preta",
-          "logo": "https://media.api-sports.io/football/teams/139.png",
-          "winner": false
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
         }
       },
       "goals": { "home": 1, "away": 0 },

@@ -43,11 +43,13 @@ export class MatchComponent implements OnInit {
 
   private startWatch() {
     this.intervalSeconds = setInterval(() => {
-      this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
-      this.gameMinutes = this.match.fixture.status.elapsed;
+      if (this.match.fixture.status.short !== 'NS') {
+        this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
+        this.gameMinutes = this.match.fixture.status.elapsed;
 
-      if (this.gameSeconds === '59') {
-        setTimeout(() => (this.gameMinutes += 1), 1000);
+        if (this.gameSeconds === '59') {
+          setTimeout(() => (this.gameMinutes += 1), 1000);
+        }
       }
     }, 1000);
   }
