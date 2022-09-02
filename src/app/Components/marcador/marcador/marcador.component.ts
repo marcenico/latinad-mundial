@@ -5,7 +5,7 @@ import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { LiveMatches, Match } from 'src/app/models/live-matches.model';
-import { ConfigLoaderService } from 'src/app/config-loader.service';
+import { ConfigLoaderService } from 'src/app/services/config-loader.service';
 import SwiperCore, { Virtual } from 'swiper';
 
 SwiperCore.use([Virtual]);

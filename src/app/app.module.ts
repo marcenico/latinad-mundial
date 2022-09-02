@@ -10,7 +10,7 @@ import { MarcadorComponent } from './Components/marcador/marcador/marcador.compo
 import { ProximosPartidosComponent } from './Components/proximos-partidos/proximos-partidos.component';
 import { TablaPuntosComponent } from './Components/tabla-puntos/tabla-puntos.component';
 import { MatchComponent } from './Components/marcador/match/match.component';
-import { ConfigLoaderService } from './config-loader.service';
+import { ConfigLoaderService } from './services/config-loader.service';
 import { PreloadFactory } from './preload-service.factory';
 
 @NgModule({

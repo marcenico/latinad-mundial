@@ -2,7 +2,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
 import { WorldCupService } from './services/world-cup.service';
 import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';
-import { ConfigLoaderService } from './config-loader.service';
+import { ConfigLoaderService } from './services/config-loader.service';
 import SwiperCore, { Virtual } from 'swiper';
 
 @Component({

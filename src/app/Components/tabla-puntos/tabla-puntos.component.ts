@@ -5,7 +5,7 @@ import { WorldCupService } from 'src/app/services/world-cup.service';
 import { SwiperOptions } from 'swiper';
 import { mergeMap } from 'rxjs/operators';
 import { UtilsService } from 'src/app/services/utlis.service';
-import { ConfigLoaderService } from 'src/app/config-loader.service';
+import { ConfigLoaderService } from 'src/app/services/config-loader.service';
 
 @Component({
   selector: 'app-tabla-puntos',

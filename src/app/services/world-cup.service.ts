@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { LiveMatches } from '../models/live-matches.model';
 import { UtilsService } from './utlis.service';
 import { Table } from '../models/table.model';
-import { ConfigLoaderService } from '../config-loader.service';
+import { ConfigLoaderService } from './config-loader.service';
 
 @Injectable({
   providedIn: 'root'
