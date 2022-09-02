@@ -111,9 +111,8 @@
 
 /*Media Query Mobile Devices*/
 
-@media(min-width:360px) and (max-width: 539px) and (orientation: portrait) {
+@media (min-width: 360px) and (max-width: 539px) and (orientation: portrait) {
   .container-sponsor {
-
     img {
       width: 70%;
     }
@@ -126,7 +125,7 @@
   }
 }
 
-@media(min-height: 280px) and (max-height: 414px) and (orientation: landscape) {
+@media (min-height: 280px) and (max-height: 414px) and (orientation: landscape) {
   .container-sponsor {
     img {
       width: 40%;
@@ -142,11 +141,9 @@
 
 /*Media Query Tablets Devices*/
 
-
 /*Surface Duo*/
-@media(min-width:540px) and (max-width: 769px) and (orientation: portrait) {
+@media (min-width: 540px) and (max-width: 769px) and (orientation: portrait) {
   .container-sponsor {
-
     img {
       width: 70%;
     }
@@ -159,9 +156,8 @@
   }
 }
 
-@media(min-height:540px) and (orientation: landscape) {
+@media (min-height: 540px) and (orientation: landscape) {
   .container-sponsor {
-
     img {
       width: 60%;
     }
@@ -176,9 +172,8 @@
 
 /*iPad Mini, Air and Surface Pro*/
 
-@media(min-width: 768px) and (max-width: 912px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 912px) and (orientation: portrait) {
   .container-sponsor {
-
     img {
       width: 60%;
     }
@@ -191,9 +186,8 @@
   }
 }
 
-@media(min-height: 768px) and (max-height: 912px) and (orientation: landscape) {
+@media (min-height: 768px) and (max-height: 912px) and (orientation: landscape) {
   .container-sponsor {
-
     img {
       width: 50%;
     }
@@ -206,11 +200,8 @@
   }
 }
 
-
-
-@media(aspect-ratio: 1/1) {
+@media (aspect-ratio: 1/1) {
   .container-sponsor {
-
     img {
       width: 70%;
     }
