@@ -71,7 +71,7 @@
 
 
         .border {
-            height: 60%;
+            height: 40px;
         }
     }
 }
@@ -120,8 +120,12 @@
         }
     }
 
+    .section-proximos-partidos:nth-child(odd) {
+        justify-content: stretch;
+    }
+
     .border {
-        height: 80%;
+        height: 40px;
     }
 
 }
@@ -169,7 +173,7 @@
     }
 
     .border {
-        height: 80%;
+        height: 40px;
     }
 
 }
@@ -209,12 +213,14 @@
         }
 
         .proximos-partidos-container {
-            justify-content: space-between;
             flex-flow: wrap;
+            align-content: flex-start;
+            gap: 25px;
 
             .proximos-partidos {
                 width: 48%;
                 min-width: 247px;
+                margin: 10px 0;
 
                 .date-partidos {
                     .fecha-proximos-partidos {
@@ -241,10 +247,14 @@
                 }
             }
         }
+
+        .proximos-partidos-container .proximos-partidos:nth-child(3) {
+            justify-items: start;
+        }
     }
 
     .border {
-        height: 110%;
+        height: 50px;
     }
 }
 
@@ -284,13 +294,13 @@
         }
 
         .proximos-partidos-container {
-            justify-content: space-between;
             flex-flow: wrap;
+            justify-content: center;
+            gap: 30px;
             align-items: center;
 
             .proximos-partidos {
                 width: 48%;
-                margin: 2rem 0;
                 padding: 0 2rem;
 
                 .date-partidos {
@@ -332,7 +342,7 @@
     }
 
     .border {
-        height: 120%;
+        height: 70px;
     }
 }
 
@@ -359,15 +369,15 @@
 
         .container-title-partidos {
             height: max-content;
-            margin-bottom: 2%;
+            margin-bottom: 10px;
 
             .title-partidos {
-                font-size: 5rem;
+                font-size: 4rem;
             }
         }
 
         .proximos-partidos-container {
-            gap: 5px;
+            gap: 8px;
 
             .proximos-partidos {
 
@@ -394,7 +404,7 @@
     }
 
     .border {
-        height: 70%;
+        height: 60px;
     }
 }
 
@@ -454,7 +464,7 @@
     }
 
     .border {
-        height: 100%;
+        height: 90px;
     }
 }
 
@@ -485,7 +495,7 @@
         .proximos-partidos-container {
 
             .proximos-partidos {
-                margin: 2rem 0;
+                margin: 25px 0;
                 padding: 0 4.5rem;
 
                 .date-partidos {
@@ -526,7 +536,7 @@
     }
 
     .border {
-        height: 100%;
+        height: 90px;
     }
 }
 
@@ -597,7 +607,7 @@
     }
 
     .border {
-        height: 100%;
+        height: 120px;
     }
 }
 
@@ -646,6 +656,7 @@
                     height: 14rem;
                     width: 14rem;
                     filter: drop-shadow(10px 5px 2px #000000b3);
+
                     img {
                         border: solid 0.5rem;
                     }
@@ -663,7 +674,7 @@
     }
 
     .border {
-        height: 100%;
+        height: 100px;
     }
 }
 
@@ -729,7 +740,7 @@
     }
 
     .border {
-        height: 130%;
+        height: 140px;
         border-radius: 20rem;
     }
 }
@@ -741,7 +752,7 @@
 
     .sponsor-proximos-partidos {
         img {
-            max-width: 330px;
+            max-width: 300px;
         }
     }
 
@@ -749,9 +760,10 @@
         max-width: 900px;
 
         .container-title-partidos {
+            margin-bottom: 20px;
             .title-partidos {
                 margin-top: 2rem;
-                font-size: 8.5rem;
+                font-size: 7rem;
             }
         }
 
@@ -779,8 +791,8 @@
                 }
 
                 .container-img {
-                    height: 14rem;
-                    width: 14rem;
+                    height: 13rem;
+                    width: 13rem;
                     filter: drop-shadow(3px 4px 5px #000000b3);
                 }
 
@@ -796,7 +808,7 @@
     }
 
     .border {
-        height: 100%;
+        height: 100px;
         border-radius: 20rem;
     }
 }
@@ -869,7 +881,7 @@
     }
 
     .border {
-        height: 120%;
+        height: 170px;
         border-radius: 20rem;
         box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
         -webkit-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
@@ -892,9 +904,9 @@
         max-width: 1100px;
 
         .container-title-partidos {
+            margin: 20px;
             .title-partidos {
-                margin-top: 0;
-                font-size: 10rem;
+                font-size: 8rem;
                 filter: drop-shadow(3px 3px 3px #000000b3);
             }
         }
@@ -942,7 +954,7 @@
     }
 
     .border {
-        height: 110%;
+        height: 140px;
         border-radius: 20rem;
         box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
         -webkit-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
@@ -977,8 +989,8 @@
 
         .proximos-partidos-container {
             .proximos-partidos {
-                padding: 0 8rem;
-                margin: 16rem 0;
+                padding: 0 80px;
+                margin: 100px 0;
 
                 .date-partidos {
                     .fecha-proximos-partidos {
@@ -1020,7 +1032,7 @@
     }
 
     .border {
-        height: 110%;
+        height: 300px;
         border-radius: 20rem;
         box-shadow: 0px 0px 30px 20px #ffffffd7 inset;
         -webkit-box-shadow: 0px 0px 30px 20px #ffffffd7 inset;
@@ -1035,7 +1047,7 @@
 
     .sponsor-proximos-partidos {
         img {
-            max-width: 900px;
+            max-width: 800px;
             filter: drop-shadow(25px 5px 5px #000000b3);
         }
     }
@@ -1044,6 +1056,7 @@
         max-width: 2200px;
 
         .container-title-partidos {
+            margin-bottom: 50px;
             .title-partidos {
                 margin-top: 0;
                 font-size: 20rem;
@@ -1053,15 +1066,15 @@
 
         .proximos-partidos-container {
             .proximos-partidos {
-                padding: 0 15rem;
-                margin: 5rem 0;
+                padding: 0 150px;
+                margin: 60px 0;
 
                 .date-partidos {
                     .fecha-proximos-partidos {
                         font-size: 8rem;
                         filter: drop-shadow(15px 5px 5px #000000b3);
                     }
-                    
+
                     .tiempo-proximos-partidos {
                         font-size: 12rem;
                         filter: drop-shadow(15px 5px 5px #000000b3);
@@ -1076,9 +1089,8 @@
                 .container-img {
                     height: 30rem;
                     width: 30rem;
-
                     img {
-                        border: 0.5rem solid;
+                        border: solid 10px;
                         filter: drop-shadow(22px 23px 24px #000000b3);
                     }
                 }
@@ -1095,7 +1107,7 @@
     }
 
     .border {
-        height: 95%;
+        height: 230px;
         border-radius: 20rem;
         box-shadow: 0px 0px 30px 20px #ffffffd7 inset;
         -webkit-box-shadow: 0px 0px 30px 20px #ffffffd7 inset;
@@ -1110,10 +1122,12 @@
     }
 
     .sponsor-proximos-partidos {
+        display: flex;
         margin-top: 40px;
-        height: 100%;
         width: 100%;
+        height: 30%;
         filter: drop-shadow(42px 33px 5px #000000b3);
+
         img {
             max-width: 2000px;
             max-height: 2000px;
@@ -1133,6 +1147,7 @@
 
         .proximos-partidos-container {
             max-width: 3500px;
+
             .proximos-partidos {
                 padding: 0 10rem;
                 margin: 35rem 0;
@@ -1142,6 +1157,7 @@
                         font-size: 15rem;
                         filter: drop-shadow(24px 23px 5px #000000b3);
                     }
+
                     .tiempo-proximos-partidos {
                         font-size: 25rem;
                         filter: drop-shadow(24px 23px 5px #000000b3);
@@ -1175,7 +1191,7 @@
     }
 
     .border {
-        height: 120%;
+        height: 600px;
         border-radius: 30rem;
         box-shadow: 0px 0px 50px 34px #ffffffd7 inset;
         -webkit-box-shadow: 0px 0px 50px 34px #ffffffd7 inset;
@@ -1190,7 +1206,8 @@
 
     .sponsor-proximos-partidos {
         width: 100%;
-        margin-top: 50px;
+        margin: 100px 0;
+
         img {
             max-width: max-content;
             height: min-content;
@@ -1202,6 +1219,7 @@
         max-width: 4000px;
 
         .container-title-partidos {
+            margin-bottom: 70px;
             .title-partidos {
                 filter: drop-shadow(32px 12px 5px #000000b3);
                 margin-top: 0;
@@ -1211,15 +1229,15 @@
 
         .proximos-partidos-container {
             .proximos-partidos {
-                padding: 0  30rem;
-                margin: 10rem 0;
+                padding: 0 300px;
+                margin: 120px 0;
 
                 .date-partidos {
                     .fecha-proximos-partidos {
                         font-size: 15rem;
                         filter: drop-shadow(24px 23px 5px #000000b3);
                     }
-                    
+
                     .tiempo-proximos-partidos {
                         font-size: 20rem;
                         filter: drop-shadow(24px 23px 5px #000000b3);
@@ -1237,7 +1255,7 @@
 
                     img {
                         border: 2rem solid;
-                        filter: drop-shadow(40px 20px 5px #000000b3);
+                        filter: drop-shadow(40px 20px 20px #000000b3);
                     }
                 }
 
@@ -1253,7 +1271,7 @@
     }
 
     .border {
-        height: 100%;
+        height: 410px;
         border-radius: 20rem;
         box-shadow: 0px 0px 40px 24px #ffffffd7 inset;
         -webkit-box-shadow: 0px 0px 40px 24px #ffffffd7 inset;
