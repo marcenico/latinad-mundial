@@ -25,7 +25,7 @@ export class MatchComponent implements OnInit {
     this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
-    interval(2 * 1000 * 60) // 2 Minutos
+    interval(1.5 * 1000 * 60) // 2 Minutos
       .pipe(mergeMap(() => this.worldCupService.getMatches(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
@@ -45,8 +45,6 @@ export class MatchComponent implements OnInit {
     this.intervalSeconds = setInterval(() => {
       if (this.match.fixture.status.short !== 'NS') {
         this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
-        this.gameMinutes = this.match.fixture.status.elapsed;
-
         if (this.gameSeconds === '59') {
           setTimeout(() => (this.gameMinutes += 1), 1000);
         }
@@ -91,6 +89,17 @@ export class MatchComponent implements OnInit {
   }
 
   private checkMatchTime(status: Status) {
-    if (status.short === 'HT') status.elapsed = 0;
+    if (status.short === 'HT') {
+      status.elapsed = 0;
+      return;
+    }
+
+    if (status.short === 'FT') {
+      status.elapsed = 0;
+      this.stopWatch();
+      return;
+    }
+
+    this.gameMinutes = status.elapsed;
   }
 }
