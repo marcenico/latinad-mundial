@@ -408,7 +408,7 @@
 
 /*iPad Mini and Air */
 
-@media (min-width: 768px) and (max-width: 912px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 915px) and (orientation: portrait) {
   .sponsor-marcador {
     margin: 0 0 120px 0;
 
@@ -513,19 +513,19 @@
   }
 
   .sponsor-marcador {
-    margin-bottom: 12rem;
+    margin-bottom: 10rem;
 
     img {
-      max-width: 350px;
+      max-width: 300px;
       filter: drop-shadow(8px 10px 1px #000000b3);
     }
   }
 
   .partidos {
-    max-width: 800px;
+    max-width: 600px;
 
     .teams-container {
-      gap: 14rem;
+      gap: 12rem;
     }
 
     .tiempo {
@@ -539,8 +539,8 @@
 
     .escudo {
       border: 1rem solid white;
-      height: 32rem;
-      width: 32rem;
+      height: 25rem;
+      width: 25rem;
 
       img {
         filter: drop-shadow(8px 10px 1px #000000b3);
@@ -553,17 +553,17 @@
   }
 
   .marcador {
-    top: 20rem;
+    top: 15rem;
 
     div {
-      font-size: 16rem;
+      font-size: 14rem;
     }
   }
 }
 
 /*Before square resolution*/
 
-@media (min-width: 913px) and (max-width: 1079px) {
+@media (min-width: 916px) and (max-width: 1079px) {
   .background {
     background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
