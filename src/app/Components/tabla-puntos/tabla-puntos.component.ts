@@ -13,7 +13,7 @@ import { ConfigLoaderService } from 'src/app/services/config-loader.service';
   styleUrls: ['./tabla-puntos.component.scss']
 })
 export class TablaPuntosComponent implements OnInit {
-  swiperConfig: SwiperOptions;
+  swiperConfig: any;
   tables: [][] = [];
   grupos = [
     ['A', 'B', 'C', 'D'],

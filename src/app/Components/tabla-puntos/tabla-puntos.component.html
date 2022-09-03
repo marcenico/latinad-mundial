@@ -7,7 +7,11 @@
 
     <swiper *ngIf="tables.length" [config]="swiperConfig">
       <!-- CONTENEDOR DE TABLAS -->
-      <ng-template swiperSlide *ngFor="let tabla of tables; index as i">
+      <ng-template
+        swiperSlide
+        [data-swiper-autoplay]="swiperConfig.delaySlide"
+        *ngFor="let tabla of tables; index as i"
+      >
         <div class="container-tables">
           <section class="table-container" *ngFor="let grupos of tabla; index as j">
             <div class="table-container__points">

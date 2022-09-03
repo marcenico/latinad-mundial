@@ -7,8 +7,13 @@
       </figure>
 
       <!-- SWIPER MATCHES -->
-      <swiper [config]="marcadorSwiperConfig" #swiper *ngIf="matches.length">
-        <ng-template class="iterator" swiperSlide *ngFor="let match of matches; let i = index">
+      <swiper [config]="swiperConfig" #swiper *ngIf="matches.length">
+        <ng-template
+          class="iterator"
+          swiperSlide
+          [data-swiper-autoplay]="swiperConfig.delaySlide"
+          *ngFor="let match of matches; let i = index"
+        >
           <app-match [match]="match" [slideIndex]="i"></app-match>
         </ng-template>
       </swiper>

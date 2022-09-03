@@ -18,10 +18,10 @@ SwiperCore.use([Virtual]);
 export class MarcadorComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   matches: Match[] = [];
-  marcadorSwiperConfig: SwiperOptions;
+  swiperConfig: any;
 
   constructor(private worldCupService: WorldCupService, private configLoaderService: ConfigLoaderService) {
-    this.marcadorSwiperConfig = this.configLoaderService.marcadorSwiperConfig;
+    this.swiperConfig = this.configLoaderService.marcadorSwiperConfig;
   }
 
   ngOnInit(): any {
@@ -31,7 +31,7 @@ export class MarcadorComponent implements OnInit {
   getLiveMatches() {
     this.worldCupService.getMatches('?live=all&league=1').subscribe(
       (res: LiveMatches) => {
-        this.marcadorSwiperConfig.autoplay = this.setAutoplay(res.response);
+        this.swiperConfig.autoplay = this.setAutoplay(res.response);
         this.matches = res.response;
         this.getMockLiveMatchesInterval(30 * 1000 * 60); // 30 Minutos
       },
@@ -44,7 +44,7 @@ export class MarcadorComponent implements OnInit {
       .pipe(mergeMap(() => this.worldCupService.getMatches('?live=all&league=1')))
       .subscribe(
         (res: LiveMatches) => {
-          this.marcadorSwiperConfig.autoplay = this.setAutoplay(res.response);
+          this.swiperConfig.autoplay = this.setAutoplay(res.response);
           this.matches = res.response;
         },
         (e) => console.error(e)
