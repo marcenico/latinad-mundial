@@ -80,7 +80,7 @@
 
 @media only screen and (min-height: 280px) and (max-height: 374px) and (orientation: landscape) {
     .background-proximos-partidos {
-        background-image: url('./../../../assets/background/ultrawide-horizontal-lineas.svg');
+        background-image: url('./../../../assets/background/background-lineas-horizontal.svg');
     }
 
     .sponsor-proximos-partidos {
@@ -132,7 +132,7 @@
 
 @media only screen and (min-height: 375px) and (max-height: 539px) and (orientation: landscape) {
     .background-proximos-partidos {
-        background-image: url('./../../../assets/background/ultrawide-horizontal-lineas.svg');
+        background-image: url('./../../../assets/background/background-lineas-horizontal.svg');
     }
 
     .sponsor-proximos-partidos {
@@ -349,10 +349,6 @@
 /*Media Query for Tablet in orientation: portrait */
 
 @media(min-width:540px) and (max-width: 767px) and (orientation: portrait) {
-    .background-proximos-partidos {
-        background-image: url('./../../../assets/background/background-lineas-vertical.svg');
-    }
-
     .sponsor-proximos-partidos {
         margin-top: 0;
         padding: 2%;
@@ -410,10 +406,6 @@
 
 /* iPad Mini and Air orientation: portrait + Notebook 1366px x 768px*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
-    .background-proximos-partidos {
-        background-image: url('./../../../assets/background/background-lineas-vertical.svg');
-    }
-
     .sponsor-proximos-partidos {
         img {
             max-width: 250px;
@@ -543,10 +535,6 @@
 /*Surface Pro 7 orientation portrait */
 
 @media only screen and (min-width:912px) and (min-height: 1368px) and (orientation: portrait) {
-    .background-proximos-partidos {
-        background-image: url('./../../../assets/background/background-lineas-vertical.svg');
-    }
-
     .sponsor-proximos-partidos {
         img {
             max-width: 350px;
@@ -761,6 +749,7 @@
 
         .container-title-partidos {
             margin-bottom: 20px;
+
             .title-partidos {
                 margin-top: 2rem;
                 font-size: 7rem;
@@ -905,6 +894,7 @@
 
         .container-title-partidos {
             margin: 20px;
+
             .title-partidos {
                 font-size: 8rem;
                 filter: drop-shadow(3px 3px 3px #000000b3);
@@ -1057,6 +1047,7 @@
 
         .container-title-partidos {
             margin-bottom: 50px;
+
             .title-partidos {
                 margin-top: 0;
                 font-size: 20rem;
@@ -1089,6 +1080,7 @@
                 .container-img {
                     height: 30rem;
                     width: 30rem;
+
                     img {
                         border: solid 10px;
                         filter: drop-shadow(22px 23px 24px #000000b3);
@@ -1220,6 +1212,7 @@
 
         .container-title-partidos {
             margin-bottom: 70px;
+
             .title-partidos {
                 filter: drop-shadow(32px 12px 5px #000000b3);
                 margin-top: 0;
