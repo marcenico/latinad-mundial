@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
