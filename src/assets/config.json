@@ -3,9 +3,7 @@
   "mainSwiperConfig": {
     "direction": "vertical",
     "rewind": true,
-    "autoplay": {
-      "disableOnInteraction": false
-    },
+    "autoplay": { "disableOnInteraction": false },
     "speed": 500,
     "delaySlideMarcador": 4000,
     "delaySlideProximosPartidos": 4000,
@@ -19,10 +17,7 @@
   "tablaPuntosSwiperConfig": {
     "direction": "horizontal",
     "rewind": true,
-    "autoplay": {
-      "delay": 4000,
-      "disableOnInteraction": false
-    },
+    "autoplay": { "delay": 4000, "disableOnInteraction": false },
     "speed": 1000
   }
 }
