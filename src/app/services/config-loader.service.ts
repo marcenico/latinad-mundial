@@ -7,8 +7,8 @@ import { SwiperOptions } from 'swiper';
 export class ConfigLoaderService {
   public token = 'Not Set Yet';
   public mainSwiperConfig: any;
-  public swiperConfigMarcador: SwiperOptions;
-  public swiperConfigTabla: SwiperOptions;
+  public marcadorSwiperConfig: SwiperOptions;
+  public tablaPuntosSwiperConfig: SwiperOptions;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -18,9 +18,9 @@ export class ConfigLoaderService {
       .pipe(
         map((response: any) => {
           this.token = response.token;
-          this.mainSwiperConfig = response.swiperConfig1;
-          this.swiperConfigMarcador = response.swiperConfigMarcador;
-          this.swiperConfigTabla = response.swiperConfigTabla;
+          this.mainSwiperConfig = response.mainSwiperConfig;
+          this.marcadorSwiperConfig = response.marcadorSwiperConfig;
+          this.tablaPuntosSwiperConfig = response.tablaPuntosSwiperConfig;
         })
       )
       .toPromise<any>();

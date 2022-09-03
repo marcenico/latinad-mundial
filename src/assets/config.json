@@ -1,10 +1,7 @@
 {
   "token": "80c1cdfd17c336d9ec08d8a1abde4992",
-  "swiperConfig1": {
+  "mainSwiperConfig": {
     "direction": "vertical",
-    "navigation": false,
-    "pagination": false,
-    "scrollbar": false,
     "rewind": true,
     "autoplay": {
       "disableOnInteraction": false
@@ -14,19 +11,13 @@
     "delaySlide2": 4000,
     "delaySlide3": 4000
   },
-  "swiperConfigMarcador": {
+  "marcadorSwiperConfig": {
     "direction": "horizontal",
-    "navigation": false,
-    "pagination": false,
-    "scrollbar": false,
     "rewind": true,
     "speed": 1000
   },
-  "swiperConfigTabla": {
+  "tablaPuntosSwiperConfig": {
     "direction": "horizontal",
-    "navigation": false,
-    "pagination": false,
-    "scrollbar": false,
     "rewind": true,
     "autoplay": {
       "delay": 4000,

@@ -25,7 +25,7 @@ export class TablaPuntosComponent implements OnInit {
     private utilsService: UtilsService,
     private configLoaderService: ConfigLoaderService
   ) {
-    this.swiperConfig = this.configLoaderService.swiperConfigTabla;
+    this.swiperConfig = this.configLoaderService.tablaPuntosSwiperConfig;
   }
 
   ngOnInit(): void {
