@@ -54,7 +54,6 @@
 
 /*#region Media Queries PORTRAIT */
 @media (orientation: portrait) {
-
   /* 320px — 480px: Mobile devices */
   @media (min-width: 320px) and (max-width: 480px) {
     .container-sponsor {
@@ -190,7 +189,6 @@
 
   /* 3841px-...  */
   @media (min-width: 3841px) {
-
     .background {
       background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
     }
