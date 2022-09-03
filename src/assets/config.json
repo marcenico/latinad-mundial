@@ -3,9 +3,7 @@
   "mainSwiperConfig": {
     "direction": "vertical",
     "rewind": true,
-    "autoplay": {
-      "disableOnInteraction": false
-    },
+    "autoplay": { "disableOnInteraction": false },
     "speed": 500,
     "delaySlideMarcador": 10000,
     "delaySlideProximosPartidos": 10000,
@@ -14,18 +12,14 @@
   "marcadorSwiperConfig": {
     "direction": "horizontal",
     "rewind": true,
-    "autoplay": {
-      "disableOnInteraction": false
-    },
+    "autoplay": { "disableOnInteraction": false },
     "delaySlide": 2000,
     "speed": 1000
   },
   "tablaPuntosSwiperConfig": {
     "direction": "horizontal",
     "rewind": true,
-    "autoplay": {
-      "disableOnInteraction": false
-    },
+    "autoplay": { "disableOnInteraction": false },
     "delaySlide": 5000,
     "speed": 1000
   }
