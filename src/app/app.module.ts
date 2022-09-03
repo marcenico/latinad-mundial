@@ -5,7 +5,7 @@ import { NgParticlesModule } from 'ng-particles';
 import { AppComponent } from './app.component';
 import { ConfettiComponent } from './Components/confetti/confetti.component';
 import { SharedModule } from './shared/shared.module';
-import { AnimacionComponent } from './Components/animacion/animacion.component';
+import { GoalComponent } from './Components/goal/goal.component';
 import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';
 import { ProximosPartidosComponent } from './Components/proximos-partidos/proximos-partidos.component';
 import { TablaPuntosComponent } from './Components/tabla-puntos/tabla-puntos.component';
@@ -17,7 +17,7 @@ import { PreloadFactory } from './preload-service.factory';
   declarations: [
     AppComponent,
     ConfettiComponent,
-    AnimacionComponent,
+    GoalComponent,
     MatchComponent,
     MarcadorComponent,
     TablaPuntosComponent,
