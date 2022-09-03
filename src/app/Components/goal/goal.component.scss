@@ -9,7 +9,7 @@
 }
 
 .background {
-  background-image: url('../../../assets/background/ultrawide-vertical-cancha.svg');
+  background-image: url('../../../assets/background/background-lineas-vertical.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,6 +27,7 @@
   display: flex;
   place-content: center;
   width: 100%;
+
   img {
     filter: drop-shadow(2px 2px 2px #000000b3);
     width: 90px;
@@ -53,6 +54,7 @@
 
 /*#region Media Queries PORTRAIT */
 @media (orientation: portrait) {
+
   /* 320px — 480px: Mobile devices */
   @media (min-width: 320px) and (max-width: 480px) {
     .container-sponsor {
@@ -103,6 +105,10 @@
 
   /* 1025px — 1200px: Desktops, large screens */
   @media (min-width: 1025px) and (max-width: 1200px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(310px, 30%, 330px);
@@ -119,6 +125,10 @@
 
   /* 1201px-1440px —  Extra large screens, TV */
   @media (min-width: 1201px) and (max-width: 1440px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         filter: drop-shadow(8px 8px 8px #000000b3);
@@ -136,6 +146,10 @@
 
   /* 1441px-2560px */
   @media (min-width: 1441px) and (max-width: 2560px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         filter: drop-shadow(10px 10px 10px #000000b3);
@@ -154,6 +168,10 @@
 
   /* 2561px-3840px  */
   @media (min-width: 2561px) and (max-width: 3840px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         filter: drop-shadow(14px 14px 14px #000000b3);
@@ -172,6 +190,11 @@
 
   /* 3841px-...  */
   @media (min-width: 3841px) {
+
+    .background {
+      background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(1160px, 30%, 1210px);
@@ -195,8 +218,13 @@
 
 /*Minimo landscape*/
 @media (orientation: landscape) {
+  .background {
+    background-image: url('../../../assets/background/background-lineas-horizontal.svg');
+  }
+
   .container-sponsor {
     margin: 0;
+
     img {
       width: 132px;
     }
@@ -211,6 +239,10 @@
 
   /* 320px — 480px: Mobile devices */
   @media (min-height: 320px) and (max-height: 480px) {
+    .background {
+      background-image: url('../../../assets/background/background-lineas-horizontal.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(115px, 35%, 130px);
@@ -220,6 +252,10 @@
 
   /* 481px — 768px: Mobile devices */
   @media (min-height: 481px) and (max-height: 768px) {
+    .background {
+      background-image: url('../../../assets/background/background-lineas-horizontal.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(145px, 30%, 190px);
@@ -236,6 +272,10 @@
 
   /* 769px — 1024px: Small screens, laptops */
   @media (min-height: 769px) and (max-height: 1024px) {
+    .background {
+      background-image: url('../../../assets/background/background-lineas-horizontal.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(235px, 30%, 270px);
@@ -252,6 +292,10 @@
 
   /* 1025px — 1200px: Desktops, large screens */
   @media (min-height: 1025px) and (max-height: 1200px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(310px, 30%, 330px);
@@ -268,6 +312,10 @@
 
   /* 1201px-1440px —  Extra large screens, TV */
   @media (min-height: 1201px) and (max-height: 1440px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(365px, 30%, 390px);
@@ -284,6 +332,10 @@
 
   /* 1441px-2560px */
   @media (min-height: 1441px) and (max-height: 2560px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(440px, 30%, 600px);
@@ -302,6 +354,10 @@
 
   /* 2561px-3840px  */
   @media (min-height: 2561px) and (max-height: 3840px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         width: clamp(770px, 30%, 980px);
@@ -320,6 +376,10 @@
 
   /* 3841px-...  */
   @media (min-height: 3841px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
+
     .container-sponsor {
       img {
         filter: drop-shadow(16px 16px 16px #000000b3);
@@ -336,4 +396,5 @@
     }
   }
 }
+
 /*#endregion Media Queries LANDSCAPE */

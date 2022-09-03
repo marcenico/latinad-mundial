@@ -128,10 +128,6 @@
 /*--------------------Media querie Mobile Devices----------------------------*/
 
 @media (min-width: 360px) and (max-width: 539px) and (orientation: portrait) {
-  .background {
-    background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
-  }
-
   .sponsor-marcador {
     margin: 0 0 100px 0;
 
@@ -175,7 +171,7 @@
 
 @media(min-height:280px) and (max-height: 359px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -224,7 +220,7 @@
 
 @media(min-height:360px) and (max-height: 539px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -313,7 +309,7 @@
 
 @media (min-height:540px) and (max-height: 559px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -361,7 +357,7 @@
 
 @media (min-height: 600px) and (max-height: 767px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -462,7 +458,7 @@
 
 @media (min-height: 768px) and (max-height: 820px) and (orientation: landscape) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -513,7 +509,7 @@
 /* ------------------------- Surface Pro ---------------------------------*/
 @media (min-width: 1368px) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -569,7 +565,7 @@
 
 @media (min-width: 913px) and (max-width: 1079px) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
@@ -625,7 +621,7 @@
 
 @media(aspect-ratio: 1/1) {
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-cuadrado.svg');
   }
 
   .sponsor-marcador {
