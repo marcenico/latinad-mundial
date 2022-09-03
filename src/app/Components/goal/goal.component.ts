@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-animacion',
+  selector: 'app-goal',
   templateUrl: './goal.component.html',
   styleUrls: ['./goal.component.scss']
 })
