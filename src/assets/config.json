@@ -7,9 +7,9 @@
       "disableOnInteraction": false
     },
     "speed": 500,
-    "delaySlide1": 4000,
-    "delaySlide2": 4000,
-    "delaySlide3": 4000
+    "delaySlideMarcador": 4000,
+    "delaySlideProximosPartidos": 4000,
+    "delaySlideTablaPuntos": 4000
   },
   "marcadorSwiperConfig": {
     "direction": "horizontal",

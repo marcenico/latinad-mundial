@@ -1,11 +1,11 @@
 <swiper [config]="swiperConfig" #swiper>
-  <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlide1">
+  <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlideMarcador">
     <app-marcador></app-marcador>
   </ng-template>
-  <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlide2">
+  <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlideProximosPartidos">
     <app-proximos-partidos></app-proximos-partidos>
   </ng-template>
-  <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlide3">
+  <ng-template swiperSlide [data-swiper-autoplay]="swiperConfig.delaySlideTablaPuntos">
     <app-tabla-puntos></app-tabla-puntos>
   </ng-template>
 </swiper>
