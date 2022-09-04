@@ -17,6 +17,7 @@ export class MatchComponent implements OnInit {
   isGoalAway = false;
   public gameSeconds = '00';
   private gameMinutes = 0;
+  private isHalfTime = false;
   private intervalSeconds: any;
 
   constructor(private worldCupService: WorldCupService, private utilsService: UtilsService) {}
@@ -46,7 +47,11 @@ export class MatchComponent implements OnInit {
       if (this.match.fixture.status.short !== 'NS') {
         this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
         if (this.gameSeconds === '59') {
-          setTimeout(() => (this.gameMinutes += 1), 1000);
+          setTimeout(() => {
+            if (this.match.fixture.status.short !== 'HT') {
+              this.gameMinutes += 1;
+            }
+          }, 1000);
         }
       }
     }, 1000);
@@ -90,9 +95,14 @@ export class MatchComponent implements OnInit {
 
   private checkMatchTime(status: Status) {
     if (status.short === 'HT') {
-      status.elapsed = 0;
+      if (this.isHalfTime === false) {
+        this.gameMinutes -= 45;
+        this.isHalfTime = true;
+      }
       return;
     }
+
+    this.isHalfTime = false;
 
     if (status.short === 'FT') {
       status.elapsed = 0;
