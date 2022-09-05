@@ -18,7 +18,7 @@
           "name": "Est\u00e1dio Dr. Jorge Ismael de Biasi",
           "city": "Novo Horizonte, S\u00e3o Paulo"
         },
-        "status": { "long": "Second Half", "short": "2H", "elapsed": 20 }
+        "status": { "long": "Halftime", "short": "HT", "elapsed": 45 }
       },
       "league": {
         "id": 72,
@@ -31,16 +31,16 @@
       },
       "teams": {
         "home": {
-          "id": 7834,
-          "name": "Novorizontino",
-          "logo": "https://media.api-sports.io/football/teams/7834.png",
-          "winner": true
+          "id": 1569,
+          "name": "Qatar",
+          "logo": "https://media.api-sports.io/football/teams/1569.png",
+          "winner": null
         },
         "away": {
-          "id": 139,
-          "name": "Ponte Preta",
-          "logo": "https://media.api-sports.io/football/teams/139.png",
-          "winner": false
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
         }
       },
       "goals": { "home": 1, "away": 0 },
@@ -49,84 +49,133 @@
         "fulltime": { "home": null, "away": null },
         "extratime": { "home": null, "away": null },
         "penalty": { "home": null, "away": null }
+      }
+    },
+    {
+      "fixture": {
+        "id": 855735,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2022-11-21T13:00:00+00:00",
+        "timestamp": 1669035600,
+        "periods": { "first": null, "second": null },
+        "venue": { "id": null, "name": "Khalifa International Stadium", "city": "Doha" },
+        "status": { "long": "Not Started", "short": "NS", "elapsed": null }
       },
-      "events": [
-        {
-          "time": { "elapsed": 11, "extra": null },
-          "team": {
-            "id": 7834,
-            "name": "Novorizontino",
-            "logo": "https://media.api-sports.io/football/teams/7834.png"
-          },
-          "player": { "id": 9456, "name": "Ligger" },
-          "assist": { "id": 9821, "name": "Douglas Baggio" },
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "comments": null
+      "league": {
+        "id": 1,
+        "name": "World Cup",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/1.png",
+        "flag": null,
+        "season": 2022,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 10,
+          "name": "England",
+          "logo": "https://media.api-sports.io/football/teams/10.png",
+          "winner": null
         },
-        {
-          "time": { "elapsed": 28, "extra": null },
-          "team": { "id": 139, "name": "Ponte Preta", "logo": "https://media.api-sports.io/football/teams/139.png" },
-          "player": { "id": 10359, "name": "Leandro Barcia" },
-          "assist": { "id": null, "name": null },
-          "type": "Card",
-          "detail": "Yellow Card",
-          "comments": null
-        },
-        {
-          "time": { "elapsed": 32, "extra": null },
-          "team": {
-            "id": 7834,
-            "name": "Novorizontino",
-            "logo": "https://media.api-sports.io/football/teams/7834.png"
-          },
-          "player": { "id": 9561, "name": "Walber" },
-          "assist": { "id": null, "name": null },
-          "type": "Card",
-          "detail": "Yellow Card",
-          "comments": null
-        },
-        {
-          "time": { "elapsed": 35, "extra": null },
-          "team": {
-            "id": 7834,
-            "name": "Novorizontino",
-            "logo": "https://media.api-sports.io/football/teams/7834.png"
-          },
-          "player": { "id": 67842, "name": "Ronaldo" },
-          "assist": { "id": null, "name": null },
-          "type": "Var",
-          "detail": "Goal Disallowed - handball",
-          "comments": null
-        },
-        {
-          "time": { "elapsed": 45, "extra": 2 },
-          "team": { "id": 139, "name": "Ponte Preta", "logo": "https://media.api-sports.io/football/teams/139.png" },
-          "player": { "id": 1503, "name": "Artur" },
-          "assist": { "id": null, "name": null },
-          "type": "Card",
-          "detail": "Yellow Card",
-          "comments": null
-        },
-        {
-          "time": { "elapsed": 46, "extra": null },
-          "team": { "id": 139, "name": "Ponte Preta", "logo": "https://media.api-sports.io/football/teams/139.png" },
-          "player": { "id": 9715, "name": "Jean Carlos" },
-          "assist": { "id": 1503, "name": "Artur" },
-          "type": "subst",
-          "detail": "Substitution 1",
-          "comments": null
-        },
-        {
-          "time": { "elapsed": 46, "extra": null },
-          "team": { "id": 139, "name": "Ponte Preta", "logo": "https://media.api-sports.io/football/teams/139.png" },
-          "player": { "id": null, "name": "Nicolas Morsch" },
-          "assist": { "id": 10359, "name": "Leandro Barcia" },
-          "type": "subst",
-          "detail": "Substitution 2",
-          "comments": null
+        "away": {
+          "id": 22,
+          "name": "Iran",
+          "logo": "https://media.api-sports.io/football/teams/22.png",
+          "winner": null
         }
-      ]
+      },
+      "goals": { "home": null, "away": null },
+      "score": {
+        "halftime": { "home": null, "away": null },
+        "fulltime": { "home": null, "away": null },
+        "extratime": { "home": null, "away": null },
+        "penalty": { "home": null, "away": null }
+      }
+    },
+    {
+      "fixture": {
+        "id": 855734,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2022-11-21T16:00:00+00:00",
+        "timestamp": 1669046400,
+        "periods": { "first": null, "second": null },
+        "venue": { "id": null, "name": "Al Thumama Stadium", "city": "Doha" },
+        "status": { "long": "Not Started", "short": "NS", "elapsed": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "World Cup",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/1.png",
+        "flag": null,
+        "season": 2022,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 13,
+          "name": "Senegal",
+          "logo": "https://media.api-sports.io/football/teams/13.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1118,
+          "name": "Netherlands",
+          "logo": "https://media.api-sports.io/football/teams/1118.png",
+          "winner": null
+        }
+      },
+      "goals": { "home": null, "away": null },
+      "score": {
+        "halftime": { "home": null, "away": null },
+        "fulltime": { "home": null, "away": null },
+        "extratime": { "home": null, "away": null },
+        "penalty": { "home": null, "away": null }
+      }
+    },
+    {
+      "fixture": {
+        "id": 866681,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2022-11-21T19:00:00+00:00",
+        "timestamp": 1669057200,
+        "periods": { "first": null, "second": null },
+        "venue": { "id": null, "name": "Ahmad bin Ali Stadium", "city": "Al-Rayyan" },
+        "status": { "long": "Not Started", "short": "NS", "elapsed": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "World Cup",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/1.png",
+        "flag": null,
+        "season": 2022,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 2384,
+          "name": "USA",
+          "logo": "https://media.api-sports.io/football/teams/2384.png",
+          "winner": null
+        },
+        "away": {
+          "id": 767,
+          "name": "Wales",
+          "logo": "https://media.api-sports.io/football/teams/767.png",
+          "winner": null
+        }
+      },
+      "goals": { "home": null, "away": null },
+      "score": {
+        "halftime": { "home": null, "away": null },
+        "fulltime": { "home": null, "away": null },
+        "extratime": { "home": null, "away": null },
+        "penalty": { "home": null, "away": null }
+      }
     }
   ]
 }

@@ -2,13 +2,16 @@
   <div class="background">
     <!-- LOGO -->
     <figure class="sponsor-table">
-      <img src="assets/logos/burger-king.png" alt="Sponsor" />
-      <!-- <img src="assets/logos/coca-cola.png" alt="Sponsor" /> -->
+      <img src="assets/logos/logo.png" alt="Sponsor" />
     </figure>
 
     <swiper *ngIf="tables.length" [config]="swiperConfig">
       <!-- CONTENEDOR DE TABLAS -->
-      <ng-template swiperSlide *ngFor="let tabla of tables; index as i">
+      <ng-template
+        swiperSlide
+        [data-swiper-autoplay]="swiperConfig.delaySlide"
+        *ngFor="let tabla of tables; index as i"
+      >
         <div class="container-tables">
           <section class="table-container" *ngFor="let grupos of tabla; index as j">
             <div class="table-container__points">

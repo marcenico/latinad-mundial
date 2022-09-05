@@ -1,37 +1,26 @@
 {
-  "token": "80c1cdfd17c336d9ec08d8a1abde4992",
-  "swiperConfig1": {
+  "token": "",
+  "mainSwiperConfig": {
     "direction": "vertical",
-    "navigation": false,
-    "pagination": false,
-    "scrollbar": false,
     "rewind": true,
-    "autoplay": {
-      "disableOnInteraction": false
-    },
+    "autoplay": { "disableOnInteraction": false },
     "speed": 500,
-    "delaySlide1": 4000,
-    "delaySlide2": 4000,
-    "delaySlide3": 4000
+    "delaySlideMarcador": 10000,
+    "delaySlideProximosPartidos": 10000,
+    "delaySlideTablaPuntos": 10000
   },
-  "swiperConfigMarcador": {
+  "marcadorSwiperConfig": {
     "direction": "horizontal",
-    "navigation": false,
-    "pagination": false,
-    "scrollbar": false,
     "rewind": true,
+    "autoplay": { "disableOnInteraction": false },
+    "delaySlide": 2000,
     "speed": 1000
   },
-  "swiperConfigTabla": {
+  "tablaPuntosSwiperConfig": {
     "direction": "horizontal",
-    "navigation": false,
-    "pagination": false,
-    "scrollbar": false,
     "rewind": true,
-    "autoplay": {
-      "delay": 4000,
-      "disableOnInteraction": false
-    },
+    "autoplay": { "disableOnInteraction": false },
+    "delaySlide": 5000,
     "speed": 1000
   }
 }

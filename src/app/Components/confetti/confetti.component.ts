@@ -10,7 +10,6 @@ import { loadConfettiShape } from 'tsparticles-shape-confetti';
   styleUrls: ['./confetti.component.scss']
 })
 export class ConfettiComponent implements OnInit {
-  @Input() duracionConfetti = 0;
   options: IParticlesProps = particlesOptions;
 
   ngOnInit(): void {}

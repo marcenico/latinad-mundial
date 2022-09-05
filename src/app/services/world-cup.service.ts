@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { LiveMatches } from '../models/live-matches.model';
 import { UtilsService } from './utlis.service';
 import { Table } from '../models/table.model';
-import { ConfigLoaderService } from '../config-loader.service';
+import { ConfigLoaderService } from './config-loader.service';
 
 @Injectable({
   providedIn: 'root'
@@ -56,57 +56,4 @@ export class WorldCupService {
       })
     );
   }
-
-  //#region Fake Server
-  public getMockLiveMatches(filters: string = ''): Observable<LiveMatches> {
-    return this.http.get<LiveMatches>(`assets/mocks/mock-live-matches-1.json`, this.options).pipe(
-      map((data: any) => {
-        let filerData: LiveMatches = {
-          errors: data.errors,
-          response: this.utilsService.filterMatchData(data.response)
-        };
-
-        return filerData;
-      })
-    );
-  }
-
-  public getMockLiveMatches2(filters: string = ''): Observable<LiveMatches> {
-    return this.http.get<LiveMatches>(`assets/mocks/mock-live-matches-2.json`, this.options).pipe(
-      map((data: any) => {
-        let filerData: LiveMatches = {
-          errors: data.errors,
-          response: this.utilsService.filterMatchData(data.response)
-        };
-
-        return filerData;
-      })
-    );
-  }
-
-  public getMockProximosPartidos(filters: string = ''): Observable<LiveMatches> {
-    return this.http.get('assets/mocks/mock-proximos-partidos.json').pipe(
-      map((data: any) => {
-        let filerData: LiveMatches = {
-          errors: data.errors,
-          response: this.utilsService.filterMatchData(data.response)
-        };
-        return filerData;
-      })
-    );
-  }
-
-  public getMockTablePoints(filters: string = ''): Observable<any[]> {
-    return this.http.get('assets/mocks/mock-tabla-puntos.json').pipe(
-      map((data: any) => {
-        let groupsPartOne: any = data.response[0].league.standings.slice(0, 4);
-        let groupsPartTwo: any = data.response[0].league.standings.slice(4, 8);
-
-        groupsPartOne = this.utilsService.filterTableData(groupsPartOne);
-        groupsPartTwo = this.utilsService.filterTableData(groupsPartTwo);
-        return [groupsPartOne, groupsPartTwo];
-      })
-    );
-  }
-  //#endregion
 }

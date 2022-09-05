@@ -6,7 +6,7 @@ export const particlesOptions: IParticlesProps = {
   },
   particles: {
     color: {
-      value: ['#FFFFFF', '#16886F0', '#2C4F70']
+      value: ['#FFFFFF', '#2C4F70']
     },
     shape: {
       type: 'confetti'
@@ -55,7 +55,7 @@ export const particlesOptions: IParticlesProps = {
       direction: 'bottom',
       rate: {
         delay: 0.1,
-        quantity: 10
+        quantity: 1
       },
       position: {
         x: 50,

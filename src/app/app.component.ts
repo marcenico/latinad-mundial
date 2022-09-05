@@ -1,10 +1,9 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-
 import { SwiperComponent } from 'swiper/angular';
 import { WorldCupService } from './services/world-cup.service';
-import SwiperCore, { Virtual } from 'swiper';
 import { MarcadorComponent } from './Components/marcador/marcador/marcador.component';
-import { ConfigLoaderService } from './config-loader.service';
+import { ConfigLoaderService } from './services/config-loader.service';
+import SwiperCore, { Virtual } from 'swiper';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,7 @@ export class AppComponent implements OnInit {
   timeGoalCelebration = 5; // En segundos
 
   constructor(private worldCupService: WorldCupService, private configLoaderService: ConfigLoaderService) {
-    this.swiperConfig = configLoaderService.mainSwiperConfig;
+    this.swiperConfig = this.configLoaderService.mainSwiperConfig;
     SwiperCore.use([Virtual]);
   }
 

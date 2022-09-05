@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { Team } from 'src/app/models/table.model';
 import { WorldCupService } from 'src/app/services/world-cup.service';
-import { SwiperOptions } from 'swiper';
 import { mergeMap } from 'rxjs/operators';
 import { UtilsService } from 'src/app/services/utlis.service';
-import { ConfigLoaderService } from 'src/app/config-loader.service';
+import { ConfigLoaderService } from 'src/app/services/config-loader.service';
 
 @Component({
   selector: 'app-tabla-puntos',
@@ -13,7 +12,7 @@ import { ConfigLoaderService } from 'src/app/config-loader.service';
   styleUrls: ['./tabla-puntos.component.scss']
 })
 export class TablaPuntosComponent implements OnInit {
-  swiperConfig: SwiperOptions;
+  swiperConfig: any;
   tables: [][] = [];
   grupos = [
     ['A', 'B', 'C', 'D'],
@@ -25,7 +24,7 @@ export class TablaPuntosComponent implements OnInit {
     private utilsService: UtilsService,
     private configLoaderService: ConfigLoaderService
   ) {
-    this.swiperConfig = this.configLoaderService.swiperConfigTabla;
+    this.swiperConfig = this.configLoaderService.tablaPuntosSwiperConfig;
   }
 
   ngOnInit(): void {
@@ -33,7 +32,7 @@ export class TablaPuntosComponent implements OnInit {
   }
 
   getTablePoints() {
-    this.service.getMockTablePoints('?league=1&season=2022').subscribe(
+    this.service.getTablePoints('?league=1&season=2022').subscribe(
       (res) => {
         this.tables = res;
         this.getTablePointsInterval(6 * 1000 * 60 * 60); // 6 Horas
@@ -44,7 +43,7 @@ export class TablaPuntosComponent implements OnInit {
 
   getTablePointsInterval(delay: number) {
     interval(delay)
-      .pipe(mergeMap(() => this.service.getMockTablePoints('?league=1&season=2022')))
+      .pipe(mergeMap(() => this.service.getTablePoints('?league=1&season=2022')))
       .subscribe(
         (res) => {
           this.tables = res;

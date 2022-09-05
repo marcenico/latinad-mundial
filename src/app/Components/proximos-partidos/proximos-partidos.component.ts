@@ -20,7 +20,7 @@ export class ProximosPartidosComponent implements OnInit {
   }
 
   getProximosPartidos() {
-    this.service.getMockProximosPartidos('?league=1&next=4').subscribe(
+    this.service.getMatches('?league=1&next=4').subscribe(
       (res: LiveMatches) => {
         res.response = res.response.slice(0, 4);
         this.proximosPartidos = res.response;
@@ -32,7 +32,7 @@ export class ProximosPartidosComponent implements OnInit {
 
   getProximosPartidosInterval(delay: number) {
     interval(delay)
-      .pipe(mergeMap(() => this.service.getMockProximosPartidos('?league=1&next=4')))
+      .pipe(mergeMap(() => this.service.getMatches('?league=1&next=4')))
       .subscribe(
         (res: LiveMatches) => {
           res.response = res.response.slice(0, 4);

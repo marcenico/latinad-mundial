@@ -17,6 +17,7 @@ export class MatchComponent implements OnInit {
   isGoalAway = false;
   public gameSeconds = '00';
   private gameMinutes = 0;
+  private isHalfTime = false;
   private intervalSeconds: any;
 
   constructor(private worldCupService: WorldCupService, private utilsService: UtilsService) {}
@@ -25,8 +26,8 @@ export class MatchComponent implements OnInit {
     this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
-    interval(5 * 1000) // 2 Minutos
-      .pipe(mergeMap(() => this.worldCupService.getMockLiveMatches2(`?id=${this.match.fixture.id}`)))
+    interval(1.5 * 1000 * 60) // 1.5 Minutos
+      .pipe(mergeMap(() => this.worldCupService.getMatches(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
           this.checkMatchTime(res.response[0].fixture.status);
@@ -43,25 +44,11 @@ export class MatchComponent implements OnInit {
 
   private startWatch() {
     this.intervalSeconds = setInterval(() => {
-      this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
-      this.gameMinutes = this.match.fixture.status.elapsed;
-
-      if (this.gameSeconds === '59') {
-        setTimeout(() => (this.gameMinutes += 1), 1000);
+      if (this.statusShort !== 'NS') {
+        this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
+        if (this.gameSeconds === '59') this.gameMinutes += 1;
       }
     }, 1000);
-  }
-
-  getMinutes() {
-    return this.agregarCero(this.gameMinutes.toString());
-  }
-
-  getFlag(team: Home | Away) {
-    return this.utilsService.cambioImagenBandera(team);
-  }
-
-  getStatusShort() {
-    return this.match.fixture.status.short;
   }
 
   private stopWatch() {
@@ -89,6 +76,52 @@ export class MatchComponent implements OnInit {
   }
 
   private checkMatchTime(status: Status) {
-    if (status.short === 'HT') status.elapsed = 0;
+    if (status.short === 'HT') {
+      if (this.isHalfTime === false) {
+        this.gameMinutes = 0;
+        this.isHalfTime = true;
+      }
+      return;
+    }
+
+    this.isHalfTime = false;
+
+    if (status.short === 'FT') {
+      status.elapsed = 0;
+      this.stopWatch();
+      return;
+    }
+
+    this.gameMinutes = status.elapsed;
+  }
+
+  getFlag(team: Home | Away) {
+    return this.utilsService.cambioImagenBandera(team);
+  }
+
+  get minutes() {
+    if (this.statusShort === '1H' && this.match.fixture.status.elapsed === 45) {
+      return '45';
+    }
+
+    if (this.statusShort === '2H' && this.match.fixture.status.elapsed === 90) {
+      return '90';
+    }
+
+    return this.agregarCero(this.gameMinutes.toString());
+  }
+
+  get seconds() {
+    if (
+      (this.statusShort === '1H' && this.match.fixture.status.elapsed === 45) ||
+      (this.statusShort === '2H' && this.match.fixture.status.elapsed === 90)
+    ) {
+      return '+';
+    }
+    return `:${this.gameSeconds}`;
+  }
+
+  get statusShort() {
+    return this.match.fixture.status.short;
   }
 }

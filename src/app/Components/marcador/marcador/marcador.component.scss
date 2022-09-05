@@ -19,6 +19,7 @@
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  min-width: 280px;
   background-image: url('../../../../assets/background/background-cancha-vertical.svg');
 }
 
@@ -26,6 +27,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 280px;
   height: 100%;
 }
 
@@ -34,10 +36,11 @@
   justify-content: center;
   width: 100%;
   margin: 0 0 6rem 0;
-  min-width: 200px;
+  min-width: 280px;
 
   img {
     width: 80%;
+    filter: drop-shadow(3px 4px 1px #000000b3);
     max-width: 300px;
   }
 }
@@ -53,7 +56,6 @@
   display: flex;
   place-content: center;
   position: relative;
-  max-width: 1000px;
   margin: 0 auto;
 
   .tiempo {
@@ -74,6 +76,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    min-width: 280px;
     gap: 4rem;
   }
 }
@@ -89,9 +92,9 @@
     height: 100px;
     width: 100px;
 
-    .escudo__img {
+    img {
       border-radius: 50%;
-      filter: drop-shadow(2px 3px 4px #000000b3);
+      filter: drop-shadow(4px 5px 1px #000000b3);
       object-fit: cover;
       width: 100%;
     }
@@ -114,6 +117,7 @@
   top: 36%;
   left: 0;
   right: 0;
+
   div {
     font-size: 6rem;
     font-weight: bold;
@@ -123,21 +127,246 @@
 
 /*--------------------Media querie Mobile Devices----------------------------*/
 
-@media (min-width: 375px) and (max-width: 539px) and (orientation: portrait) {
+@media (min-width: 360px) and (max-width: 539px) and (orientation: portrait) {
+  .sponsor-marcador {
+    margin: 0 0 100px 0;
+
+    img {
+      filter: drop-shadow(3px 4px 1px #000000b3);
+      max-width: 250px;
+    }
+  }
+
+  .partidos {
+    .tiempo {
+      top: -35%;
+      font-size: 6rem;
+    }
+
+    .teams-container {
+      gap: 2rem;
+      max-width: 360px;
+    }
+  }
+
+  .team {
+    width: 45%;
+
+    .escudo {
+      height: 120px;
+      width: 120px;
+    }
+
+    .name {
+      font-size: 4rem;
+    }
+  }
+
+  .marcador>div {
+    font-size: 6rem;
+  }
+}
+
+/*-----------------------Mobile in landscape---------------------------*/
+
+@media(min-height:280px) and (max-height: 359px) and (orientation: landscape) {
   .background {
     background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    margin: 0 0 40px 0;
+
+    img {
+      filter: drop-shadow(3px 4px 1px #000000b3);
+      max-width: 100px;
+    }
+  }
+
+  .partidos {
+    .tiempo {
+      top: -20%;
+      font-size: 3rem;
+    }
+
+    .teams-container {
+      gap: 1rem;
+      max-width: 280px;
+    }
+  }
+
+  .team {
+    width: 45%;
+
+    .escudo {
+      height: 100px;
+      width: 100px;
+    }
+
+    .name {
+      font-size: 2rem;
+      margin-top: 2px;
+    }
+  }
+
+  .marcador {
+    top: 50%;
+  }
+
+  .marcador>div {
+    font-size: 5rem;
+  }
+}
+
+@media(min-height:360px) and (max-height: 539px) and (orientation: landscape) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    margin: 0 0 60px 0;
+
+    img {
+      filter: drop-shadow(4px 3px 1px #000000b3);
+      max-width: 120px;
+    }
+  }
+
+  .partidos {
+    .tiempo {
+      top: -30%;
+      font-size: 5rem;
+    }
+
+    .teams-container {
+      gap: 2rem;
+      max-width: 360px;
+    }
+  }
+
+  .team {
+    width: 45%;
+
+    .escudo {
+      height: 120px;
+      width: 120px;
+    }
+
+    .name {
+      font-size: 3rem;
+    }
+  }
+
+  .marcador>div {
+    font-size: 6rem;
+  }
+}
+
+/*Surface Duo*/
+@media (min-width: 540px) and (max-width: 767px) and (orientation: portrait) {
+  .sponsor-marcador {
+    margin: 0 0 100px 0;
+
+    img {
+      max-width: 300px;
+      filter: drop-shadow(4px 5px 1px #000000b3);
+    }
+  }
+
+  .partidos {
+    .tiempo {
+      top: -40%;
+      font-size: 8rem;
+    }
+
+    .teams-container {
+      max-width: 410px;
+      gap: 3rem;
+    }
+  }
+
+  .team {
+    .escudo {
+      width: 150px;
+      height: 150px;
+    }
+
+    .name {
+      font-size: 6rem;
+    }
+  }
+
+  .marcador {
+    top: 35%;
+
+    div {
+      font-size: 8rem;
+    }
+  }
+}
+
+/*Surface Duo landscape orientation*/
+
+@media (min-height:540px) and (max-height: 559px) and (orientation: landscape) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    margin: 0 0 100px 0;
+
+    img {
+      max-width: 200px;
+      filter: drop-shadow(4px 5px 1px #000000b3);
+    }
+  }
+
+  .partidos {
+    .tiempo {
+      top: -40%;
+      font-size: 8rem;
+    }
+
+    .teams-container {
+      max-width: 410px;
+      gap: 3rem;
+    }
+  }
+
+  .team {
+    .escudo {
+      width: 150px;
+      height: 150px;
+    }
+
+    .name {
+      font-size: 6rem;
+    }
+  }
+
+  .marcador {
+    top: 35%;
+
+    div {
+      font-size: 8rem;
+    }
   }
 }
 
 /*Nest Hub*/
 
-@media (min-height: 600px) and (orientation: landscape) {
+@media (min-height: 600px) and (max-height: 767px) and (orientation: landscape) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
   .sponsor-marcador {
-    margin: 0 0 150px 0;
+    margin: 0 0 100px 0;
 
     img {
       width: 40%;
-      max-width: 600px;
+      max-width: 200px;
+      filter: drop-shadow(4px 5px 1px #000000b3);
     }
   }
 
@@ -153,7 +382,7 @@
 
     .teams-container {
       width: auto;
-      gap: 10rem;
+      gap: 5rem;
     }
   }
 
@@ -170,39 +399,47 @@
 
   .marcador {
     top: 48%;
+
     div {
-      font-size: 11rem;
+      font-size: 10rem;
     }
   }
 }
 
 /*iPad Mini and Air */
 
-@media (min-width: 768px) and (max-width: 912px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 915px) and (orientation: portrait) {
   .sponsor-marcador {
-    margin: 0 0 150px 0;
+    margin: 0 0 120px 0;
 
     img {
-      max-width: 600px;
+      max-width: 400px;
+      filter: drop-shadow(10px 11px 2px #000000b3);
     }
   }
 
   .partidos {
+    max-width: 820px;
+
     .tiempo {
-      top: -25%;
+      top: -30%;
       font-size: 10rem;
     }
 
     .teams-container {
-      width: auto;
+      max-width: 500px;
       gap: 14rem;
     }
   }
 
   .team {
     .escudo {
-      width: 300px;
-      height: 300px;
+      width: 220px;
+      height: 220px;
+
+      img {
+        filter: drop-shadow(10px 11px 1px #000000b3);
+      }
     }
 
     .name {
@@ -211,28 +448,36 @@
   }
 
   .marcador {
-    top: 48%;
+    top: 35%;
+
     div {
-      font-size: 15rem;
+      font-size: 14rem;
     }
   }
 }
 
 @media (min-height: 768px) and (max-height: 820px) and (orientation: landscape) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
   .sponsor-marcador {
-    margin: 0 0 120px 0;
+    margin: 0 0 100px 0;
 
     img {
       margin-top: 30px;
       width: 100%;
-      max-width: 600px;
+      max-width: 280px;
+      filter: drop-shadow(5px 11px 1px #000000b3);
     }
   }
 
   .partidos {
+    max-width: 1000px;
+
     .tiempo {
-      top: -25%;
-      font-size: 10rem;
+      top: -18%;
+      font-size: 8rem;
     }
 
     .teams-container {
@@ -243,40 +488,44 @@
 
   .team {
     .escudo {
-      width: 300px;
-      height: 300px;
+      width: 260px;
+      height: 260px;
     }
 
     .name {
-      font-size: 8rem;
+      font-size: 6rem;
     }
   }
 
   .marcador {
     top: 48%;
+
     div {
       font-size: 15rem;
     }
   }
 }
 
-/* ------------------------- Surface Pro and 1366px x 768px ---------------------------------*/
-@media (min-width: 1366px) {
+/* ------------------------- Surface Pro ---------------------------------*/
+@media (min-width: 1081px) and (max-width: 1368px){
   .background {
-    background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
   }
 
   .sponsor-marcador {
-    margin-bottom: 12rem;
+    margin-bottom: 10rem;
 
     img {
-      width: 40%;
+      max-width: 300px;
+      filter: drop-shadow(8px 10px 1px #000000b3);
     }
   }
 
   .partidos {
+    max-width: 600px;
+
     .teams-container {
-      gap: 14rem;
+      gap: 12rem;
     }
 
     .tiempo {
@@ -290,11 +539,11 @@
 
     .escudo {
       border: 1rem solid white;
-      height: 30rem;
-      width: 30rem;
+      height: 25rem;
+      width: 25rem;
 
       img {
-        filter: drop-shadow(2px 3px 4px #000000b3);
+        filter: drop-shadow(8px 10px 1px #000000b3);
       }
     }
 
@@ -304,7 +553,176 @@
   }
 
   .marcador {
+    top: 15rem;
+
+    div {
+      font-size: 14rem;
+    }
+  }
+}
+
+/*Before square resolution*/
+
+@media (min-width: 916px) and (max-width: 1079px) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    margin-bottom: 12rem;
+
+    img {
+      max-width: 400px;
+      filter: drop-shadow(10px 12px 1px #000000b3);
+    }
+  }
+
+  .partidos {
+    max-width: 800px;
+
+    .teams-container {
+      gap: 14rem;
+    }
+
+    .tiempo {
+      top: -10rem;
+      font-size: 12rem;
+    }
+  }
+
+  .team {
+    width: 40%;
+
+    .escudo {
+      border: 1rem solid white;
+      height: 32rem;
+      width: 32rem;
+
+      img {
+        filter: drop-shadow(8px 10px 1px #000000b3);
+      }
+    }
+
+    .name {
+      font-size: 10rem;
+    }
+  }
+
+  .marcador {
     top: 20rem;
+
+    div {
+      font-size: 16rem;
+    }
+  }
+}
+
+/*Square resolution*/
+
+@media(aspect-ratio: 1/1) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-cuadrado.svg');
+  }
+
+  .sponsor-marcador {
+    margin-bottom: 12rem;
+
+    img {
+      max-width: 400px;
+      filter: drop-shadow(10px 12px 1px #000000b3);
+    }
+  }
+
+  .partidos {
+    max-width: 800px;
+
+    .teams-container {
+      gap: 14rem;
+    }
+
+    .tiempo {
+      top: -10rem;
+      font-size: 12rem;
+    }
+  }
+
+  .team {
+    width: 40%;
+
+    .escudo {
+      border: 1rem solid white;
+      height: 32rem;
+      width: 32rem;
+
+      img {
+        filter: drop-shadow(8px 10px 1px #000000b3);
+      }
+    }
+
+    .name {
+      font-size: 10rem;
+    }
+  }
+
+  .marcador {
+    top: 20rem;
+
+    div {
+      font-size: 16rem;
+    }
+  }
+}
+
+/*After Surface Pro*/
+
+@media(min-width: 1369px) and (max-width: 1919px) and (orientation: landscape) {
+  .background {
+    background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+  }
+
+  .sponsor-marcador {
+    margin-bottom: 12rem;
+
+    img {
+      max-width: 400px;
+      filter: drop-shadow(10px 12px 1px #000000b3);
+    }
+  }
+
+  .partidos {
+    max-width: 800px;
+
+    .teams-container {
+      gap: 14rem;
+    }
+
+    .tiempo {
+      top: -10rem;
+      font-size: 12rem;
+    }
+  }
+
+  .team {
+    width: 40%;
+
+    .escudo {
+      border: 1rem solid white;
+      height: 32rem;
+      width: 32rem;
+
+      img {
+        filter: drop-shadow(8px 10px 1px #000000b3);
+      }
+    }
+
+    .name {
+      font-size: 10rem;
+    }
+  }
+
+  .marcador {
+    top: 20rem;
+
     div {
       font-size: 16rem;
     }
@@ -322,6 +740,7 @@
 
     img {
       width: 45%;
+      filter: drop-shadow(10px 12px 1px #000000b3);
     }
   }
 
@@ -348,7 +767,7 @@
       width: 42rem;
 
       img {
-        filter: drop-shadow(2px 3px 4px #000000b3);
+        filter: drop-shadow(10px 12px 1px #000000b3);
       }
     }
 
@@ -359,6 +778,7 @@
 
   .marcador {
     top: 25rem;
+
     div {
       font-size: 22rem;
     }
@@ -377,6 +797,7 @@
     img {
       width: 70%;
       max-width: 800px;
+      filter: drop-shadow(10px 12px 1px #000000b3);
     }
   }
 
@@ -387,7 +808,7 @@
   .partidos {
     .teams-container {
       width: 100%;
-      gap: 150px;
+      gap: 100px;
     }
 
     .tiempo {
@@ -405,7 +826,7 @@
       width: 42rem;
 
       img {
-        filter: drop-shadow(2px 3px 4px #000000b3);
+        filter: drop-shadow(10px 12px 1px #000000b3);
       }
     }
 
@@ -415,7 +836,8 @@
   }
 
   .marcador {
-    top: 56%;
+    top: 50%;
+
     div {
       font-size: 20rem;
     }
@@ -430,11 +852,12 @@
   }
 
   .sponsor-marcador {
-    margin: 0 0 18rem 0;
+    margin: 0 0 120px 0;
 
     img {
       width: 40%;
-      max-width: 1160px;
+      max-width: 500px;
+      filter: drop-shadow(10px 15px 1px #000000b3);
     }
   }
 
@@ -447,7 +870,7 @@
 
     .teams-container {
       width: 80%;
-      gap: 15rem;
+      gap: 10rem;
     }
 
     .tiempo {
@@ -465,20 +888,21 @@
       width: 60rem;
 
       img {
-        filter: drop-shadow(12px 13px 14px #000000b3);
+        filter: drop-shadow(10px 15px 1px #000000b3);
       }
     }
 
     .name {
-      font-size: 15rem;
+      font-size: 12rem;
       margin-top: 5rem;
     }
   }
 
   .marcador {
     top: 35rem;
+
     div {
-      font-size: 35rem;
+      font-size: 30rem;
     }
   }
 }
@@ -494,6 +918,7 @@
     img {
       width: 60%;
       max-width: 870px;
+      filter: drop-shadow(10px 15px 1px #000000b3);
     }
   }
 
@@ -524,7 +949,7 @@
       width: 45rem;
 
       img {
-        filter: drop-shadow(12px 13px 14px #000000b3);
+        filter: drop-shadow(10px 15px 1px #000000b3);
       }
     }
 
@@ -536,6 +961,7 @@
 
   .marcador {
     top: 25rem;
+
     div {
       font-size: 25rem;
     }
@@ -553,7 +979,8 @@
 
     img {
       width: 40%;
-      max-width: 1500px;
+      max-width: 900px;
+      filter: drop-shadow(15px 30px 1px #000000b3);
     }
   }
 
@@ -562,8 +989,10 @@
   }
 
   .partidos {
+    max-width: 2500px;
+
     .teams-container {
-      gap: 400px;
+      gap: 100px;
     }
 
     .tiempo {
@@ -581,7 +1010,7 @@
       width: 90rem;
 
       img {
-        filter: drop-shadow(22px 23px 24px #000000b3);
+        filter: drop-shadow(15px 30px 1px #000000b3);
       }
     }
 
@@ -593,6 +1022,7 @@
 
   .marcador {
     top: 60rem;
+
     div {
       font-size: 45rem;
     }
@@ -610,6 +1040,7 @@
     img {
       width: 70%;
       max-width: 1700px;
+      filter: drop-shadow(15px 30px 1px #000000b3);
     }
   }
 
@@ -619,6 +1050,7 @@
 
   .partidos {
     max-width: 2000px;
+
     .teams-container {
       width: 100%;
       gap: 45rem;
@@ -639,7 +1071,7 @@
       width: 90rem;
 
       img {
-        filter: drop-shadow(22px 23px 24px #000000b3);
+        filter: drop-shadow(15px 30px 1px #000000b3);
       }
     }
 
@@ -651,6 +1083,7 @@
 
   .marcador {
     top: 60rem;
+
     div {
       font-size: 50rem;
     }
@@ -665,10 +1098,11 @@
   }
 
   .sponsor-marcador {
-    margin-bottom: 30rem;
+    margin-bottom: 200px;
 
     img {
-      max-width: 3000px;
+      max-width: 1600px;
+      filter: drop-shadow(20px 50px 2px #000000b3);
     }
   }
 
@@ -678,7 +1112,7 @@
 
   .partidos {
     width: 100%;
-    max-width: 4000px;
+    max-width: 6000px;
 
     .teams-container {
       gap: 100rem;
@@ -687,7 +1121,7 @@
 
     .tiempo {
       top: -20rem;
-      font-size: 60rem;
+      font-size: 56rem;
     }
   }
 
@@ -696,24 +1130,25 @@
 
     .escudo {
       border: 4rem solid white;
-      height: 220rem;
-      width: 220rem;
+      height: 180rem;
+      width: 180rem;
 
       img {
-        filter: drop-shadow(38px 39px 30px #000000b3);
+        filter: drop-shadow(20px 50px 2px #000000b3);
       }
     }
 
     .name {
       font-size: 40rem;
-      margin-top: 18rem;
+      margin-top: 15rem;
     }
   }
 
   .marcador {
-    top: 140rem;
+    top: 1000px;
+
     div {
-      font-size: 120rem;
+      font-size: 100rem;
     }
   }
 }
@@ -724,10 +1159,11 @@
   }
 
   .sponsor-marcador {
-    margin-bottom: 60rem;
+    margin-bottom: 600px;
 
     img {
       max-width: 3000px;
+      filter: drop-shadow(20px 50px 2px #000000b3);
     }
   }
 
@@ -740,7 +1176,7 @@
     max-width: 4000px;
 
     .teams-container {
-      gap: 100rem;
+      gap: 1000px;
       width: max-content;
     }
 
@@ -755,22 +1191,23 @@
 
     .escudo {
       border: 3rem solid white;
-      height: 150rem;
-      width: 150rem;
+      height: 1500px;
+      width: 1500px;
 
       img {
-        filter: drop-shadow(38px 39px 30px #000000b3);
+        filter: drop-shadow(20px 50px 2px #000000b3);
       }
     }
 
     .name {
       font-size: 40rem;
-      margin-top: 30rem;
+      margin-top: 260px;
     }
   }
 
   .marcador {
     top: 80rem;
+
     div {
       font-size: 100rem;
     }
@@ -789,6 +1226,7 @@
     -webkit-transform-origin: top;
     transform-origin: top;
   }
+
   100% {
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -804,6 +1242,7 @@
     -webkit-transform-origin: top;
     transform-origin: top;
   }
+
   100% {
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);

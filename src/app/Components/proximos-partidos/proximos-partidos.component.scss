@@ -15,11 +15,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  min-width: 280px;
 }
 
 .container-proximos-partidos {
   height: 100%;
   width: 100%;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,9 +33,12 @@
   justify-content: center;
   width: 100%;
   font-size: var(--lg);
+  margin-bottom: 10px;
+
   img {
-    min-width: 200px;
-    max-width: 220px;
+    min-width: 180px;
+    max-width: 180px;
+    filter: drop-shadow(1px 1px 1px #000000b3);
   }
 }
 
@@ -50,7 +55,10 @@
     height: 15%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+
     .title-partidos {
+      filter: drop-shadow(2px 2px 2px #000000b3);
       text-align: center;
       font-size: 3rem;
       letter-spacing: 0.2rem;
@@ -60,6 +68,7 @@
   .proximos-partidos-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     .proximos-partidos {
       position: relative;
       display: flex;
@@ -67,29 +76,55 @@
       height: 22%;
       width: 100%;
       padding: 0 1rem;
-      .tiempo-proximos-partidos {
-        text-align: center;
-        font-size: 1.3rem;
-        letter-spacing: 0.2rem;
-        width: 33.3%;
-      }
+
       .team-name {
         width: 33.3%;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         line-height: 9rem;
-        letter-spacing: 0.4rem;
+        letter-spacing: 0.2rem;
+        filter: drop-shadow(1px 1px 1px #000000b3);
       }
+
+      .team-home {
+        text-align: left;
+      }
+
       .team-away {
         text-align: right;
       }
+
+      .date-partidos {
+        display: flex;
+        width: 33.3%;
+        justify-content: center;
+        flex-direction: column;
+
+        .fecha-proximos-partidos {
+          width: 100%;
+          text-align: center;
+          font-size: 1.1rem;
+          letter-spacing: 0.1rem;
+          filter: drop-shadow(1px 1px 1px #000000b3);
+        }
+
+        .tiempo-proximos-partidos {
+          text-align: center;
+          font-size: 1.8rem;
+          letter-spacing: 0.1rem;
+          filter: drop-shadow(1px 1px 1px #000000b3);
+          width: 100%;
+        }
+      }
+
       .container-img {
         position: absolute;
         display: flex;
         place-content: center;
         align-items: center;
-        height: 6rem;
-        width: 6rem;
+        height: 5rem;
+        width: 5rem;
         border-radius: 50%;
+
         img {
           border: solid 0.2rem white;
           border-radius: 50%;
@@ -99,12 +134,13 @@
           width: 90%;
         }
       }
+
       .img-home {
-        left: 18%;
+        left: 20%;
       }
 
       .img-away {
-        right: 18%;
+        right: 20%;
       }
     }
   }
@@ -114,7 +150,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 40%;
+  height: 40px;
   border-radius: 40px;
   z-index: 0;
   opacity: 0.7;
