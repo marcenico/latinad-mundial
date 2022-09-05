@@ -28,7 +28,7 @@ export class MarcadorComponent implements OnInit {
   }
 
   getLiveMatches() {
-    this.worldCupService.getMatches('?live=all&league=1').subscribe(
+    this.worldCupService.getMatches(`?live=all&league=${this.configLoaderService.league}`).subscribe(
       (res: LiveMatches) => {
         this.swiperConfig.autoplay = this.setAutoplay(res.response);
         this.matches = res.response;
@@ -40,7 +40,7 @@ export class MarcadorComponent implements OnInit {
 
   getMockLiveMatchesInterval(delay: number) {
     interval(delay)
-      .pipe(mergeMap(() => this.worldCupService.getMatches('?live=all&league=1')))
+      .pipe(mergeMap(() => this.worldCupService.getMatches(`?live=all&league=${this.configLoaderService.league}`)))
       .subscribe(
         (res: LiveMatches) => {
           this.swiperConfig.autoplay = this.setAutoplay(res.response);

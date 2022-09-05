@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { Away, Goals, Home, LiveMatches, Match, Status } from 'src/app/models/live-matches.model';
+import { ConfigLoaderService } from 'src/app/services/config-loader.service';
 import { UtilsService } from 'src/app/services/utlis.service';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 
@@ -20,9 +21,14 @@ export class MatchComponent implements OnInit {
   private isHalfTime = false;
   private intervalSeconds: any;
 
-  constructor(private worldCupService: WorldCupService, private utilsService: UtilsService) {}
+  constructor(
+    private worldCupService: WorldCupService,
+    private utilsService: UtilsService,
+    private configLoaderService: ConfigLoaderService
+  ) {}
 
   ngOnInit(): void {
+    if (this.configLoaderService.useMundialMocks) return;
     this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
@@ -92,7 +98,7 @@ export class MatchComponent implements OnInit {
       return;
     }
 
-    this.gameMinutes = status.elapsed;
+    this.gameMinutes = status.elapsed ? status.elapsed : 0;
   }
 
   getFlag(team: Home | Away) {
