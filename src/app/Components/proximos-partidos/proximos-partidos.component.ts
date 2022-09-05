@@ -4,6 +4,7 @@ import { UtilsService } from 'src/app/services/utlis.service';
 import { WorldCupService } from 'src/app/services/world-cup.service';
 import { interval } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
+import { ConfigLoaderService } from 'src/app/services/config-loader.service';
 
 @Component({
   selector: 'app-proximos-partidos',
@@ -13,14 +14,18 @@ import { mergeMap } from 'rxjs/operators';
 export class ProximosPartidosComponent implements OnInit {
   proximosPartidos: Match[] = [];
 
-  constructor(private service: WorldCupService, private utilsService: UtilsService) {}
+  constructor(
+    private service: WorldCupService,
+    private utilsService: UtilsService,
+    private configLoaderService: ConfigLoaderService
+  ) {}
 
   ngOnInit(): void {
     this.getProximosPartidos();
   }
 
   getProximosPartidos() {
-    this.service.getMatches('?league=1&next=4').subscribe(
+    this.service.getMatches(`?league=${this.configLoaderService.league}&next=4`).subscribe(
       (res: LiveMatches) => {
         res.response = res.response.slice(0, 4);
         this.proximosPartidos = res.response;
@@ -32,7 +37,7 @@ export class ProximosPartidosComponent implements OnInit {
 
   getProximosPartidosInterval(delay: number) {
     interval(delay)
-      .pipe(mergeMap(() => this.service.getMatches('?league=1&next=4')))
+      .pipe(mergeMap(() => this.service.getMatches(`?league=${this.configLoaderService.league}&next=4`)))
       .subscribe(
         (res: LiveMatches) => {
           res.response = res.response.slice(0, 4);
