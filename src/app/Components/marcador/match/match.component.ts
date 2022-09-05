@@ -118,7 +118,7 @@ export class MatchComponent implements OnInit {
     ) {
       return '+';
     }
-    return this.gameSeconds;
+    return `:${this.gameSeconds}`;
   }
 
   get statusShort() {
