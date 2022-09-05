@@ -26,7 +26,7 @@ export class MatchComponent implements OnInit {
     this.checkMatchTime(this.match.fixture.status);
     this.startWatch();
 
-    interval(1.5 * 1000 * 60) // 2 Minutos
+    interval(1.5 * 1000 * 60) // 1.5 Minutos
       .pipe(mergeMap(() => this.worldCupService.getMatches(`?id=${this.match.fixture.id}`)))
       .subscribe(
         (res: LiveMatches) => {
@@ -44,29 +44,11 @@ export class MatchComponent implements OnInit {
 
   private startWatch() {
     this.intervalSeconds = setInterval(() => {
-      if (this.match.fixture.status.short !== 'NS') {
+      if (this.statusShort !== 'NS') {
         this.gameSeconds = this.agregarCero(new Date().getSeconds().toString());
-        if (this.gameSeconds === '59') {
-          setTimeout(() => {
-            if (this.match.fixture.status.short !== 'HT') {
-              this.gameMinutes += 1;
-            }
-          }, 1000);
-        }
+        if (this.gameSeconds === '59') this.gameMinutes += 1;
       }
     }, 1000);
-  }
-
-  getMinutes() {
-    return this.agregarCero(this.gameMinutes.toString());
-  }
-
-  getFlag(team: Home | Away) {
-    return this.utilsService.cambioImagenBandera(team);
-  }
-
-  getStatusShort() {
-    return this.match.fixture.status.short;
   }
 
   private stopWatch() {
@@ -96,7 +78,7 @@ export class MatchComponent implements OnInit {
   private checkMatchTime(status: Status) {
     if (status.short === 'HT') {
       if (this.isHalfTime === false) {
-        this.gameMinutes -= 45;
+        this.gameMinutes = 0;
         this.isHalfTime = true;
       }
       return;
@@ -111,5 +93,35 @@ export class MatchComponent implements OnInit {
     }
 
     this.gameMinutes = status.elapsed;
+  }
+
+  getFlag(team: Home | Away) {
+    return this.utilsService.cambioImagenBandera(team);
+  }
+
+  get minutes() {
+    if (this.statusShort === '1H' && this.match.fixture.status.elapsed === 45) {
+      return '45';
+    }
+
+    if (this.statusShort === '2H' && this.match.fixture.status.elapsed === 90) {
+      return '90';
+    }
+
+    return this.agregarCero(this.gameMinutes.toString());
+  }
+
+  get seconds() {
+    if (
+      (this.statusShort === '1H' && this.match.fixture.status.elapsed === 45) ||
+      (this.statusShort === '2H' && this.match.fixture.status.elapsed === 90)
+    ) {
+      return '+';
+    }
+    return this.gameSeconds;
+  }
+
+  get statusShort() {
+    return this.match.fixture.status.short;
   }
 }
