@@ -1,6 +1,7 @@
 {
   "token": "",
   "league": 128,
+  "useMundialMocks": true,
   "mainSwiperConfig": {
     "direction": "vertical",
     "rewind": true,

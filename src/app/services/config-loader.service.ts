@@ -7,6 +7,7 @@ import { SwiperOptions } from 'swiper';
 export class ConfigLoaderService {
   public token = 'Not Set Yet';
   public league = 1;
+  public useMundialMocks = false;
   public mainSwiperConfig: any;
   public marcadorSwiperConfig: SwiperOptions;
   public tablaPuntosSwiperConfig: SwiperOptions;
@@ -20,6 +21,7 @@ export class ConfigLoaderService {
         map((response: any) => {
           this.token = response.token;
           this.league = response.league;
+          this.useMundialMocks = response.useMundialMocks;
           this.mainSwiperConfig = response.mainSwiperConfig;
           this.marcadorSwiperConfig = response.marcadorSwiperConfig;
           this.tablaPuntosSwiperConfig = response.tablaPuntosSwiperConfig;

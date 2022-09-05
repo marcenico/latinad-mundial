@@ -14,7 +14,6 @@ import { ConfigLoaderService } from './config-loader.service';
 export class WorldCupService {
   private token = '';
   private options: any;
-
   public thereIsAGoal$ = new EventEmitter<{ isGoal: boolean; slideIndex: number }>();
 
   constructor(
@@ -33,27 +32,41 @@ export class WorldCupService {
   }
 
   public getMatches(filters: string = ''): Observable<LiveMatches> {
-    filters += `&timezone=${environment.timezone}`;
-    return this.http.get<LiveMatches>(`${environment.apiSports}/fixtures${filters}`, this.options).pipe(
-      map((data: any) => {
-        let filerData: LiveMatches = {
-          errors: data.errors,
-          response: this.utilsService.filterMatchData(data.response)
-        };
-        return filerData;
-      })
-    );
+    if (this.configLoaderService.useMundialMocks) filters += `&timezone=${environment.timezone}`;
+    return this.http
+      .get<LiveMatches>(
+        this.configLoaderService.useMundialMocks
+          ? './assets/mocks/mock-live-matches-1.json'
+          : `${environment.apiSports}/fixtures${filters}`,
+        this.options
+      )
+      .pipe(
+        map((data: any) => {
+          let filerData: LiveMatches = {
+            errors: data.errors,
+            response: this.utilsService.filterMatchData(data.response)
+          };
+          return filerData;
+        })
+      );
   }
 
   public getTablePoints(filters: string = ''): Observable<any> {
-    return this.http.get(`${environment.apiSports}/standings${filters}`, this.options).pipe(
-      map((data: any) => {
-        let groupsPartOne: Table[] = data.response[0].league.standings.slice(0, 4);
-        let groupsPartTwo: Table[] = data.response[0].league.standings.slice(4, 8);
-        groupsPartOne = this.utilsService.filterTableData(groupsPartOne);
-        groupsPartTwo = this.utilsService.filterTableData(groupsPartTwo);
-        return [groupsPartOne, groupsPartTwo];
-      })
-    );
+    return this.http
+      .get(
+        this.configLoaderService.useMundialMocks
+          ? './assets/mocks/mock-tabla-puntos.json'
+          : `${environment.apiSports}/standings${filters}`,
+        this.options
+      )
+      .pipe(
+        map((data: any) => {
+          let groupsPartOne: Table[] = data.response[0].league.standings.slice(0, 4);
+          let groupsPartTwo: Table[] = data.response[0].league.standings.slice(4, 8);
+          groupsPartOne = this.utilsService.filterTableData(groupsPartOne);
+          groupsPartTwo = this.utilsService.filterTableData(groupsPartTwo);
+          return [groupsPartOne, groupsPartTwo];
+        })
+      );
   }
 }

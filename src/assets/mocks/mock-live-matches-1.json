@@ -1,33 +1,29 @@
 {
   "get": "fixtures",
-  "parameters": { "live": "all", "league": "72" },
+  "parameters": { "league": "1", "next": "4", "timezone": "America/Argentina/Buenos_Aires" },
   "errors": [],
-  "results": 1,
+  "results": 4,
   "paging": { "current": 1, "total": 1 },
   "response": [
     {
       "fixture": {
-        "id": 838878,
-        "referee": "Caio Max Augusto Vieira",
-        "timezone": "UTC",
-        "date": "2022-08-26T00:30:00+00:00",
-        "timestamp": 1661473800,
-        "periods": { "first": 1661473800, "second": 1661477400 },
-        "venue": {
-          "id": 5664,
-          "name": "Est\u00e1dio Dr. Jorge Ismael de Biasi",
-          "city": "Novo Horizonte, S\u00e3o Paulo"
-        },
-        "status": { "long": "Halftime", "short": "HT", "elapsed": 45 }
+        "id": 855736,
+        "referee": null,
+        "timezone": "America/Argentina/Buenos_Aires",
+        "date": "2022-11-20T13:00:00-03:00",
+        "timestamp": 1668960000,
+        "periods": { "first": null, "second": null },
+        "venue": { "id": null, "name": "Al Bayt Stadium", "city": "Al-Khor" },
+        "status": { "long": "Not Started", "short": "NS", "elapsed": null }
       },
       "league": {
-        "id": 72,
-        "name": "Serie B",
-        "country": "Brazil",
-        "logo": "https://media.api-sports.io/football/leagues/72.png",
-        "flag": "https://media.api-sports.io/flags/br.svg",
+        "id": 1,
+        "name": "World Cup",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/1.png",
+        "flag": null,
         "season": 2022,
-        "round": "Regular Season - 26"
+        "round": "Group Stage - 1"
       },
       "teams": {
         "home": {
@@ -43,9 +39,9 @@
           "winner": null
         }
       },
-      "goals": { "home": 1, "away": 0 },
+      "goals": { "home": null, "away": null },
       "score": {
-        "halftime": { "home": 1, "away": 0 },
+        "halftime": { "home": null, "away": null },
         "fulltime": { "home": null, "away": null },
         "extratime": { "home": null, "away": null },
         "penalty": { "home": null, "away": null }
@@ -55,8 +51,8 @@
       "fixture": {
         "id": 855735,
         "referee": null,
-        "timezone": "UTC",
-        "date": "2022-11-21T13:00:00+00:00",
+        "timezone": "America/Argentina/Buenos_Aires",
+        "date": "2022-11-21T10:00:00-03:00",
         "timestamp": 1669035600,
         "periods": { "first": null, "second": null },
         "venue": { "id": null, "name": "Khalifa International Stadium", "city": "Doha" },
@@ -97,8 +93,8 @@
       "fixture": {
         "id": 855734,
         "referee": null,
-        "timezone": "UTC",
-        "date": "2022-11-21T16:00:00+00:00",
+        "timezone": "America/Argentina/Buenos_Aires",
+        "date": "2022-11-21T13:00:00-03:00",
         "timestamp": 1669046400,
         "periods": { "first": null, "second": null },
         "venue": { "id": null, "name": "Al Thumama Stadium", "city": "Doha" },
@@ -139,8 +135,8 @@
       "fixture": {
         "id": 866681,
         "referee": null,
-        "timezone": "UTC",
-        "date": "2022-11-21T19:00:00+00:00",
+        "timezone": "America/Argentina/Buenos_Aires",
+        "date": "2022-11-21T16:00:00-03:00",
         "timestamp": 1669057200,
         "periods": { "first": null, "second": null },
         "venue": { "id": null, "name": "Ahmad bin Ali Stadium", "city": "Al-Rayyan" },
