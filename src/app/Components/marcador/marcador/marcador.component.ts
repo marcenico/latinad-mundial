@@ -12,14 +12,22 @@ SwiperCore.use([Virtual]);
 @Component({
   selector: 'app-marcador',
   templateUrl: './marcador.component.html',
-  styleUrls: ['./marcador.component.scss']
+  styleUrls: [
+    './marcador.component.scss',
+    './marcador-portrait.component.scss',
+    './marcador-landscape.component.scss',
+    '../marcador/marcador-animacion.component.scss',
+  ],
 })
 export class MarcadorComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   matches: Match[] = [];
   swiperConfig: any;
 
-  constructor(private worldCupService: WorldCupService, private configLoaderService: ConfigLoaderService) {
+  constructor(
+    private worldCupService: WorldCupService,
+    private configLoaderService: ConfigLoaderService
+  ) {
     this.swiperConfig = this.configLoaderService.marcadorSwiperConfig;
   }
 
@@ -28,19 +36,27 @@ export class MarcadorComponent implements OnInit {
   }
 
   getLiveMatches() {
-    this.worldCupService.getMatches(`?live=all&league=${this.configLoaderService.league}`).subscribe(
-      (res: LiveMatches) => {
-        this.swiperConfig.autoplay = this.setAutoplay(res.response);
-        this.matches = res.response;
-        this.getMockLiveMatchesInterval(45 * 1000 * 60); // 45 Minutos
-      },
-      (e) => console.error(e)
-    );
+    this.worldCupService
+      .getMatches(`?live=all&league=${this.configLoaderService.league}`)
+      .subscribe(
+        (res: LiveMatches) => {
+          this.swiperConfig.autoplay = this.setAutoplay(res.response);
+          this.matches = res.response;
+          this.getMockLiveMatchesInterval(45 * 1000 * 60); // 45 Minutos
+        },
+        (e) => console.error(e)
+      );
   }
 
   getMockLiveMatchesInterval(delay: number) {
     interval(delay)
-      .pipe(mergeMap(() => this.worldCupService.getMatches(`?live=all&league=${this.configLoaderService.league}`)))
+      .pipe(
+        mergeMap(() =>
+          this.worldCupService.getMatches(
+            `?live=all&league=${this.configLoaderService.league}`
+          )
+        )
+      )
       .subscribe(
         (res: LiveMatches) => {
           this.swiperConfig.autoplay = this.setAutoplay(res.response);
@@ -51,6 +67,8 @@ export class MarcadorComponent implements OnInit {
   }
 
   private setAutoplay(matches: any[]) {
-    return matches.length === 1 ? undefined : { delay: 1000 * 2, disableOnInteraction: false };
+    return matches.length === 1
+      ? undefined
+      : { delay: 1000 * 2, disableOnInteraction: false };
   }
 }
