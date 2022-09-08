@@ -96,13 +96,13 @@
 
     /*Surface Duo*/
 
-    @media (min-height:540px) and (max-height: 559px) {
+    @media (min-height:540px) and (max-height: 599px) {
         .background {
             background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
         }
 
         .sponsor-marcador {
-            margin: 0 0 100px 0;
+            margin: 40px 0 40px 0;
 
             img {
                 max-width: 200px;
@@ -112,29 +112,29 @@
 
         .partidos {
             .tiempo {
-                top: -40%;
-                font-size: 8rem;
+                top: -15%;
+                font-size: 5rem;
             }
 
             .teams-container {
-                max-width: 410px;
-                gap: 3rem;
+                max-width: 500px;
+                gap: 2rem;
             }
         }
 
         .team {
             .escudo {
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
             }
 
             .name {
-                font-size: 6rem;
+                font-size: 4rem;
             }
         }
 
         .marcador {
-            top: 35%;
+            top: 50%;
 
             div {
                 font-size: 8rem;
@@ -144,7 +144,7 @@
 
     /*Nest Hub*/
 
-    @media (min-height: 600px) and (max-height: 767px) {
+    @media (min-height: 600px) and (max-height: 719px) {
         .background {
             background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
         }
@@ -195,6 +195,57 @@
         }
     }
 
+    @media (min-height: 720px) and (max-height: 767px) {
+        .background {
+            background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+        }
+
+        .sponsor-marcador {
+            margin: 100px 0 60px 0;
+
+            img {
+                width: 40%;
+                max-width: 300px;
+                filter: drop-shadow(4px 5px 1px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 1024px;
+        }
+
+        .partidos {
+            .tiempo {
+                top: -20%;
+                font-size: 6rem;
+            }
+
+            .teams-container {
+                width: auto;
+                gap: 5rem;
+            }
+        }
+
+        .team {
+            .escudo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .name {
+                font-size: 5rem;
+            }
+        }
+
+        .marcador {
+            top: 48%;
+
+            div {
+                font-size: 10rem;
+            }
+        }
+    }
+    
     /*iPad Mini and Air */
 
     @media (min-height: 768px) and (max-height: 820px) {
@@ -246,7 +297,7 @@
             }
         }
     }
-
+    
     /*After Surface Pro*/
 
     @media(min-width: 1369px) and (max-width: 1919px) {

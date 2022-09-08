@@ -43,42 +43,42 @@
 
     @media (min-width: 540px) and (max-width: 767px) {
         .sponsor-marcador {
-            margin: 0 0 100px 0;
+            margin: 100px 0 60px 0;
 
             img {
-                max-width: 300px;
+                max-width: 220px;
                 filter: drop-shadow(4px 5px 1px #000000b3);
             }
         }
 
         .partidos {
             .tiempo {
-                top: -40%;
-                font-size: 8rem;
+                top: -25%;
+                font-size: 6rem;
             }
 
             .teams-container {
-                max-width: 410px;
+                max-width: 520px;
                 gap: 3rem;
             }
         }
 
         .team {
             .escudo {
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
             }
 
             .name {
-                font-size: 6rem;
+                font-size: 4rem;
             }
         }
 
         .marcador {
-            top: 35%;
+            top: 50%;
 
             div {
-                font-size: 8rem;
+                font-size: 10rem;
             }
         }
     }
@@ -132,7 +132,6 @@
     }
 
     /* ------------------------- Surface Pro ---------------------------------*/
-
     @media (min-width: 1081px) and (max-width: 1368px) {
         .background {
             background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
