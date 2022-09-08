@@ -299,7 +299,7 @@
         }
     }
 
-    /* Media querie desktop in portrait */
+    /* Media querie desktop */
     @media (min-height: 1920px) and (max-width: 2559px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
@@ -358,7 +358,7 @@
         }
     }
 
-    /*---------------------- 2560px x 1440px portrait ----------------------------*/
+    /*---------------------- 2560px x 1440px ----------------------------*/
 
     @media screen and (min-height: 2560px) and (max-height: 3839px) {
         .background {

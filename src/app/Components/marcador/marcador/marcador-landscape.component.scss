@@ -94,7 +94,7 @@
         }
     }
 
-    /*Surface Duo landscape orientation*/
+    /*Surface Duo*/
 
     @media (min-height:540px) and (max-height: 559px) {
         .background {
@@ -303,7 +303,7 @@
         }
     }
 
-    /* Media querie desktop in landscape orientation */
+    /* Media querie desktop */
     @media (min-width: 1920px) and (max-width: 2559px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
@@ -420,7 +420,7 @@
         }
     }
 
-    /*---------------------- 3840px x 2610px landscape ----------------------------*/
+    /*---------------------- 3840px x 2610px ----------------------------*/
     @media screen and (min-width: 3840px) and (max-width: 7679px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
@@ -481,7 +481,7 @@
         }
     }
 
-    /*---------------------- 7680px x 4320px landscape ----------------------------*/
+    /*---------------------- 7680px x 4320px ----------------------------*/
 
     @media (min-width: 7680px) and (max-width: 9999px) {
         .background {
