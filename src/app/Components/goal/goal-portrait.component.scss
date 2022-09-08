@@ -1,0 +1,157 @@
+@media (orientation: portrait) {
+
+    /* 320px — 480px: Mobile devices */
+    @media (min-width: 320px) and (max-width: 480px) {
+        .container-sponsor {
+            img {
+                width: clamp(100px, 30%, 110px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(5.5rem + 1vw);
+                padding: 1rem;
+            }
+        }
+    }
+
+    /* 481px — 768px: iPads, Tablets */
+    @media (min-width: 481px) and (max-width: 768px) {
+        .container-sponsor {
+            img {
+                width: clamp(170px, 35%, 200px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(10rem + 1vw);
+                padding: 1rem;
+            }
+        }
+    }
+
+    /* 769px — 1024px: Small screens, laptops */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .container-sponsor {
+            img {
+                width: clamp(235px, 30%, 280px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(16rem + 1vw);
+                padding: 1rem;
+            }
+        }
+    }
+
+    /* 1025px — 1200px: Desktops, large screens */
+    @media (min-width: 1025px) and (max-width: 1200px) {
+        .background {
+            background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+        }
+
+        .container-sponsor {
+            img {
+                width: clamp(310px, 30%, 330px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(22rem + 1vw);
+                padding: 1.4rem;
+            }
+        }
+    }
+
+    /* 1201px-1440px —  Extra large screens, TV */
+    @media (min-width: 1201px) and (max-width: 1440px) {
+        .background {
+            background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+        }
+
+        .container-sponsor {
+            img {
+                filter: drop-shadow(8px 8px 8px #000000b3);
+                width: clamp(330px, 30%, 370px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(26rem + 1vw);
+                padding: 2rem;
+            }
+        }
+    }
+
+    /* 1441px-2560px */
+    @media (min-width: 1441px) and (max-width: 2560px) {
+        .background {
+            background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+        }
+
+        .container-sponsor {
+            img {
+                filter: drop-shadow(10px 10px 10px #000000b3);
+                width: clamp(440px, 30%, 600px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(35rem + 1vw);
+                padding: 1rem;
+                text-shadow: #000000b3 6px 16px 16px;
+            }
+        }
+    }
+
+    /* 2561px-3840px  */
+    @media (min-width: 2561px) and (max-width: 3840px) {
+        .background {
+            background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+        }
+
+        .container-sponsor {
+            img {
+                filter: drop-shadow(14px 14px 14px #000000b3);
+                width: clamp(770px, 30%, 900px);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(55rem + 2vw);
+                padding: calc(2rem + 0.5vw);
+                text-shadow: #000000b3 10px 20px 20px;
+            }
+        }
+    }
+
+    /* 3841px-...  */
+    @media (min-width: 3841px) {
+        .background {
+            background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
+        }
+
+        .container-sponsor {
+            img {
+                width: clamp(1160px, 30%, 1210px);
+                filter: drop-shadow(16px 16px 16px #000000b3);
+            }
+        }
+
+        .container-letter {
+            .letter {
+                font-size: calc(80rem + 4vw);
+                padding: calc(3rem + 0.5vw);
+                text-shadow: #000000b3 14px 24px 24px;
+            }
+        }
+    }
+}
