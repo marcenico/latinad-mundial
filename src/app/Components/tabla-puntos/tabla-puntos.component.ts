@@ -9,7 +9,7 @@ import { ConfigLoaderService } from 'src/app/services/config-loader.service';
 @Component({
   selector: 'app-tabla-puntos',
   templateUrl: './tabla-puntos.component.html',
-  styleUrls: ['./tabla-puntos.component.scss']
+  styleUrls: ['./tabla-puntos.component.scss', './tabla-puntos-portrait.component.scss', './tabla-puntos-landscape.component.scss']
 })
 export class TablaPuntosComponent implements OnInit {
   swiperConfig: any;
