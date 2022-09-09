@@ -23,6 +23,7 @@
 
             .proximos-partidos-container {
                 justify-content: space-evenly;
+                width: 320px;
 
                 .proximos-partidos {
                     padding: 0 1.1rem;
@@ -92,7 +93,7 @@
         }
 
         .section-proximos-partidos {
-            max-width: 400px;
+            width: 400px;
             gap: 2%;
 
             .container-title-partidos {
@@ -100,7 +101,7 @@
                 margin-bottom: 10px;
 
                 .title-partidos {
-                    font-size: 4rem;
+                    font-size: 3rem;
                 }
             }
 
@@ -146,7 +147,7 @@
         }
 
         .section-proximos-partidos {
-            max-width: 600px;
+            width: 600px;
 
             .container-title-partidos {
                 .title-partidos {
@@ -203,7 +204,7 @@
         }
 
         .section-proximos-partidos {
-            max-width: 800px;
+           width: 800px;
 
             .container-title-partidos {
 

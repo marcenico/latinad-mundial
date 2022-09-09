@@ -184,7 +184,7 @@
         }
     }
    
-    @media(min-height: 720px) and (max-height: 767px) {
+    @media(min-height: 720px) and (max-height: 767px) and (min-width: 848px) {
         .background-proximos-partidos {
             background-image: url('./../../../assets/background/background-lineas-horizontal.svg');
         }
@@ -219,6 +219,7 @@
                 flex-flow: wrap;
                 align-content: flex-start;
                 gap: 32px;
+                min-width: 804px;
                 margin: 0 20px;
 
                 .proximos-partidos {
