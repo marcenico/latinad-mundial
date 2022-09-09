@@ -159,7 +159,7 @@
 
             .teams-container {
                 width: auto;
-                gap: 5rem;
+                gap: 10rem;
             }
         }
 
@@ -206,7 +206,7 @@
 
             .teams-container {
                 width: auto;
-                gap: 5rem;
+                gap: 10rem;
             }
         }
 
@@ -337,25 +337,25 @@
         }
 
         .sponsor-marcador {
-            margin-bottom: 12rem;
+            margin-bottom: 110px;
 
             img {
-                width: 45%;
+                max-width: 450px;
                 filter: drop-shadow(10px 12px 1px #000000b3);
             }
         }
 
         .partidos {
-            max-width: 1080px;
+            max-width: 1020px;
 
             .teams-container {
                 width: 100%;
-                gap: 200px;
+                gap: 160px;
             }
 
             .tiempo {
                 top: -10rem;
-                font-size: 14rem;
+                font-size: 12rem;
             }
         }
 
@@ -364,8 +364,8 @@
 
             .escudo {
                 border: 1rem solid white;
-                height: 42rem;
-                width: 42rem;
+                height: 350px;
+                width: 350px;
 
                 img {
                     filter: drop-shadow(10px 12px 1px #000000b3);
@@ -378,7 +378,7 @@
         }
 
         .marcador {
-            top: 25rem;
+            top: 20rem;
 
             div {
                 font-size: 22rem;

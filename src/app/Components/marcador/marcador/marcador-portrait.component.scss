@@ -1,5 +1,54 @@
 @media (orientation: portrait) {
+
     /*--------------------Media querie Mobile Devices----------------------------*/
+    @media (min-width: 256px) and (max-width:359px) and (min-height: 512px) {
+        .background {
+            min-width: 256px;
+        }
+
+        .section-partidos {
+            min-width: 256px;
+        }
+
+            .sponsor-marcador {
+                margin: 0 0 50px 0;
+                min-width: 256px;
+
+                img {
+                    filter: drop-shadow(3px 4px 1px #000000b3);
+                    max-width: 150px;
+                }
+            }
+
+            .partidos {
+                .tiempo {
+                    top: -30%;
+                    font-size: 4rem;
+                }
+
+                .teams-container {
+                    gap: 2rem;
+                    max-width: 360px;
+                }
+            }
+
+            .team {
+                width: 45%;
+
+                .escudo {
+                    height: 85px;
+                    width: 85px;
+                }
+
+                .name {
+                    font-size: 3rem;
+                }
+            }
+
+            .marcador>div {
+                font-size: 5rem;
+            }
+    }
 
     @media (min-width: 360px) and (max-width: 539px) {
         .sponsor-marcador {
@@ -305,7 +354,7 @@
 
             img {
                 width: 70%;
-                max-width: 800px;
+                max-width: 600px;
                 filter: drop-shadow(10px 12px 1px #000000b3);
             }
         }
@@ -317,7 +366,7 @@
         .partidos {
             .teams-container {
                 width: 100%;
-                gap: 100px;
+                gap: 30px;
             }
 
             .tiempo {
@@ -331,8 +380,8 @@
 
             .escudo {
                 border: 1rem solid white;
-                height: 42rem;
-                width: 42rem;
+                height: 350px;
+                width: 350px;
 
                 img {
                     filter: drop-shadow(10px 12px 1px #000000b3);
