@@ -12,6 +12,7 @@
             img {
                 min-width: 100px;
                 max-width: 100px;
+                filter: drop-shadow(3px 3px 3px #000000b3);
             }
         }
 
@@ -64,6 +65,7 @@
             img {
                 min-width: 100px;
                 max-width: 160px;
+                filter: drop-shadow(3px 3px 3px #000000b3);
             }
         }
 
@@ -115,6 +117,7 @@
             img {
                 min-width: 180px;
                 max-width: 200px;
+                filter: drop-shadow(3px 3px 3px #000000b3);
             }
         }
 
@@ -180,6 +183,7 @@
             height: 50px;
         }
     }
+   
     @media(min-height: 720px) and (max-height: 767px) {
         .background-proximos-partidos {
             background-image: url('./../../../assets/background/background-lineas-horizontal.svg');
@@ -190,7 +194,8 @@
 
             img {
                 min-width: 180px;
-                max-width: 250px;
+                max-width: 300px;
+                filter: drop-shadow(3px 3px 3px #000000b3);
             }
         }
 
@@ -258,8 +263,6 @@
         }
     }
 
-
-
     /* iPad Mini and Air */
 
     @media (min-height: 768px) and (max-height: 911px) {
@@ -268,8 +271,7 @@
         }
 
         .sponsor-proximos-partidos {
-            margin-top: 0;
-            padding: 2%;
+            margin: 30px 0 20px 0;
 
             img {
                 filter: drop-shadow(3px 3px 3px #000000b3);
@@ -280,7 +282,6 @@
 
         .section-proximos-partidos {
             justify-content: center;
-            height: 85%;
             width: 100vw;
             min-width: 650px;
             max-width: 900px;
