@@ -1,6 +1,98 @@
 @media (orientation: portrait) {
 
     /* Media Query for Mobile Devices */
+    @media (min-width: 256px) and (min-height: 512px) {
+        .background-proximos-partidos {
+            min-width: 256px;
+        }
+
+        .sponsor-proximos-partidos {
+            width: 256px;
+            margin: 30px 0 10px 0;
+            img {
+                min-width: 120px;
+                max-width: 120px;
+                filter: drop-shadow(2px 2px 2px #000000b3);
+            }
+        }
+
+        .container-proximos-partidos {
+            min-width: 256px;
+
+            .section-proximos-partidos {
+                place-items: center;
+                width: 256px;
+                min-width: 256px;
+
+                .container-title-partidos {
+                    height: max-content;
+                    margin: 5px 0;
+
+                    .title-partidos {
+                        font-size: 2rem;
+                    }
+                }
+
+                .proximos-partidos-container {
+                    justify-content: center;
+                    width: 220px;
+                    height: 300px;
+
+                    .proximos-partidos {
+                        padding: 0 8px;
+
+                        .tiempo-proximos-partidos {
+                            font-size: 1.2rem;
+                        }
+
+                        .team-name {
+                            font-size: 1.2rem;
+                        }
+
+                        .date-partidos {
+                            .fecha-proximos-partidos {
+                                font-size: 1rem;
+                            }
+
+                            .tiempo-proximos-partidos {
+                                font-size: 1.3rem;
+                            }
+                        }
+
+
+                        .container-img {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+
+                            img {
+                                border: solid 0.2rem white;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                filter: drop-shadow(2px 3px 4px #000000b3);
+                                height: 90%;
+                                width: 90%;
+                            }
+                        }
+
+                        .img-home {
+                            left: 18%;
+                        }
+
+                        .img-away {
+                            right: 18%;
+                        }
+                    }
+                }
+
+
+                .border {
+                    height: 40px;
+                }
+            }
+        }
+    }
+
     @media (min-width: 360px) and (max-width: 539px) {
 
         .sponsor-proximos-partidos {
