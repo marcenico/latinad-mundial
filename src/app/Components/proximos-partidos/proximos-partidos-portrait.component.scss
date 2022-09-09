@@ -81,7 +81,7 @@
 
     /*Media Query for Tablet */
 
-    @media(min-width:540px) and (max-width: 767px) {
+    @media(min-width:540px) and (max-width: 719px) {
         .sponsor-proximos-partidos {
             margin-top: 0;
             padding: 2%;
@@ -137,6 +137,62 @@
         }
     }
 
+    @media(min-width: 720px) and (max-width: 767px) and (min-height: 1200px){
+        .sponsor-proximos-partidos {
+            margin-top: 0;
+            padding: 2%;
+
+            img {
+                min-width: 280px;
+                max-width: 350px;
+            }
+        }
+
+        .section-proximos-partidos {
+            width: 600px;
+            gap: 2%;
+
+            .container-title-partidos {
+                height: max-content;
+                margin-bottom: 10px;
+
+                .title-partidos {
+                    font-size: 5rem;
+                }
+            }
+
+            .proximos-partidos-container {
+                gap: 50px;
+
+                .proximos-partidos {
+                    padding: 0 20px;
+                    .date-partidos {
+                        .fecha-proximos-partidos {
+                            font-size: 2rem;
+                        }
+
+                        .tiempo-proximos-partidos {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .team-name {
+                        font-size: 4rem;
+                    }
+
+                    .container-img {
+                        height: 12rem;
+                        width: 12rem;
+                    }
+                }
+            }
+        }
+
+        .border {
+            height: 80px;
+        }
+    }
+
     /* iPad Mini and Air + Notebook 1366px x 768px*/
     @media (min-width: 768px) and (max-width: 1366px) {
         .sponsor-proximos-partidos {
@@ -158,7 +214,7 @@
             .proximos-partidos-container {
 
                 .proximos-partidos {
-                    padding: 0 2.5rem;
+                    padding: 0 25px;
                     margin: 4rem 0;
 
                     .date-partidos {
