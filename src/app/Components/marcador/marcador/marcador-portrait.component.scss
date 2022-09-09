@@ -10,44 +10,44 @@
             min-width: 256px;
         }
 
-            .sponsor-marcador {
-                margin: 0 0 50px 0;
-                min-width: 256px;
+        .sponsor-marcador {
+            margin: 0 0 50px 0;
+            min-width: 256px;
 
-                img {
-                    filter: drop-shadow(3px 4px 1px #000000b3);
-                    max-width: 150px;
-                }
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 150px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -30%;
+                font-size: 4rem;
             }
 
-            .partidos {
-                .tiempo {
-                    top: -30%;
-                    font-size: 4rem;
-                }
+            .teams-container {
+                gap: 2rem;
+                max-width: 280px;
+            }
+        }
 
-                .teams-container {
-                    gap: 2rem;
-                    max-width: 360px;
-                }
+        .team {
+            width: 45%;
+
+            .escudo {
+                height: 85px;
+                width: 85px;
             }
 
-            .team {
-                width: 45%;
-
-                .escudo {
-                    height: 85px;
-                    width: 85px;
-                }
-
-                .name {
-                    font-size: 3rem;
-                }
+            .name {
+                font-size: 3rem;
             }
+        }
 
-            .marcador>div {
-                font-size: 5rem;
-            }
+        .marcador>div {
+            font-size: 5rem;
+        }
     }
 
     @media (min-width: 360px) and (max-width: 539px) {
@@ -92,7 +92,7 @@
 
     @media (min-width: 540px) and (max-width: 767px) {
         .sponsor-marcador {
-            margin: 100px 0 60px 0;
+            margin: 0 0 60px 0;
 
             img {
                 max-width: 220px;
@@ -108,7 +108,7 @@
 
             .teams-container {
                 max-width: 520px;
-                gap: 3rem;
+                gap: 10rem;
             }
         }
 
@@ -132,12 +132,55 @@
         }
     }
 
-    @media (min-width: 768px) and (max-width: 915px) {
+    @media (min-width: 663px) and (min-height: 663px)  {
+        .sponsor-marcador {
+            margin: 0 0 80px 0;
+
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 200px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -35%;
+                font-size: 6rem;
+            }
+
+            .teams-container {
+                gap: 50px;
+                max-width: 360px;
+            }
+        }
+
+        .team {
+
+            .escudo {
+                height: 120px;
+                width: 120px;
+            }
+
+            .name {
+                font-size: 4rem;
+            }
+        }
+
+        .marcador {
+            top: 45%;
+        }
+
+        .marcador>div {
+            font-size: 6rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1079px) {
         .sponsor-marcador {
             margin: 0 0 120px 0;
 
             img {
-                max-width: 400px;
+                max-width: 300px;
                 filter: drop-shadow(10px 11px 2px #000000b3);
             }
         }
@@ -235,61 +278,9 @@
         }
     }
 
-    /*Before square resolution*/
-
-    @media (min-width: 916px) and (max-width: 1079px) {
-        .sponsor-marcador {
-            margin-bottom: 12rem;
-
-            img {
-                max-width: 400px;
-                filter: drop-shadow(10px 12px 1px #000000b3);
-            }
-        }
-
-        .partidos {
-            max-width: 800px;
-
-            .teams-container {
-                gap: 14rem;
-            }
-
-            .tiempo {
-                top: -10rem;
-                font-size: 12rem;
-            }
-        }
-
-        .team {
-            width: 40%;
-
-            .escudo {
-                border: 1rem solid white;
-                height: 32rem;
-                width: 32rem;
-
-                img {
-                    filter: drop-shadow(8px 10px 1px #000000b3);
-                }
-            }
-
-            .name {
-                font-size: 10rem;
-            }
-        }
-
-        .marcador {
-            top: 20rem;
-
-            div {
-                font-size: 16rem;
-            }
-        }
-    }
-
     /*Square resolution*/
 
-    @media(aspect-ratio: 1/1) {
+    @media(min-width: 1080px) and (min-height: 1080px) {
         .background {
             background-image: url('../../../../assets/background/background-cancha-cuadrado.svg');
         }
@@ -317,7 +308,6 @@
         }
 
         .team {
-            width: 40%;
 
             .escudo {
                 border: 1rem solid white;
