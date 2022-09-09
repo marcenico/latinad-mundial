@@ -16,7 +16,7 @@
 
             img {
                 filter: drop-shadow(3px 4px 1px #000000b3);
-                max-width: 150px;
+                max-width: 120px;
             }
         }
 
@@ -226,7 +226,7 @@
     /* ------------------------- Surface Pro ---------------------------------*/
     @media (min-width: 1081px) and (max-width: 1368px) {
         .background {
-            background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+            background-image: url('../../../../assets/background/background-cancha-vertical.svg');
         }
 
         .sponsor-marcador {
