@@ -29,12 +29,12 @@
                     margin: 5px 0;
 
                     .title-partidos {
-                        font-size: 2rem;
+                        font-size: 1.9rem;
                     }
                 }
 
                 .proximos-partidos-container {
-                    justify-content: center;
+                    justify-content: start;
                     width: 220px;
                     height: 300px;
 
@@ -692,7 +692,6 @@
             -moz-box-shadow: 0px 0px 30px 20px #ffffffd7 inset;
         }
     }
-
 
     /* 8k */
     @media(min-height: 7680px) and (max-height: 9999px) {
