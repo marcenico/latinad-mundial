@@ -1,6 +1,7 @@
   @media(orientation: landscape) {
       .background {
           background-image: url('../../../assets/background/background-lineas-horizontal.svg');
+          flex-direction: row;
       }
 
       /*Media Query Mobile Devices*/
