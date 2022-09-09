@@ -103,7 +103,7 @@
 
     /*Media Query for Tablet */
 
-    @media(min-height: 540px) and (max-height: 767px) {
+    @media(min-height: 540px) and (max-height: 719px) {
         .background-proximos-partidos {
             background-image: url('./../../../assets/background/background-lineas-horizontal.svg');
         }
@@ -180,6 +180,85 @@
             height: 50px;
         }
     }
+    @media(min-height: 720px) and (max-height: 767px) {
+        .background-proximos-partidos {
+            background-image: url('./../../../assets/background/background-lineas-horizontal.svg');
+        }
+
+        .sponsor-proximos-partidos {
+            margin: 30px 0 20px 0;
+
+            img {
+                min-width: 180px;
+                max-width: 250px;
+            }
+        }
+
+        .section-proximos-partidos {
+            justify-content: center;
+            width: 100vw;
+            min-width: 540px;
+            max-width: 1000px;
+            gap: 2%;
+
+            .container-title-partidos {
+                height: max-content;
+                margin-bottom: 2%;
+
+                .title-partidos {
+                    font-size: 5rem;
+                }
+            }
+
+            .proximos-partidos-container {
+                flex-flow: wrap;
+                align-content: flex-start;
+                gap: 32px;
+                margin: 0 20px;
+
+                .proximos-partidos {
+                    width: 48%;
+                    min-width: 247px;
+                    margin: 10px 0;
+                    padding: 0 20px;
+
+                    .date-partidos {
+                        .fecha-proximos-partidos {
+                            font-size: 1.6rem;
+                        }
+
+                        .tiempo-proximos-partidos {
+                            font-size: 2.5rem;
+                        }
+                    }
+
+                    .team-name {
+                        font-size: 2.5rem;
+                    }
+
+                    .container-img {
+                        height: 80px;
+                        width: 80px;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .proximos-partidos-container .proximos-partidos:nth-child(3) {
+                justify-items: start;
+            }
+        }
+
+        .border {
+            height: 60px;
+        }
+    }
+
+
 
     /* iPad Mini and Air */
 
