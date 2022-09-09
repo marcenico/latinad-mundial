@@ -42,7 +42,7 @@
     /*Surface Duo oientation portrait*/
     @media(min-width: 540px) and (max-width: 767px) {
         .sponsor-table {
-            margin-bottom: 20px;
+            margin: 10px 0;
 
             img {
                 filter: drop-shadow(2px 3px 4px #000000b3);
@@ -55,11 +55,16 @@
             width: 90%;
         }
 
-        .table-container__points {
-            width: 70%;
+        .table-container {
+            justify-content: center;
+            .table-container__points {
+                margin: 0;
+                width: 80%;
+            }
         }
 
         .groups-title {
+            margin-top: 1rem;
             font-size: 2rem;
         }
 
