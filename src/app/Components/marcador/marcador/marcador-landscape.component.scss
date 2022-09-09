@@ -1,9 +1,55 @@
 @media (orientation: landscape) {
     .background {
         background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+        min-width: 512px;
     }
 
     /*-----------------------Mobile in landscape---------------------------*/
+    @media (min-width: 512px) and (min-height: 256px) and (max-height: 287px) {
+        .section-partidos {
+            min-width: 256px;
+        }
+
+        .sponsor-marcador {
+            margin: 20px 0 40px 0;
+            min-width: 256px;
+
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 80px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -30%;
+                font-size: 4rem;
+            }
+
+            .teams-container {
+                gap: 20px;
+                max-width: 280px;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                height: 75px;
+                width: 75px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+        }
+
+        .marcador>div {
+            font-size: 5rem;
+        }
+    }
+
     @media(min-height:280px) and (max-height: 359px) {
         .sponsor-marcador {
             margin: 0 0 40px 0;
