@@ -2,6 +2,7 @@
     .background {
         background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
     }
+
     /*-----------------------Mobile in landscape---------------------------*/
     @media(min-height:280px) and (max-height: 359px) {
         .sponsor-marcador {
@@ -212,8 +213,8 @@
 
         .team {
             .escudo {
-                width: 180px;
-                height: 180px;
+                width: 200px;
+                height: 200px;
             }
 
             .name {
@@ -229,10 +230,10 @@
             }
         }
     }
-    
+
     /*iPad Mini and Air */
 
-    @media (min-height: 768px) and (max-height: 820px) {
+    @media (min-height: 768px) and (max-height: 1079px) {
         .sponsor-marcador {
             margin: 0 0 100px 0;
 
@@ -277,7 +278,63 @@
             }
         }
     }
-    @media (min-height: 975px) and (max-width: 1929px) {
+
+    @media (min-height: 975px) and (max-width: 1920px) {
+        .sponsor-marcador {
+            margin-bottom: 100px;
+
+            img {
+                max-width: 300px;
+                filter: drop-shadow(8px 10px 1px #000000b3);
+            }
+        }
+
+        .partidos {
+            max-width: 600px;
+
+            .teams-container {
+                gap: 12rem;
+            }
+
+            .tiempo {
+                top: -10rem;
+                font-size: 10rem;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                border: 1rem solid white;
+                height: 25rem;
+                width: 25rem;
+
+                img {
+                    filter: drop-shadow(8px 10px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 15rem;
+
+            div {
+                font-size: 14rem;
+            }
+        }
+    }
+
+    /* ------------------------- Surface Pro ---------------------------------*/
+    @media(min-width: 1368px) and (min-height: 912px) and (max-width: 1920px) {
+        .background {
+            background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+        }
+
         .sponsor-marcador {
             margin-bottom: 10rem;
 
@@ -326,60 +383,9 @@
             }
         }
     }
-    /*After Surface Pro*/
-
-    @media(min-width: 1369px) and (max-width: 1919px) {
-        .sponsor-marcador {
-            margin-bottom: 12rem;
-
-            img {
-                max-width: 400px;
-                filter: drop-shadow(10px 12px 1px #000000b3);
-            }
-        }
-
-        .partidos {
-            max-width: 800px;
-
-            .teams-container {
-                gap: 14rem;
-            }
-
-            .tiempo {
-                top: -10rem;
-                font-size: 12rem;
-            }
-        }
-
-        .team {
-            width: 40%;
-
-            .escudo {
-                border: 1rem solid white;
-                height: 32rem;
-                width: 32rem;
-
-                img {
-                    filter: drop-shadow(8px 10px 1px #000000b3);
-                }
-            }
-
-            .name {
-                font-size: 10rem;
-            }
-        }
-
-        .marcador {
-            top: 20rem;
-
-            div {
-                font-size: 16rem;
-            }
-        }
-    }
 
     /* Media querie desktop */
-    @media (min-width: 1920px) and (max-width: 2559px) {
+    @media (min-width: 1920px) and (min-height: 1080px) and (max-width: 2559px) and (max-height: 1920px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
         }
