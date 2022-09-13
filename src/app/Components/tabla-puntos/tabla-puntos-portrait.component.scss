@@ -9,6 +9,7 @@
         .sponsor-table {
             min-width: 256px;
             margin: 10px 0;
+
             img {
                 max-width: 150px;
             }
@@ -92,7 +93,7 @@
 
     /*-------------------- Media Query for Tablets --------------------------------*/
     /*Surface Duo oientation portrait*/
-    @media(min-width: 540px) and (max-width: 767px) {
+    @media(min-width: 540px) and (max-width: 767px) and (min-height: 878px) {
         .sponsor-table {
             margin: 10px 0;
 
@@ -103,7 +104,7 @@
         }
 
         .container-tables {
-            width: 90%;
+            max-width: 500px;
         }
 
         .table-container {
@@ -150,7 +151,7 @@
     }
 
     /*iPad Mini and Air orientation portrait*/
-    @media(min-width:768px) and (max-width: 820px) {
+    @media(min-width:768px) and (min-height: 975px) {
         .sponsor-table {
             margin-bottom: 20px;
 
@@ -160,7 +161,7 @@
         }
 
         .container-tables {
-            width: 90%;
+            max-width: 700px;
         }
 
         .table-container {
@@ -204,7 +205,7 @@
     }
 
     /*Surface Pro 7 orientation portrait*/
-    @media(min-width: 821px)and (max-width: 1079px) {
+    @media(min-width: 821px) and (max-width: 1079px) and (min-height: 1368px) {
         .sponsor-table {
             img {
                 width: 350px;
@@ -257,7 +258,7 @@
     }
 
     /*--------------------Square resolution-----------------------*/
-    @media(aspect-ratio: 1/1) {
+    @media(min-width:1080px) and (min-height: 1080px) {
         .background {
             background-image: url('../../../assets/background/background-lineas-cuadrado.svg');
             background-size: cover;

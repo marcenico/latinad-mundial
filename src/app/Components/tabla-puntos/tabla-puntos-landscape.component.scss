@@ -372,7 +372,7 @@
       }
 
       /*iPad Mini and Air orientation ladscape and Notebook 1366px x 768px */
-      @media(min-height: 768px) and (max-height: 911px) {
+      @media(min-height: 768px) and (max-height: 911px) and (min-width: 878px) {
           .swiper {
               overflow: hidden;
           }
@@ -389,7 +389,7 @@
           }
 
           .container-tables {
-              width: 90%;
+              max-width: 512px;
               height: 100%;
               place-items: center;
           }
@@ -445,7 +445,7 @@
       }
 
       /*Surface Pro 7 orientation*/
-      @media (min-height:912px) and (max-height:1079px) {
+      @media (min-height:912px) and (max-height:1080px) {
           .swiper {
               overflow: hidden;
           }
@@ -456,14 +456,83 @@
 
               img {
                   align-self: center;
-                  max-width: 364px;
+                  max-width: 400px;
                   width: 80%;
                   filter: drop-shadow(22px 23px 24px #000000b3);
               }
           }
 
           .container-tables {
+              height: 100%;
+          }
+
+          .table-container {
+              display: flex;
+              flex-direction: column;
+              place-items: center;
+              justify-content: center;
+          }
+
+          .table-container__points {
               width: 90%;
+              margin: 10px;
+          }
+
+          .table-teams {
+              gap: 15px;
+              height: 350px;
+          }
+
+          .groups-title {
+              font-size: 3rem;
+          }
+
+          .table-teams--ul {
+
+              .border-table {
+                  box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+                  -webkit-box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+                  -moz-box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+                  height: 80%;
+              }
+
+              .escudo {
+                  border: 0.3rem solid;
+                  height: 7rem;
+                  width: 7rem;
+              }
+
+              .title-name {
+                  font-size: 3rem;
+                  filter: drop-shadow(12px 13px 14px #000000b3);
+              }
+
+              .points {
+                  filter: drop-shadow(12px 13px 14px #000000b3);
+                  font-size: 3rem;
+                  padding: 0.5rem;
+              }
+          }
+      }
+
+      @media(min-width:1366px) and (min-height:768px) {
+          .swiper {
+              overflow: hidden;
+          }
+
+          .sponsor-table {
+              height: 100%;
+              width: 80%;
+
+              img {
+                  align-self: center;
+                  max-width: 500px;
+                  width: 80%;
+              }
+          }
+
+          .container-tables {
+              max-width: 700px;
               height: 100%;
               place-items: center;
           }
@@ -482,7 +551,7 @@
           }
 
           .table-teams {
-              gap: 10px;
+              gap: 18px;
           }
 
           .groups-title {
@@ -500,13 +569,14 @@
 
               .escudo {
                   border: 0.3rem solid;
-                  height: 8rem;
-                  width: 8rem;
+                  height: 6rem;
+                  width: 6rem;
               }
 
               .title-name {
-                  font-size: 3rem;
                   filter: drop-shadow(12px 13px 14px #000000b3);
+                  font-size: 3rem;
+
               }
 
               .points {
