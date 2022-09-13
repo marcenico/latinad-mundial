@@ -150,6 +150,60 @@
         }
     }
 
+    @media(min-width:720px) and (min-height: 1200px) {
+        .sponsor-table {
+            margin-bottom: 20px;
+
+            img {
+                max-width: 300px;
+                width: 80%;
+            }
+        }
+
+        .container-tables {
+            max-width: 700px;
+        }
+
+        .table-container {
+            justify-content: center;
+        }
+
+        .table-container__points {
+            width: 80%;
+            margin: 0;
+        }
+
+        .groups-title {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+
+        .table-teams--ul {
+            .border-table {
+                height: 80%;
+                box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+                -webkit-box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+                -moz-box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+            }
+
+            .escudo {
+                border: 0.3rem solid;
+                height: 6rem;
+                width: 6rem;
+            }
+
+            .title-name {
+                font-size: 3rem;
+
+            }
+
+            .points {
+                font-size: 3rem;
+                padding: 0.5rem;
+            }
+        }
+    }
+
     /*iPad Mini and Air orientation portrait*/
     @media(min-width:768px) and (min-height: 975px) {
         .sponsor-table {
