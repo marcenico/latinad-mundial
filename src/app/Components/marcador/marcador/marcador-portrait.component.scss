@@ -175,6 +175,50 @@
         }
     }
 
+    @media (min-width: 720px) and (min-height: 1200px) {
+        .sponsor-marcador {
+            margin: 0 0 80px 0;
+
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 320px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -15%;
+                font-size: 8rem;
+            }
+
+            .teams-container {
+                gap: 100px;
+                max-width: 500px;
+            }
+        }
+
+        .team {
+
+            .escudo {
+                height: 280px;
+                width: 280px;
+                border: 0.8rem solid white;
+            }
+
+            .name {
+                font-size: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 50%;
+        }
+
+        .marcador>div {
+            font-size: 12rem;
+        }
+    }
+
     @media (min-width: 768px) and (max-width: 1079px) {
         .sponsor-marcador {
             margin: 0 0 120px 0;
