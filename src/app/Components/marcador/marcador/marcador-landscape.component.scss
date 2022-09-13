@@ -486,6 +486,68 @@
         }
     }
 
+    /*---------------------- 3840px x 2160px ----------------------------*/
+    @media(min-width:3840px) and (min-height: 2160px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 16rem;
+
+            img {
+                width: 40%;
+                max-width: 700px;
+                filter: drop-shadow(15px 14px 5px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 3840px;
+        }
+
+        .partidos {
+            max-width: 2000px;
+
+            .teams-container {
+                gap: 100px;
+            }
+
+            .tiempo {
+                top: -12rem;
+                font-size: 22rem;
+            }
+        }
+
+        .team {
+            width: 50%;
+
+            .escudo {
+                border: 2.5rem solid white;
+                height: 70rem;
+                width: 70rem;
+
+                img {
+                    filter: drop-shadow(15px 30px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 18rem;
+                margin-top: 6rem;
+            }
+        }
+
+        .marcador {
+            top: 46rem;
+
+            div {
+                font-size: 40rem;
+            }
+        }
+    }
+
+    /*---------------------- 2560px x 1440px ----------------------------*/
     @media screen and (min-width: 2560px) and (max-width: 3839px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
@@ -548,7 +610,7 @@
     }
 
     /*---------------------- 3840px x 2610px ----------------------------*/
-    @media screen and (min-width: 3840px) and (max-width: 7679px) {
+    @media screen and (min-width: 3840px) and (max-width: 7679px) and (min-height: 2610px){
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
         }
@@ -558,7 +620,7 @@
 
             img {
                 width: 40%;
-                max-width: 900px;
+                max-width: 1000px;
                 filter: drop-shadow(15px 30px 1px #000000b3);
             }
         }
