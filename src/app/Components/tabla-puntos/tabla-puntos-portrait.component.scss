@@ -462,6 +462,7 @@
                 width: 100%;
                 max-width: 700px;
                 margin-bottom: 5%;
+                filter: drop-shadow(4px 5px 10px #000000b3);
             }
         }
 
@@ -567,7 +568,6 @@
                 border: 1rem solid;
                 height: 20rem;
                 width: 20rem;
-                filter: drop-shadow(14px 14px 14px #000000b3);
             }
 
             .title-name {
