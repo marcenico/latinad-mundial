@@ -132,7 +132,7 @@
         }
     }
 
-    @media (min-width: 663px) and (min-height: 663px)  {
+    @media (min-width: 663px) and (min-height: 663px) {
         .sponsor-marcador {
             margin: 0 0 80px 0;
 
@@ -436,6 +436,69 @@
         }
     }
 
+    /*---------------------- 2160px x 3840px ----------------------------*/
+
+    @media (min-width: 2160px) and (min-height: 3840px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 30rem;
+
+            img {
+                width: 70%;
+                max-width: 1300px;
+                filter: drop-shadow(15px 30px 1px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 2610px;
+        }
+
+        .partidos {
+            max-width: 1900px;
+
+            .teams-container {
+                width: 100%;
+                gap: 45rem;
+            }
+
+            .tiempo {
+                top: -16rem;
+                font-size: 26rem;
+            }
+        }
+
+        .team {
+            width: 1000px;
+
+            .escudo {
+                border: 2.5rem solid white;
+                height: 80rem;
+                width: 80rem;
+
+                img {
+                    filter: drop-shadow(15px 30px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 28rem;
+                margin-top: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 50rem;
+
+            div {
+                font-size: 50rem;
+            }
+        }
+    }
+
     /*---------------------- 2560px x 1440px ----------------------------*/
 
     @media screen and (min-height: 2560px) and (max-height: 3839px) {
@@ -499,7 +562,8 @@
         }
     }
 
-    @media screen and (min-height: 3840px) and (max-height: 7679px) {
+    /*---------------------- 3840px x 2610px ----------------------------*/
+    @media screen and (min-height: 3840px) and (max-height: 7679px) and (min-width: 2610px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-vertical-cancha.svg');
         }
@@ -509,7 +573,7 @@
 
             img {
                 width: 70%;
-                max-width: 1700px;
+                max-width: 1500px;
                 filter: drop-shadow(15px 30px 1px #000000b3);
             }
         }
@@ -519,7 +583,7 @@
         }
 
         .partidos {
-            max-width: 2000px;
+            max-width: 2400px;
 
             .teams-container {
                 width: 100%;
@@ -533,7 +597,7 @@
         }
 
         .team {
-            width: 50%;
+            width: 1000px;
 
             .escudo {
                 border: 2.5rem solid white;
