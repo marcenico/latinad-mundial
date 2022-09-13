@@ -557,20 +557,79 @@
           .groups-title {
               font-size: 3rem;
           }
+      }
+
+      @media(min-width: 1366px) and (min-height: 975px) {
+          .table-teams {
+              gap: 20px;
+              height: 400px;
+              padding: 15px;
+          }
+      }
+
+      @media(min-width: 1920px) and (min-height: 975px) {
+          .background {
+              background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+          }
+
+          .swiper {
+              overflow: hidden;
+          }
+
+          .sponsor-table {
+              height: 100%;
+              width: 80%;
+
+              img {
+                  align-self: center;
+                  max-width: 650px;
+                  width: 80%;
+                  filter: drop-shadow(5px 6px 7px #000000b3);
+              }
+          }
+
+          .container-tables {
+              max-width: 900px;
+              height: 100%;
+              place-items: center;
+          }
+
+          .table-container {
+              display: flex;
+              flex-direction: column;
+              place-items: center;
+              justify-content: center;
+              width: 100%;
+          }
+
+          .table-container__points {
+              width: 90%;
+              margin: 10px;
+          }
+
+          .table-teams {
+              gap: 25px;
+              height: 400px;
+              padding: 15px;
+          }
+
+          .groups-title {
+              font-size: 3rem;
+          }
 
           .table-teams--ul {
 
               .border-table {
-                  box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
-                  -webkit-box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
-                  -moz-box-shadow: 0px 0px 10px 4px #ffffffd7 inset;
+                  box-shadow: 0px 0px 10px 6px #ffffffd7 inset;
+                  -webkit-box-shadow: 0px 0px 10px 6px #ffffffd7 inset;
+                  -moz-box-shadow: 0px 0px 10px 6px #ffffffd7 inset;
                   height: 80%;
               }
 
               .escudo {
                   border: 0.3rem solid;
-                  height: 6rem;
-                  width: 6rem;
+                  height: 7rem;
+                  width: 7rem;
               }
 
               .title-name {
@@ -586,6 +645,8 @@
               }
           }
       }
+
+
 
       @media (min-height: 1080px) and (max-width: 2559px) and (min-width: 1920px) {
           .background {
