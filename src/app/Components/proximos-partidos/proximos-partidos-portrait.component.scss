@@ -9,6 +9,7 @@
         .sponsor-proximos-partidos {
             width: 256px;
             margin: 30px 0 10px 0;
+
             img {
                 min-width: 120px;
                 max-width: 120px;
@@ -406,6 +407,7 @@
             height: 120px;
         }
     }
+
     /*
 * ------------------------------ Media Query for Desktop ----------------------------------
 *                           Aspect ratio 1:1 Square resolution 
@@ -614,6 +616,100 @@
             -moz-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
         }
     }
+
+    /*3840px x 2160px*/
+
+    @media(min-width: 2160px) and (min-height: 3840px) {
+        .background-proximos-partidos {
+            background-image: url('./../../../assets/background/ultrawide-vertical-lineas.svg');
+        }
+
+        .sponsor-proximos-partidos {
+            filter: drop-shadow(25px 5px 5px #000000b3);
+            width: 100%;
+
+            img {
+                min-width: 1000px;
+            }
+        }
+
+        .container-proximos-partidos {
+
+            .section-proximos-partidos {
+                place-items: center;
+                width: 1800px;
+
+                .container-title-partidos {
+                    height: max-content;
+                    margin: 50px 0 10px 0;
+
+                    .title-partidos {
+                        font-size: 14rem;
+                    }
+                }
+
+                .proximos-partidos-container {
+                    justify-content: start;
+                    width: 1800px;
+                    height: 2000px;
+
+                    .proximos-partidos {
+                        padding: 0 80px;
+                        margin: 100px 0;
+
+
+                        .team-name {
+                            font-size: 8rem;
+                        }
+
+                        .date-partidos {
+                            .fecha-proximos-partidos {
+                                font-size: 6rem;
+                            }
+
+                            .tiempo-proximos-partidos {
+                                font-size: 10rem;
+                            }
+                        }
+
+
+                        .container-img {
+                            height: 350px;
+                            width: 350px;
+                            border-radius: 50%;
+
+                            img {
+                                border: solid 1rem white;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                filter: drop-shadow(12px 13px 14px #000000b3);
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+
+                        .img-home {
+                            left: 18%;
+                        }
+
+                        .img-away {
+                            right: 18%;
+                        }
+                    }
+                }
+
+
+                .border {
+                    height: 260px;
+                    border-radius: 20rem;
+                    box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                    -webkit-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                    -moz-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                }
+            }
+        }
+    }
+
 
     /* 4k */
     @media(min-height: 3840px) and (max-height: 7679px) and (min-width: 2610px) {
