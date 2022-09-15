@@ -521,61 +521,68 @@
             margin-top: 100px;
 
             img {
-                max-width: 500px;
+                min-width: 500px;
             }
         }
 
-        .section-proximos-partidos {
-            max-width: 900px;
+        .container-proximos-partidos {
+            .section-proximos-partidos {
+                min-width: 900px;
 
-            .container-title-partidos {
-                .title-partidos {
-                    margin-top: 2rem;
-                    font-size: 8.5rem;
+                .container-title-partidos {
+                    .title-partidos {
+                        margin-top: 2rem;
+                        font-size: 8.5rem;
+                    }
                 }
-            }
 
-            .proximos-partidos-container {
-                .proximos-partidos {
-                    padding: 0 3rem;
-                    margin: 8rem 0;
+                .proximos-partidos-container {
+                    width: 100%;
+                    height: 1100px;
 
-                    .date-partidos {
-                        .fecha-proximos-partidos {
-                            filter: drop-shadow(3px 3px 3px #000000b3);
-                            font-size: 3rem;
+                    .proximos-partidos {
+                        min-width: 900px;
+                        padding: 0 3rem;
+                        margin: 8rem 0;
+
+                        .date-partidos {
+                            .fecha-proximos-partidos {
+                                filter: drop-shadow(3px 3px 3px #000000b3);
+                                font-size: 3rem;
+                            }
+
+                            .tiempo-proximos-partidos {
+                                filter: drop-shadow(3px 3px 3px #000000b3);
+                                font-size: 5rem;
+                            }
                         }
 
-                        .tiempo-proximos-partidos {
-                            filter: drop-shadow(3px 3px 3px #000000b3);
+                        .team-name {
                             font-size: 5rem;
                         }
-                    }
 
-                    .team-name {
-                        font-size: 5rem;
-                    }
+                        .container-img {
+                            height: 22rem;
+                            width: 22rem;
+                            filter: drop-shadow(3px 4px 5px #000000b3);
+                        }
 
-                    .container-img {
-                        height: 22rem;
-                        width: 22rem;
-                        filter: drop-shadow(3px 4px 5px #000000b3);
-                    }
+                        .img-home {
+                            left: 16%;
+                        }
 
-                    .img-home {
-                        left: 16%;
-                    }
-
-                    .img-away {
-                        right: 16%;
+                        .img-away {
+                            right: 16%;
+                        }
                     }
                 }
-            }
-        }
 
-        .border {
-            height: 140px;
-            border-radius: 20rem;
+                .border {
+                    height: 140px;
+                    border-radius: 20rem;
+                }
+            }
+
         }
     }
 
@@ -606,6 +613,7 @@
 
                 .proximos-partidos-container {
                     min-width: 1300px;
+
                     .proximos-partidos {
                         padding: 0 3rem;
                         margin: 12rem 0;

@@ -516,7 +516,10 @@
                     .container-img {
                         height: 12rem;
                         width: 12rem;
-                        filter: drop-shadow(3px 4px 5px #000000b3);
+                        img {
+                            border: 0.5rem solid;
+                            filter: drop-shadow(10px 4px 10px #000000b3);
+                        }
                     }
 
                     .img-home {

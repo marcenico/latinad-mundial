@@ -400,7 +400,7 @@
         .partidos {
             .teams-container {
                 width: 100%;
-                gap: 30px;
+                min-width: 900px;
             }
 
             .tiempo {

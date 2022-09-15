@@ -380,12 +380,15 @@
         }
 
         .container-tables {
-            width: 90%;
+            min-width: 1000px;
             height: 100%;
             place-items: center;
         }
 
         .table-container {
+            .table-container__points {
+                width: 450px;
+            }
             display: flex;
             flex-direction: column;
             place-items: center;
@@ -414,7 +417,6 @@
         }
 
         .table-teams--ul {
-
             .border-table {
                 border-radius: 1.5rem;
                 box-shadow: 0px 0px 12px 10px #ffffffd7 inset;
@@ -424,24 +426,24 @@
             }
 
             .escudo {
-                border: 0.3rem solid;
+                border: 0.5rem solid;
                 height: 10rem;
                 width: 10rem;
 
                 img {
-                    filter: drop-shadow(4px 4px 4px #000000b3);
+                    filter: drop-shadow(14px 4px 10px #000000b3);
                 }
             }
 
             .title-name {
                 filter: drop-shadow(4px 4px 4px #000000b3);
-                font-size: 5rem;
+                font-size: 4rem;
 
             }
 
             .points {
                 filter: drop-shadow(4px 4px 4px #000000b3);
-                font-size: 5rem;
+                font-size: 4rem;
                 padding: 0.5rem;
             }
         }
