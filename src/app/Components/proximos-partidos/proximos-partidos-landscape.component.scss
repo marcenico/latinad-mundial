@@ -399,7 +399,7 @@
     }
 
     /*Surface Pro 7 */
-    @media(min-height:912px) {
+    @media(min-height:912px) and (max-height: 1079px){
         .sponsor-proximos-partidos {
             img {
                 max-width: 250px;
@@ -466,7 +466,7 @@
     }
 
     /* Desktop for 1920px x 1080px */
-    @media(min-width: 1920px) and (max-width: 2559px) {
+    @media(min-width: 1920px) and (max-width: 2559px) and (min-height: 1080px) {
         .background-proximos-partidos {
             background-image: url('./../../../assets/background/ultrawide-horizontal-lineas.svg');
         }

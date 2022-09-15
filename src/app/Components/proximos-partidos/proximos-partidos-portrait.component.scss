@@ -1,7 +1,7 @@
 @media (orientation: portrait) {
 
     /* Media Query for Mobile Devices */
-    @media (min-width: 256px) and (min-height: 512px) {
+    @media (min-width: 256px) and (max-width: 279px) and (min-height: 512px) {
         .background-proximos-partidos {
             min-width: 256px;
         }
@@ -94,7 +94,7 @@
         }
     }
 
-    @media (min-width: 360px) and (max-width: 539px) {
+    @media (min-width: 360px) and (max-width: 665px) {
 
         .sponsor-proximos-partidos {
             img {
@@ -169,7 +169,7 @@
                     }
 
                     .border {
-                        height: 40px;
+                        height: 50px;
                     }
                 }
             }
@@ -177,10 +177,9 @@
     }
 
     /*Media Query for Tablet */
-    @media(min-width:540px) and (max-width: 719px) and (min) {
+    @media(min-width:540px) and (max-width: 975px) and (min-height: 665px) {
         .sponsor-proximos-partidos {
             margin-top: 0;
-            padding: 2%;
 
             img {
                 min-width: 180px;
@@ -203,8 +202,9 @@
                 }
 
                 .proximos-partidos-container {
-                    gap: 25px;
+                    gap: 15px;
                     width: 100%;
+                    height: 360px;
 
                     .proximos-partidos {
 
@@ -308,9 +308,9 @@
     }
 
     /* iPad Mini and Air + Notebook 1366px x 768px*/
-    @media (min-width: 768px) and (max-width: 1366px) and (min-height: 1024px){
+    @media (min-width: 768px) and (max-width: 1366px) and (min-height: 1024px) {
         .sponsor-proximos-partidos {
-            margin: 220px 0 10px 0;
+            margin: 80px 0 10px 0;
 
             img {
                 max-width: 250px;
@@ -332,7 +332,8 @@
 
                 .proximos-partidos-container {
                     width: 650px;
-                    height: 800px;
+                    height: 600px;
+                    gap: 0;
 
                     .proximos-partidos {
                         padding: 0 25px;
@@ -395,6 +396,7 @@
 
                 .proximos-partidos-container {
                     width: 800px;
+
                     .proximos-partidos {
                         margin: 4rem 0;
                         padding: 0 2rem;
@@ -447,7 +449,7 @@
 * ------------------------------ Media Query for Desktop ----------------------------------
 *                           Aspect ratio 1:1 Square resolution 
 */
-    @media (aspect-ratio: 1/1) {
+    @media (min-width: 1080px) and (min-height: 1080px) {
         .background-proximos-partidos {
             background-image: url('./../../../assets/background/background-lineas-cuadrado.svg');
         }
@@ -508,7 +510,7 @@
             height: 100px;
         }
     }
-
+    
     /* Desktop for 1920px x 1080px */
     @media(min-height: 1920px) and (max-height: 2559px) {
         .background-proximos-partidos {
