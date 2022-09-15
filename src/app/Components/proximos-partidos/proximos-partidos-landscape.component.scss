@@ -119,8 +119,6 @@
     }
 
     @media only screen and (min-height: 375px) and (max-height: 539px) {
-
-
         .sponsor-proximos-partidos {
             margin-top: 70px;
 
@@ -516,6 +514,7 @@
                     .container-img {
                         height: 12rem;
                         width: 12rem;
+
                         img {
                             border: 0.5rem solid;
                             filter: drop-shadow(10px 4px 10px #000000b3);
@@ -538,8 +537,6 @@
             border-radius: 20rem;
         }
     }
-
-
 
     /* Desktop for 2560px x 1440px */
     @media(min-width: 2560px) and (max-width: 3839px) {
