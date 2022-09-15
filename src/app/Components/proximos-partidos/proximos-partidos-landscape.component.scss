@@ -399,7 +399,7 @@
     }
 
     /*Surface Pro 7 */
-    @media(min-height:912px) and (max-height: 1079px){
+    @media(min-height:912px) and (max-height: 1079px) {
         .sponsor-proximos-partidos {
             img {
                 max-width: 250px;
@@ -622,6 +622,7 @@
 
         .sponsor-proximos-partidos {
             margin: 50px 0 10px 0;
+
             img {
                 max-width: 600px;
                 filter: drop-shadow(10px 11px 5px #000000b3);
@@ -782,7 +783,7 @@
             img {
                 max-width: max-content;
                 height: min-content;
-                filter: drop-shadow(42px 33px 5px #000000b3);
+                filter: drop-shadow(32px 20px 5px #000000b3);
             }
         }
 
@@ -791,6 +792,7 @@
 
             .container-title-partidos {
                 margin-bottom: 70px;
+                width: 3500px;
 
                 .title-partidos {
                     filter: drop-shadow(32px 12px 5px #000000b3);

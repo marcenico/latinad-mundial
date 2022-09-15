@@ -599,7 +599,7 @@
 
         .container-tables {
             width: 100%;
-            min-width: 2210px;
+            min-width: 4320px;
         }
 
         .groups-title {
@@ -627,19 +627,19 @@
 
             .escudo {
                 border: 2.5rem solid;
-                height: 45rem;
-                width: 45rem;
+                height: 40rem;
+                width: 40rem;
                 filter: drop-shadow(34px 34px 34px #000000b3);
             }
 
             .title-name {
                 filter: drop-shadow(25px 25px 25px #000000b3);
-                font-size: 20rem;
+                font-size: 16rem;
             }
 
             .points {
                 filter: drop-shadow(25px 25px 25px #000000b3);
-                font-size: 20rem;
+                font-size: 16rem;
                 padding: 1rem;
             }
         }

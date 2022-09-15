@@ -928,7 +928,7 @@
       }
 
       /*----------------------------Media Query for 4k--------------------------------*/
-      @media(min-width:7680px) and (max-width: 9999px) {
+      @media(min-width:7680px) and (max-width: 9999px) and (min-height: 4320px) {
           .background {
               background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
               flex-direction: row;
@@ -943,7 +943,8 @@
               width: 80%;
 
               img {
-                  width: 80%;
+                  width: 100%;
+                  min-width: 2800px;
                   margin: 0;
                   filter: drop-shadow(20px 20px 20px #000000b3);
               }
@@ -953,13 +954,23 @@
               font-size: 15rem;
           }
 
+          .container-tables {
+            max-width: 4000px;
+          }
+
+          .table-container {
+            height: 2100px;
+          }
+
           .table-container__points {
               width: 80%;
               margin: 5%;
           }
 
           .table-teams {
-              gap: 60px;
+            height: 1800px;
+            padding: 60px;
+              gap: 40px;
               border-radius: 50px;
               box-shadow: 0px 0px 30px 20px #ffffff63 inset;
               -webkit-box-shadow: 0px 0px 30px 20px #ffffff63 inset;
@@ -984,12 +995,12 @@
 
               .title-name {
                   filter: drop-shadow(25px 25px 25px #000000b3);
-                  font-size: 15rem;
+                  font-size: 14rem;
               }
 
               .points {
                   filter: drop-shadow(25px 25px 25px #000000b3);
-                  font-size: 15rem;
+                  font-size: 14rem;
               }
           }
       }
