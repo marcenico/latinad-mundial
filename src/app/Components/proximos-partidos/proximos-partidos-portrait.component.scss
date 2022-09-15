@@ -587,70 +587,74 @@
 
         .sponsor-proximos-partidos {
             img {
-                max-width: 600px;
+                min-width: 600px;
                 filter: drop-shadow(3px 3px 3px #000000b3);
             }
         }
 
-        .section-proximos-partidos {
-            max-width: 1200px;
+        .container-proximos-partidos {
+            .section-proximos-partidos {
+                min-width: 1300px;
 
-            .container-title-partidos {
-                .title-partidos {
-                    margin-top: 2rem;
-                    font-size: 12rem;
-                    filter: drop-shadow(3px 3px 3px #000000b3);
+                .container-title-partidos {
+                    .title-partidos {
+                        margin-top: 2rem;
+                        font-size: 12rem;
+                        filter: drop-shadow(3px 3px 3px #000000b3);
+                    }
                 }
-            }
 
-            .proximos-partidos-container {
-                .proximos-partidos {
-                    padding: 0 3rem;
-                    margin: 12rem 0;
+                .proximos-partidos-container {
+                    min-width: 1300px;
+                    .proximos-partidos {
+                        padding: 0 3rem;
+                        margin: 12rem 0;
 
-                    .date-partidos {
-                        .fecha-proximos-partidos {
-                            filter: drop-shadow(3px 3px 3px #000000b3);
-                            font-size: 6rem;
+                        .date-partidos {
+                            .fecha-proximos-partidos {
+                                filter: drop-shadow(3px 3px 3px #000000b3);
+                                font-size: 6rem;
+                            }
+
+                            .tiempo-proximos-partidos {
+                                filter: drop-shadow(3px 3px 3px #000000b3);
+                                font-size: 8rem;
+                            }
                         }
 
-                        .tiempo-proximos-partidos {
-                            filter: drop-shadow(3px 3px 3px #000000b3);
+                        .team-name {
                             font-size: 8rem;
                         }
-                    }
 
-                    .team-name {
-                        font-size: 8rem;
-                    }
+                        .container-img {
+                            height: 28rem;
+                            width: 28rem;
 
-                    .container-img {
-                        height: 28rem;
-                        width: 28rem;
+                            img {
+                                border: 1rem solid;
+                                filter: drop-shadow(12px 13px 14px #000000b3);
+                            }
+                        }
 
-                        img {
-                            border: 1rem solid;
-                            filter: drop-shadow(12px 13px 14px #000000b3);
+                        .img-home {
+                            left: 18%;
+                        }
+
+                        .img-away {
+                            right: 18%;
                         }
                     }
-
-                    .img-home {
-                        left: 18%;
-                    }
-
-                    .img-away {
-                        right: 18%;
-                    }
                 }
-            }
-        }
 
-        .border {
-            height: 170px;
-            border-radius: 20rem;
-            box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
-            -webkit-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
-            -moz-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                .border {
+                    height: 170px;
+                    border-radius: 20rem;
+                    box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                    -webkit-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                    -moz-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
+                }
+
+            }
         }
     }
 
@@ -856,10 +860,12 @@
                 .proximos-partidos-container {
                     min-width: 3800px;
                     height: 5000px;
+
                     .proximos-partidos {
                         padding: 0 10rem;
                         margin: 15rem 0;
                         height: 800px;
+
                         .date-partidos {
                             .fecha-proximos-partidos {
                                 font-size: 15rem;

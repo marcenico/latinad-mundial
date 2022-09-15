@@ -521,16 +521,17 @@
         }
 
         .partidos {
-            max-width: 1440px;
+            min-width: 1440px;
 
             .teams-container {
                 width: 100%;
-                gap: 15rem;
+                max-width: 1250px;
+                gap: 20rem;
             }
 
             .tiempo {
                 top: -8rem;
-                font-size: 16rem;
+                font-size: 15rem;
             }
         }
 
@@ -658,10 +659,10 @@
         }
 
         .team {
-            width: 40%;
+            width: 4000px;
 
             .escudo {
-                border: 3rem solid white;
+                border: 4rem solid white;
                 height: 1500px;
                 width: 1500px;
 
