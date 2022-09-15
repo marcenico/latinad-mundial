@@ -441,7 +441,7 @@
 
             img {
                 max-width: 450px;
-                filter: drop-shadow(10px 12px 1px #000000b3);
+                filter: drop-shadow(10px 12px 3px #000000b3);
             }
         }
 
@@ -610,7 +610,7 @@
     }
 
     /*---------------------- 3840px x 2610px ----------------------------*/
-    @media screen and (min-width: 3840px) and (max-width: 7679px) and (min-height: 2610px){
+    @media screen and (min-width: 3840px) and (max-width: 7679px) and (min-height: 2610px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
         }
