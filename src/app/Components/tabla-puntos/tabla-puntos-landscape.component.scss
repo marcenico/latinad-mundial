@@ -798,7 +798,7 @@
       }
 
       /*--------------------------------Ultrawide-------------------------------------*/
-      @media(min-width:2560px) and (max-width: 3839px) {
+      @media(min-width:2560px) and (max-width: 3839px) and (min-height: 1440px) {
           .background {
               background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
               flex-direction: row;
@@ -865,6 +865,80 @@
                   font-size: 5rem;
               }
           }
+      }
+
+      @media(min-width:2664px) and (min-height: 256px) {
+        .swiper {
+            overflow: hidden;
+        }
+
+        .sponsor-table {
+            margin-top: 5px;
+            align-items: center;
+            min-width: 180px;
+            width: 30%;
+
+            img {
+                height: 220px;
+                width: auto;
+            }
+        }
+
+        .container-tables {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            width: 100%;
+            place-items: center;
+            height: 100%;
+            place-items: center;
+        }
+
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            justify-content: center;
+            height: 120px;
+        }
+
+        .table-container__points {
+            width: 80%;
+            margin: 10px;
+        }
+
+        .table-teams {
+            gap: 10px;
+            padding: 3px;
+            height: 220px;
+        }
+
+        .groups-title {
+            font-size: 2rem;
+        }
+
+        .table-teams--ul {
+
+            .border-table {
+                height: 75%;
+                width: 95%;
+            }
+
+            .escudo {
+                height: 4.5rem;
+                width: 4.5rem;
+                border: 2px solid;
+            }
+
+            .title-name {
+                font-size: 2rem;
+
+            }
+
+            .points {
+                font-size: 2rem;
+                padding: 0.5rem;
+            }
+        }
       }
 
       /*----------------------------Media Query for 4k--------------------------------*/
