@@ -387,8 +387,9 @@
 
         .table-container {
             .table-container__points {
-                width: 450px;
+                min-width: 450px;
             }
+
             display: flex;
             flex-direction: column;
             place-items: center;
