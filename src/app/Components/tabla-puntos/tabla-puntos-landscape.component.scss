@@ -868,77 +868,81 @@
       }
 
       @media(min-width:2664px) and (min-height: 256px) {
-        .swiper {
-            overflow: hidden;
-        }
+          .background-proximos-partidos {
+              background-image: url('./../../../assets/background/ultrawide-horizontal-lineas.svg');
+          }
 
-        .sponsor-table {
-            margin-top: 5px;
-            align-items: center;
-            min-width: 180px;
-            width: 30%;
+          .swiper {
+              overflow: hidden;
+          }
 
-            img {
-                height: 220px;
-                width: auto;
-            }
-        }
+          .sponsor-table {
+              margin-top: 5px;
+              align-items: center;
+              min-width: 180px;
+              width: 30%;
 
-        .container-tables {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(1, 1fr);
-            width: 100%;
-            place-items: center;
-            height: 100%;
-            place-items: center;
-        }
+              img {
+                  height: 220px;
+                  width: auto;
+              }
+          }
 
-        .table-container {
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-            justify-content: center;
-            height: 120px;
-        }
+          .container-tables {
+              grid-template-columns: repeat(4, 1fr);
+              grid-template-rows: repeat(1, 1fr);
+              width: 100%;
+              place-items: center;
+              height: 100%;
+              place-items: center;
+          }
 
-        .table-container__points {
-            width: 80%;
-            margin: 10px;
-        }
+          .table-container {
+              display: flex;
+              flex-direction: column;
+              place-items: center;
+              justify-content: center;
+              height: 120px;
+          }
 
-        .table-teams {
-            gap: 10px;
-            padding: 3px;
-            height: 220px;
-        }
+          .table-container__points {
+              width: 80%;
+              margin: 10px;
+          }
 
-        .groups-title {
-            font-size: 2rem;
-        }
+          .table-teams {
+              gap: 10px;
+              padding: 3px;
+              height: 220px;
+          }
 
-        .table-teams--ul {
+          .groups-title {
+              font-size: 2rem;
+          }
 
-            .border-table {
-                height: 75%;
-                width: 95%;
-            }
+          .table-teams--ul {
 
-            .escudo {
-                height: 4.5rem;
-                width: 4.5rem;
-                border: 2px solid;
-            }
+              .border-table {
+                  height: 75%;
+                  width: 95%;
+              }
 
-            .title-name {
-                font-size: 2rem;
+              .escudo {
+                  height: 4.5rem;
+                  width: 4.5rem;
+                  border: 2px solid;
+              }
 
-            }
+              .title-name {
+                  font-size: 2rem;
 
-            .points {
-                font-size: 2rem;
-                padding: 0.5rem;
-            }
-        }
+              }
+
+              .points {
+                  font-size: 2rem;
+                  padding: 0.5rem;
+              }
+          }
       }
 
       /*----------------------------Media Query for 4k--------------------------------*/

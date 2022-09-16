@@ -616,6 +616,9 @@
     }
     /*2664px x 256px*/
     @media (min-width: 2664px) and (min-height: 256px) {
+        .background-proximos-partidos {
+            background-image: url('./../../../assets/background/ultrawide-horizontal-lineas.svg');
+        }
         .sponsor-proximos-partidos {
             margin: 0;
             width: 30%;
