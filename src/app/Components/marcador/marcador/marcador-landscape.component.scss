@@ -1,0 +1,784 @@
+@media (orientation: landscape) {
+    .background {
+        background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+        min-width: 512px;
+    }
+
+    /*-----------------------Mobile in landscape---------------------------*/
+    @media (min-width: 512px) and (min-height: 256px) and (max-height: 287px) {
+        .section-partidos {
+            min-width: 256px;
+        }
+
+        .sponsor-marcador {
+            margin: 20px 0 40px 0;
+            min-width: 256px;
+
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 80px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -30%;
+                font-size: 4rem;
+            }
+
+            .teams-container {
+                gap: 20px;
+                max-width: 280px;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                height: 75px;
+                width: 75px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+        }
+
+        .marcador>div {
+            font-size: 5rem;
+        }
+    }
+
+    @media(min-height:280px) and (max-height: 359px) {
+        .sponsor-marcador {
+            margin: 0 0 40px 0;
+
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 100px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -20%;
+                font-size: 3rem;
+            }
+
+            .teams-container {
+                gap: 1rem;
+                max-width: 280px;
+            }
+        }
+
+        .team {
+            width: 45%;
+
+            .escudo {
+                height: 100px;
+                width: 100px;
+            }
+
+            .name {
+                font-size: 2rem;
+                margin-top: 2px;
+            }
+        }
+
+        .marcador {
+            top: 50%;
+        }
+
+        .marcador>div {
+            font-size: 5rem;
+        }
+    }
+
+    @media(min-height:360px) and (max-height: 539px) {
+        .sponsor-marcador {
+            margin: 0 0 60px 0;
+
+            img {
+                filter: drop-shadow(4px 3px 1px #000000b3);
+                max-width: 120px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -30%;
+                font-size: 5rem;
+            }
+
+            .teams-container {
+                gap: 2rem;
+                max-width: 360px;
+            }
+        }
+
+        .team {
+            width: 45%;
+
+            .escudo {
+                height: 120px;
+                width: 120px;
+            }
+
+            .name {
+                font-size: 3rem;
+            }
+        }
+
+        .marcador>div {
+            font-size: 6rem;
+        }
+    }
+
+    /*Surface Duo*/
+    @media (min-height:540px) and (max-height: 599px) {
+        .background {
+            background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+        }
+
+        .sponsor-marcador {
+            margin: 40px 0 40px 0;
+
+            img {
+                max-width: 200px;
+                filter: drop-shadow(4px 5px 1px #000000b3);
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -15%;
+                font-size: 5rem;
+            }
+
+            .teams-container {
+                max-width: 500px;
+                gap: 2rem;
+            }
+        }
+
+        .team {
+            .escudo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .name {
+                font-size: 4rem;
+            }
+        }
+
+        .marcador {
+            top: 50%;
+
+            div {
+                font-size: 8rem;
+            }
+        }
+    }
+
+    /*Nest Hub*/
+    @media (min-height: 600px) and (max-height: 719px) {
+        .sponsor-marcador {
+            margin: 0 0 80px 0;
+
+            img {
+                width: 40%;
+                max-width: 230px;
+                filter: drop-shadow(4px 5px 1px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 1024px;
+        }
+
+        .partidos {
+            .tiempo {
+                top: -30%;
+                font-size: 8rem;
+            }
+
+            .teams-container {
+                width: auto;
+                gap: 10rem;
+            }
+        }
+
+        .team {
+            .escudo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .name {
+                font-size: 5rem;
+            }
+        }
+
+        .marcador {
+            top: 48%;
+
+            div {
+                font-size: 10rem;
+            }
+        }
+    }
+
+    @media (min-height: 720px) and (max-height: 767px) {
+        .sponsor-marcador {
+            margin: 60px 0 60px 0;
+
+            img {
+                width: 40%;
+                max-width: 300px;
+                filter: drop-shadow(4px 5px 1px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 1024px;
+        }
+
+        .partidos {
+            .tiempo {
+                top: -20%;
+                font-size: 6rem;
+            }
+
+            .teams-container {
+                width: auto;
+                gap: 10rem;
+            }
+        }
+
+        .team {
+            .escudo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .name {
+                font-size: 5rem;
+            }
+        }
+
+        .marcador {
+            top: 48%;
+
+            div {
+                font-size: 10rem;
+            }
+        }
+    }
+
+    /*iPad Mini and Air */
+
+    @media (min-height: 768px) and (max-height: 1079px) {
+        .sponsor-marcador {
+            margin: 0 0 100px 0;
+
+            img {
+                margin-top: 30px;
+                width: 100%;
+                max-width: 280px;
+                filter: drop-shadow(5px 11px 1px #000000b3);
+            }
+        }
+
+        .partidos {
+            max-width: 1000px;
+
+            .tiempo {
+                top: -18%;
+                font-size: 8rem;
+            }
+
+            .teams-container {
+                width: auto;
+                gap: 14rem;
+            }
+        }
+
+        .team {
+            .escudo {
+                width: 260px;
+                height: 260px;
+            }
+
+            .name {
+                font-size: 6rem;
+            }
+        }
+
+        .marcador {
+            top: 48%;
+
+            div {
+                font-size: 15rem;
+            }
+        }
+    }
+
+    @media (min-height: 975px) and (max-width: 1920px) {
+        .sponsor-marcador {
+            margin-bottom: 100px;
+
+            img {
+                max-width: 300px;
+                filter: drop-shadow(8px 10px 1px #000000b3);
+            }
+        }
+
+        .partidos {
+            max-width: 600px;
+
+            .teams-container {
+                gap: 12rem;
+            }
+
+            .tiempo {
+                top: -10rem;
+                font-size: 10rem;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                border: 1rem solid white;
+                height: 25rem;
+                width: 25rem;
+
+                img {
+                    filter: drop-shadow(8px 10px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 15rem;
+
+            div {
+                font-size: 14rem;
+            }
+        }
+    }
+
+    /* ------------------------- Surface Pro ---------------------------------*/
+    @media(min-width: 1368px) and (min-height: 912px) and (max-width: 1920px) {
+        .background {
+            background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 10rem;
+
+            img {
+                max-width: 300px;
+                filter: drop-shadow(8px 10px 1px #000000b3);
+            }
+        }
+
+        .partidos {
+            max-width: 600px;
+
+            .teams-container {
+                gap: 12rem;
+            }
+
+            .tiempo {
+                top: -10rem;
+                font-size: 10rem;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                border: 1rem solid white;
+                height: 25rem;
+                width: 25rem;
+
+                img {
+                    filter: drop-shadow(8px 10px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 15rem;
+
+            div {
+                font-size: 14rem;
+            }
+        }
+    }
+
+    /* Media querie desktop */
+    @media (min-width: 1920px) and (min-height: 1080px) and (max-width: 2559px) and (max-height: 1920px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 110px;
+
+            img {
+                max-width: 450px;
+                filter: drop-shadow(10px 12px 3px #000000b3);
+            }
+        }
+
+        .partidos {
+            max-width: 1020px;
+
+            .teams-container {
+                width: 100%;
+                gap: 160px;
+            }
+
+            .tiempo {
+                top: -10rem;
+                font-size: 12rem;
+            }
+        }
+
+        .team {
+            width: 50%;
+
+            .escudo {
+                border: 1rem solid white;
+                height: 350px;
+                width: 350px;
+
+                img {
+                    filter: drop-shadow(10px 12px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 20rem;
+
+            div {
+                font-size: 22rem;
+            }
+        }
+    }
+
+    /*---------------------- 3840px x 2160px ----------------------------*/
+    @media(min-width:3840px) and (min-height: 2160px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 16rem;
+
+            img {
+                width: 40%;
+                max-width: 700px;
+                filter: drop-shadow(15px 14px 5px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 3840px;
+        }
+
+        .partidos {
+            max-width: 2000px;
+
+            .teams-container {
+                gap: 100px;
+            }
+
+            .tiempo {
+                top: -12rem;
+                font-size: 22rem;
+            }
+        }
+
+        .team {
+            width: 50%;
+
+            .escudo {
+                border: 2.5rem solid white;
+                height: 70rem;
+                width: 70rem;
+
+                img {
+                    filter: drop-shadow(15px 30px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 18rem;
+                margin-top: 6rem;
+            }
+        }
+
+        .marcador {
+            top: 46rem;
+
+            div {
+                font-size: 40rem;
+            }
+        }
+    }
+
+    /*---------------------- 2560px x 1440px ----------------------------*/
+    @media screen and (min-width: 2560px) and (max-width: 3839px) and (min-height: 1440px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin: 0 0 120px 0;
+
+            img {
+                width: 40%;
+                max-width: 500px;
+                filter: drop-shadow(10px 15px 1px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 2400px;
+        }
+
+        .partidos {
+            max-width: 2560px;
+
+            .teams-container {
+                width: 80%;
+                gap: 10rem;
+            }
+
+            .tiempo {
+                top: -8rem;
+                font-size: 16rem;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                border: 2rem solid white;
+                height: 60rem;
+                width: 60rem;
+
+                img {
+                    filter: drop-shadow(10px 15px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 12rem;
+                margin-top: 5rem;
+            }
+        }
+
+        .marcador {
+            top: 35rem;
+
+            div {
+                font-size: 30rem;
+            }
+        }
+    }
+
+    @media (min-width: 2664px) and (min-height: 256px) and (max-height: 400px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .section-partidos {
+            min-width: 256px;
+        }
+
+        .sponsor-marcador {
+            margin: 20px 0 40px 0;
+            min-width: 256px;
+
+            img {
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                max-width: 80px;
+            }
+        }
+
+        .partidos {
+            .tiempo {
+                top: -30%;
+                font-size: 4rem;
+            }
+
+            .teams-container {
+                gap: 20px;
+                max-width: 280px;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                height: 75px;
+                width: 75px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+        }
+
+        .marcador>div {
+            font-size: 5rem;
+        }
+    }
+
+    /*---------------------- 3840px x 2610px ----------------------------*/
+    @media screen and (min-width: 3840px) and (max-width: 7679px) and (min-height: 2610px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 16rem;
+
+            img {
+                width: 40%;
+                max-width: 1000px;
+                filter: drop-shadow(15px 30px 1px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 3840px;
+        }
+
+        .partidos {
+            max-width: 2500px;
+
+            .teams-container {
+                gap: 100px;
+            }
+
+            .tiempo {
+                top: -12rem;
+                font-size: 26rem;
+            }
+        }
+
+        .team {
+            width: 50%;
+
+            .escudo {
+                border: 2.5rem solid white;
+                height: 90rem;
+                width: 90rem;
+
+                img {
+                    filter: drop-shadow(15px 30px 1px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 28rem;
+                margin-top: 8rem;
+            }
+        }
+
+        .marcador {
+            top: 60rem;
+
+            div {
+                font-size: 45rem;
+            }
+        }
+    }
+
+    /*---------------------- 7680px x 4320px ----------------------------*/
+
+    @media (min-width: 7680px) and (max-width: 9999px) {
+        .background {
+            background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
+        }
+
+        .sponsor-marcador {
+            margin-bottom: 200px;
+
+            img {
+                max-width: 1600px;
+                filter: drop-shadow(20px 50px 2px #000000b3);
+            }
+        }
+
+        .iterator {
+            max-width: 7680px;
+        }
+
+        .partidos {
+            width: 100%;
+            max-width: 6000px;
+
+            .teams-container {
+                gap: 100rem;
+                width: max-content;
+            }
+
+            .tiempo {
+                top: -20rem;
+                font-size: 56rem;
+            }
+        }
+
+        .team {
+            width: 40%;
+
+            .escudo {
+                border: 4rem solid white;
+                height: 180rem;
+                width: 180rem;
+
+                img {
+                    filter: drop-shadow(20px 50px 2px #000000b3);
+                }
+            }
+
+            .name {
+                font-size: 40rem;
+                margin-top: 15rem;
+            }
+        }
+
+        .marcador {
+            top: 1000px;
+
+            div {
+                font-size: 100rem;
+            }
+        }
+    }
+}

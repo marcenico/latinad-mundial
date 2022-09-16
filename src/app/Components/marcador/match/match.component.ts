@@ -9,7 +9,7 @@ import { WorldCupService } from 'src/app/services/world-cup.service';
 @Component({
   selector: 'app-match',
   templateUrl: './match.component.html',
-  styleUrls: ['../marcador/marcador.component.scss']
+  styleUrls: ['../marcador/marcador.component.scss', '../marcador/marcador-landscape.component.scss', '../marcador/marcador-portrait.component.scss']
 })
 export class MatchComponent implements OnInit {
   @Input() match: Match;
