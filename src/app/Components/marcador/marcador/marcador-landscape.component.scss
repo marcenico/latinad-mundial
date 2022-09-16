@@ -609,7 +609,7 @@
         }
     }
 
-    @media (min-width: 2664px) and (min-height: 256px) {
+    @media (min-width: 2664px) and (min-height: 256px) and (max-height: 400px) {
         .background {
             background-image: url('../../../../assets/background/ultrawide-horizontal-cancha.svg');
         }
