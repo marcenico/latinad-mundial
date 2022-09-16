@@ -669,16 +669,17 @@
                     }
 
                     .team-name {
-                        font-size: 2.5rem;
+                        font-size: 3rem;
                     }
 
                     .date-partidos {
+                        flex-direction: row-reverse;
                         .fecha-proximos-partidos {
-                            font-size: 2rem;
+                            font-size: 3rem;
                         }
 
                         .tiempo-proximos-partidos {
-                            font-size: 2rem;
+                            font-size: 3rem;
                         }
                     }
 
