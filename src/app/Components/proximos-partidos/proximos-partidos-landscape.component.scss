@@ -614,23 +614,28 @@
             -moz-box-shadow: 0px 0px 30px 14px #ffffffd7 inset;
         }
     }
+
     /*2664px x 256px*/
-    @media (min-width: 2664px) and (min-height: 256px) {
+    @media (min-width: 2664px) and (min-height: 256px) and (max-height: 400px){
         .background-proximos-partidos {
             background-image: url('./../../../assets/background/ultrawide-horizontal-lineas.svg');
         }
+
         .sponsor-proximos-partidos {
             margin: 0;
             width: 30%;
+            max-width: 620px;
             img {
                 min-width: 220px;
                 max-width: 220px;
             }
         }
+
         .container-proximos-partidos {
             display: flex;
             flex-direction: row;
         }
+
         .section-proximos-partidos {
             justify-content: center;
             width: 100vw;
@@ -656,6 +661,8 @@
                     min-width: 230px;
                     padding: 0 80px;
                     margin: 0;
+                    height: 90px;
+
                     .container-img {
                         height: 9rem;
                         width: 9rem;
@@ -674,6 +681,7 @@
                             font-size: 2rem;
                         }
                     }
+
                     .img-home {
                         left: 25%;
                     }
