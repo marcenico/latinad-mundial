@@ -666,6 +666,9 @@
                     .container-img {
                         height: 9rem;
                         width: 9rem;
+                        img {
+                            border: 0.3rem solid;
+                        }
                     }
 
                     .team-name {
