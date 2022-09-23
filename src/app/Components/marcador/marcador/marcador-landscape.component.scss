@@ -528,7 +528,7 @@
                 width: 70rem;
 
                 img {
-                    filter: drop-shadow(15px 30px 1px #000000b3);
+                    filter: drop-shadow(15px 30px 10px #000000b3);
                 }
             }
 
@@ -615,28 +615,42 @@
         }
 
         .section-partidos {
-            min-width: 256px;
+            display: flex;
+            flex-direction: row;
         }
 
         .sponsor-marcador {
-            margin: 20px 0 40px 0;
-            min-width: 256px;
+            width: 30%;
+            justify-content: end;
+            margin: 10px 0;
 
             img {
                 filter: drop-shadow(3px 4px 1px #000000b3);
-                max-width: 80px;
+                min-width: 220px;
+                min-height: 220px;
             }
         }
 
+        .swiper {
+            width: 70%;
+            overflow: hidden;
+        }
+
         .partidos {
+            height: 100%;
+            width: 73%;
+            align-items: center;
+            justify-content: start;
+
             .tiempo {
-                top: -30%;
-                font-size: 4rem;
+                position: relative;
+                top: 10px;
+                font-size: 24rem;
             }
 
             .teams-container {
                 gap: 20px;
-                max-width: 280px;
+                max-width: 600px;
             }
         }
 
@@ -644,17 +658,24 @@
             width: 40%;
 
             .escudo {
-                height: 75px;
-                width: 75px;
+                height: 180px;
+                width: 180px;
             }
 
             .name {
-                font-size: 2rem;
+                font-size: 3rem;
             }
         }
 
+        .marcador {
+            position: absolute;
+            left: 789px;
+            top: 120px;
+            width: max-content;
+        }
+
         .marcador>div {
-            font-size: 5rem;
+            font-size: 10rem;
         }
     }
 
