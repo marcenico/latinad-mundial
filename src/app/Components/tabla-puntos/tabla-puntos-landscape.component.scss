@@ -18,8 +18,7 @@
               min-width: 180px;
 
               img {
-                  height: 160px;
-                  width: auto;
+                  width: 160px;
               }
           }
 
@@ -877,14 +876,13 @@
           }
 
           .sponsor-table {
-              margin-top: 5px;
+              margin: 10px 0;
               align-items: center;
-              min-width: 180px;
-              width: 30%;
+              width: 1000px;
 
               img {
-                  height: 220px;
-                  width: auto;
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                width: 220px;
               }
           }
 

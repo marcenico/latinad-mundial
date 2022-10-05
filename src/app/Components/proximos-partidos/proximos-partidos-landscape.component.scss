@@ -692,13 +692,13 @@
         }
 
         .sponsor-proximos-partidos {
-            margin: 0;
-            width: 30%;
-            max-width: 620px;
+            margin: 10px 0;
+            width: 1000px;
 
             img {
-                min-width: 220px;
-                max-width: 220px;
+                filter: drop-shadow(3px 4px 1px #000000b3);
+                width: 220px;
+                max-width: none;
             }
         }
 
@@ -728,7 +728,7 @@
                 gap: 10px;
 
                 .proximos-partidos {
-                    width: 40%;
+                    width: 45%;
                     min-width: 230px;
                     padding: 0 80px;
                     margin: 0;
