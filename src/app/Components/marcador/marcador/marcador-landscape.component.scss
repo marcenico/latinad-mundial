@@ -620,14 +620,16 @@
         }
 
         .sponsor-marcador {
-            width: 30%;
-            justify-content: end;
             margin: 10px 0;
+            width: 1000px;
+            height: max-content;
+            place-self: center;
+            justify-content: end;
 
             img {
                 filter: drop-shadow(3px 4px 1px #000000b3);
-                min-width: 220px;
-                min-height: 220px;
+                width: 220px;
+                max-width: none;
             }
         }
 
@@ -638,14 +640,14 @@
 
         .partidos {
             height: 100%;
-            width: 73%;
+            width: 1200px;
             align-items: center;
             justify-content: start;
 
             .tiempo {
                 position: relative;
                 top: 10px;
-                font-size: 24rem;
+                font-size: 12rem;
             }
 
             .teams-container {
@@ -669,7 +671,7 @@
 
         .marcador {
             position: absolute;
-            left: 789px;
+            left: 503px;
             top: 120px;
             width: max-content;
         }
