@@ -178,18 +178,23 @@
   }
 
   @media(min-width: 2664px) and (min-height: 256px) {
+    .background {
+      background-image: url('../../../assets/background/ultrawide-horizontal-lineas.svg');
+    }
+    
     .main-section {
       flex-direction: row;
     }
 
     .container-sponsor {
       margin: 10px 0;
-      width: 1000px;
+      width: 1300px;
       display: flex;
       justify-content: flex-end;
+      align-self: center;
 
       img {
-        filter: drop-shadow(3px 3px 3px #000000b3);
+        filter: drop-shadow(3px 4px 1px #000000b3);
         width: 220px;
       }
     }
@@ -197,11 +202,11 @@
     .container-letter {
       justify-content: start;
       align-items: center;
-      margin-left: 100px;
+      margin-left: 200px;
 
       .letter {
-        font-size: 15rem;
-        margin: 0 70px;
+        font-size: 12rem;
+        margin: 0 50px;
       }
     }
   }
