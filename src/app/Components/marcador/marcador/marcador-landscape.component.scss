@@ -648,6 +648,8 @@
                 position: relative;
                 top: 10px;
                 font-size: 12rem;
+                width: 320px;
+                max-width: 320px;
             }
 
             .teams-container {
@@ -671,9 +673,9 @@
 
         .marcador {
             position: absolute;
-            left: 503px;
+            left: 536px;
             top: 120px;
-            width: max-content;
+            width: 170px;
         }
 
         .marcador>div {
