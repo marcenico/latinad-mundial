@@ -406,7 +406,7 @@
         }
 
         .section-proximos-partidos {
-            min-width: 700px;
+            min-width: 900px;
 
             .container-title-partidos {
 
@@ -422,14 +422,15 @@
                     padding: 0 4.5rem;
 
                     .date-partidos {
+                        flex-direction: row-reverse;
                         .fecha-proximos-partidos {
                             filter: drop-shadow(2px 2px 2px #000000b3);
-                            font-size: 2.5rem;
+                            font-size: 5rem;
                         }
 
                         .tiempo-proximos-partidos {
                             filter: drop-shadow(2px 2px 2px #000000b3);
-                            font-size: 4rem;
+                            font-size: 5rem;
                         }
                     }
 
@@ -448,11 +449,11 @@
                     }
 
                     .img-home {
-                        left: 22%;
+                        left: 18%;
                     }
 
                     .img-away {
-                        right: 22%;
+                        right: 18%;
                     }
                 }
             }
