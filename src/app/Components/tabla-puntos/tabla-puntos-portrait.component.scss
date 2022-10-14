@@ -1,7 +1,7 @@
 @media (orientation: portrait) {
 
     /*-------------------Media Query for Mobile Devices-------------------------*/
-    @media (min-width: 256px) and (max-width:359px) and (min-height: 512px) {
+    @media (min-width: 256px) and (max-width:279px) and (min-height: 512px) {
         .swiper {
             min-width: 256px;
         }
@@ -26,6 +26,7 @@
 
         .table-teams {
             gap: 5px;
+            height: 150px;
 
             .table-teams--ul {
 
@@ -58,7 +59,7 @@
 
         .sponsor-table {
             img {
-                width: 180px;
+                width: 150px;
             }
         }
 
@@ -66,27 +67,30 @@
             min-width: 340px;
         }
 
-        .table-teams--ul {
+        .table-teams {
+            height: auto;
+            .table-teams--ul {
 
-            .border-table {
-                height: 80%;
-            }
+                .border-table {
+                    height: 80%;
+                }
 
-            .escudo {
-                height: 4rem;
-                width: 4rem;
-            }
+                .escudo {
+                    height: 4rem;
+                    width: 4rem;
+                }
 
-            .title-name {
-                filter: drop-shadow(12px 13px 14px #000000b3);
-                font-size: 2rem;
+                .title-name {
+                    filter: drop-shadow(12px 13px 14px #000000b3);
+                    font-size: 2rem;
 
-            }
+                }
 
-            .points {
-                filter: drop-shadow(12px 13px 14px #000000b3);
-                font-size: 2rem;
-                padding: 0.5rem;
+                .points {
+                    filter: drop-shadow(12px 13px 14px #000000b3);
+                    font-size: 2rem;
+                    padding: 0.5rem;
+                }
             }
         }
     }
@@ -122,30 +126,30 @@
         }
 
         .table-teams {
-            gap: 1rem;
-        }
+            gap: 5px;
 
-        .table-teams--ul {
+            .table-teams--ul {
 
-            .border-table {
-                height: 80%;
-            }
+                .border-table {
+                    height: 80%;
+                }
 
-            .escudo {
-                height: 4rem;
-                width: 4rem;
-            }
+                .escudo {
+                    height: 4rem;
+                    width: 4rem;
+                }
 
-            .title-name {
-                filter: drop-shadow(12px 13px 14px #000000b3);
-                font-size: 2rem;
+                .title-name {
+                    filter: drop-shadow(12px 13px 14px #000000b3);
+                    font-size: 2rem;
 
-            }
+                }
 
-            .points {
-                filter: drop-shadow(12px 13px 14px #000000b3);
-                font-size: 2rem;
-                padding: 0.5rem;
+                .points {
+                    filter: drop-shadow(12px 13px 14px #000000b3);
+                    font-size: 2rem;
+                    padding: 0.5rem;
+                }
             }
         }
     }
