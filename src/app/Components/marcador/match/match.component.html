@@ -1,6 +1,14 @@
 <div *ngIf="match" class="partidos">
   <!-- TIEMPO PARTIDO -->
-  <h2 class="tiempo" [ngClass]="{ 'tiempo--color': statusShort == 'HT' }">{{ minutes }}{{ seconds }}</h2>
+  <div *ngIf="statusShort == 'HT'; then halfTimeBlock; else tiempoBlock"></div>
+  <ng-template #tiempoBlock>
+    <h2 class="tiempo">{{ minutes }}{{ seconds }}</h2>
+  </ng-template>
+  <ng-template #halfTimeBlock>
+    <div class="container-halftime">
+      <img class="halftime" src="../../../../assets/logos/Halftime.png" alt="Entretiempo" />
+    </div>
+  </ng-template>
   <div class="teams-container">
     <!-- LOCAL -->
     <div class="team home">
@@ -22,9 +30,13 @@
     </div>
     <!-- MARCADOR DEL PARTIDO -->
     <div class="marcador">
-      <div [ngClass]="{ 'marcador--anim': isGoalHome }">{{ match.goals.home }}</div>
+      <div [ngClass]="{ 'marcador--anim': isGoalHome }">
+        {{ match.goals.home }}
+      </div>
       <div>-</div>
-      <div [ngClass]="{ 'marcador--anim': isGoalAway }">{{ match.goals.away }}</div>
+      <div [ngClass]="{ 'marcador--anim': isGoalAway }">
+        {{ match.goals.away }}
+      </div>
     </div>
   </div>
 </div>
