@@ -287,7 +287,7 @@
                 margin-top: 30px;
                 width: 100%;
                 max-width: 280px;
-                filter: drop-shadow(5px 11px 1px #000000b3);
+                filter: drop-shadow(4px 4px 4px #000000b3);
             }
         }
 
@@ -307,6 +307,7 @@
 
         .team {
             .escudo {
+                border: 0.6rem solid white;
                 width: 260px;
                 height: 260px;
             }
@@ -331,7 +332,7 @@
 
             img {
                 max-width: 300px;
-                filter: drop-shadow(8px 10px 1px #000000b3);
+                filter: drop-shadow(4px 4px 4px #000000b3);
             }
         }
 
@@ -357,7 +358,7 @@
                 width: 25rem;
 
                 img {
-                    filter: drop-shadow(8px 10px 1px #000000b3);
+                    filter: drop-shadow(10px 8px 5px #000000b3);
                 }
             }
 
@@ -407,7 +408,7 @@
             width: 40%;
 
             .escudo {
-                border: 1rem solid white;
+                border: 0.8rem solid white;
                 height: 25rem;
                 width: 25rem;
 
@@ -441,7 +442,7 @@
 
             img {
                 max-width: 450px;
-                filter: drop-shadow(10px 12px 3px #000000b3);
+                filter: drop-shadow(5px 5px 3px #000000b3);
             }
         }
 
@@ -468,7 +469,7 @@
                 width: 350px;
 
                 img {
-                    filter: drop-shadow(10px 12px 1px #000000b3);
+                    filter: drop-shadow(10px 8px 5px #000000b3);
                 }
             }
 
@@ -498,7 +499,7 @@
             img {
                 width: 40%;
                 max-width: 700px;
-                filter: drop-shadow(15px 14px 5px #000000b3);
+                filter: drop-shadow(10px 10px 10px #000000b3);
             }
         }
 
@@ -528,7 +529,7 @@
                 width: 70rem;
 
                 img {
-                    filter: drop-shadow(15px 30px 10px #000000b3);
+                    filter: drop-shadow(20px 15px 10px #000000b3);
                 }
             }
 
@@ -559,7 +560,7 @@
             img {
                 width: 40%;
                 max-width: 500px;
-                filter: drop-shadow(10px 15px 1px #000000b3);
+                filter: drop-shadow(7px 7px 7px #000000b3);
             }
         }
 
@@ -590,7 +591,7 @@
                 width: 60rem;
 
                 img {
-                    filter: drop-shadow(10px 15px 1px #000000b3);
+                    filter: drop-shadow(20px 15px 10px #000000b3);
                 }
             }
 
@@ -627,7 +628,7 @@
             justify-content: end;
 
             img {
-                filter: drop-shadow(3px 4px 1px #000000b3);
+                filter: drop-shadow(3px 2px 1px #000000b3);
                 width: 220px;
                 max-width: none;
             }
@@ -662,8 +663,13 @@
             width: 40%;
 
             .escudo {
+                border: 0.8rem solid white;
                 height: 180px;
                 width: 180px;
+
+                img {
+                    filter: drop-shadow(20px 15px 10px #000000b3);
+                }
             }
 
             .name {
@@ -695,7 +701,7 @@
             img {
                 width: 40%;
                 max-width: 1000px;
-                filter: drop-shadow(15px 30px 1px #000000b3);
+                filter: drop-shadow(15px 15px 8px #000000b3);
             }
         }
 
@@ -725,7 +731,7 @@
                 width: 90rem;
 
                 img {
-                    filter: drop-shadow(15px 30px 1px #000000b3);
+                    filter: drop-shadow(25px 20px 15px #000000b3);
                 }
             }
 
@@ -756,7 +762,7 @@
 
             img {
                 max-width: 1600px;
-                filter: drop-shadow(20px 50px 2px #000000b3);
+                filter: drop-shadow(35px 30px 25px #000000b3);
             }
         }
 
@@ -788,7 +794,7 @@
                 width: 180rem;
 
                 img {
-                    filter: drop-shadow(20px 50px 2px #000000b3);
+                    filter: drop-shadow(35px 30px 20px #000000b3);
                 }
             }
 

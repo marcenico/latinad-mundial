@@ -15,7 +15,7 @@
             min-width: 256px;
 
             img {
-                filter: drop-shadow(1px 1px 1px #000000b3);
+                filter: drop-shadow(2px 2px 1px #000000b3);
                 max-width: 150px;
             }
         }
@@ -55,7 +55,7 @@
             margin: 0 0 80px 0;
 
             img {
-                filter: drop-shadow(3px 4px 1px #000000b3);
+                filter: drop-shadow(3px 2px 1px #000000b3);
                 max-width: 200px;
             }
         }
@@ -96,7 +96,7 @@
 
             img {
                 max-width: 220px;
-                filter: drop-shadow(4px 5px 1px #000000b3);
+                filter: drop-shadow(3px 2px 1px #000000b3);
             }
         }
 
@@ -114,6 +114,7 @@
 
         .team {
             .escudo {
+                border: 0.5rem solid white;
                 width: 180px;
                 height: 180px;
             }
@@ -225,7 +226,7 @@
 
             img {
                 max-width: 300px;
-                filter: drop-shadow(10px 11px 2px #000000b3);
+                filter: drop-shadow(5px 5px 5px #000000b3);
             }
         }
 
@@ -245,11 +246,12 @@
 
         .team {
             .escudo {
+                border: 0.5rem solid white;
                 width: 220px;
                 height: 220px;
 
                 img {
-                    filter: drop-shadow(10px 11px 1px #000000b3);
+                    filter: drop-shadow(10px 8px 5px #000000b3);
                 }
             }
 
@@ -278,7 +280,7 @@
 
             img {
                 max-width: 300px;
-                filter: drop-shadow(8px 10px 1px #000000b3);
+                filter: drop-shadow(5px 5px 5px #000000b3);
             }
         }
 
@@ -304,7 +306,7 @@
                 width: 25rem;
 
                 img {
-                    filter: drop-shadow(8px 10px 1px #000000b3);
+                    filter: drop-shadow(10px 8px 5px #000000b3);
                 }
             }
 
@@ -360,7 +362,7 @@
                 width: 32rem;
 
                 img {
-                    filter: drop-shadow(8px 10px 1px #000000b3);
+                    filter: drop-shadow(10px 8px 5px #000000b3);
                 }
             }
 
@@ -390,7 +392,7 @@
             img {
                 width: 70%;
                 max-width: 600px;
-                filter: drop-shadow(4px 4px 4px #000000b3);
+                filter: drop-shadow(5px 5px 3px #000000b3);
             }
         }
 
@@ -419,7 +421,7 @@
                 width: 350px;
 
                 img {
-                    filter: drop-shadow(10px 12px 5px #000000b3);
+                    filter: drop-shadow(10px 8px 5px #000000b3);
                 }
             }
 
