@@ -69,6 +69,7 @@
 
         .table-teams {
             height: auto;
+
             .table-teams--ul {
 
                 .border-table {
@@ -380,6 +381,7 @@
                 align-self: center;
                 max-width: 800px;
                 width: 500px;
+                filter: drop-shadow(6px 5px 4px #000000b3);
             }
         }
 
@@ -424,9 +426,9 @@
         .table-teams--ul {
             .border-table {
                 border-radius: 1.5rem;
-                box-shadow: 0px 0px 12px 10px #ffffffd7 inset;
-                -webkit-box-shadow: 0px 0px 12px 10px #ffffffd7 inset;
-                -moz-box-shadow: 0px 0px 12px 10px #ffffffd7 inset;
+                box-shadow: 0px 0px 12px 6px #ffffffd7 inset;
+                -webkit-box-shadow: 0px 0px 12px 6px #ffffffd7 inset;
+                -moz-box-shadow: 0px 0px 12px 6px #ffffffd7 inset;
                 height: 80%;
             }
 
@@ -436,7 +438,7 @@
                 width: 10rem;
 
                 img {
-                    filter: drop-shadow(14px 4px 10px #000000b3);
+                    filter: drop-shadow(5px 4px 3px #000000b3);
                 }
             }
 
@@ -454,7 +456,7 @@
         }
     }
 
-    /* Desktop 1080px x 1920px  */
+    /* Desktop 1440px x 2560px  */
     @media(min-height: 2560px) and (min-width: 1440px) {
         .background {
             background-image: url('../../../assets/background/ultrawide-vertical-lineas.svg');
@@ -469,7 +471,7 @@
                 width: 100%;
                 max-width: 700px;
                 margin-bottom: 5%;
-                filter: drop-shadow(4px 5px 10px #000000b3);
+                filter: drop-shadow(5px 4px 3px #000000b3);
             }
         }
 
@@ -564,9 +566,9 @@
 
         .table-teams--ul {
             .border-table {
-                box-shadow: 0px 0px 26px 20px #ffffffd7 inset;
-                -webkit-box-shadow: 0px 0px 26px 20px #ffffffd7 inset;
-                -moz-box-shadow: 0px 0px 26px 20px #ffffffd7 inset;
+                box-shadow: 0px 0px 26px 15px #ffffffd7 inset;
+                -webkit-box-shadow: 0px 0px 26px 15px #ffffffd7 inset;
+                -moz-box-shadow: 0px 0px 26px 15px #ffffffd7 inset;
                 height: 80%;
                 border-radius: 40px;
             }

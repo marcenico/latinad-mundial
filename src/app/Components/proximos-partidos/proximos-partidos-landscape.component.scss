@@ -423,6 +423,7 @@
 
                     .date-partidos {
                         flex-direction: row-reverse;
+
                         .fecha-proximos-partidos {
                             filter: drop-shadow(2px 2px 2px #000000b3);
                             font-size: 5rem;
@@ -490,6 +491,7 @@
 
                     .date-partidos {
                         flex-direction: row-reverse;
+
                         .fecha-proximos-partidos {
                             filter: drop-shadow(2px 2px 2px #000000b3);
                             font-size: 5rem;
@@ -542,7 +544,7 @@
 
             img {
                 max-width: 300px;
-                filter: drop-shadow(10px 12px 3px #000000b3);
+                filter: drop-shadow(6px 5px 4px #000000b3);
             }
         }
 
@@ -793,7 +795,7 @@
 
             img {
                 max-width: 600px;
-                filter: drop-shadow(10px 11px 5px #000000b3);
+                filter: drop-shadow(10px 8px 5px #000000b3);
             }
         }
 
@@ -870,7 +872,7 @@
         .sponsor-proximos-partidos {
             img {
                 max-width: 800px;
-                filter: drop-shadow(25px 5px 5px #000000b3);
+                filter: drop-shadow(15px 5px 5px #000000b3);
             }
         }
 
@@ -883,7 +885,7 @@
                 .title-partidos {
                     margin-top: 0;
                     font-size: 20rem;
-                    filter: drop-shadow(25px 5px 5px #000000b3);
+                    filter: drop-shadow(15px 5px 5px #000000b3);
                 }
             }
 
@@ -952,7 +954,7 @@
             img {
                 max-width: max-content;
                 height: min-content;
-                filter: drop-shadow(32px 20px 5px #000000b3);
+                filter: drop-shadow(15px 10px 5px #000000b3);
             }
         }
 
@@ -963,7 +965,7 @@
                 margin-bottom: 70px;
 
                 .title-partidos {
-                    filter: drop-shadow(32px 12px 5px #000000b3);
+                    filter: drop-shadow(15px 10px 5px #000000b3);
                     margin-top: 0;
                     font-size: 30rem;
                 }
