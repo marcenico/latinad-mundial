@@ -26,6 +26,12 @@
                 font-size: 4rem;
             }
 
+            .container-halftime {
+                .halftime {
+                    height: 110px;
+                }
+            }
+
             .teams-container {
                 gap: 2rem;
                 max-width: 280px;
@@ -66,6 +72,12 @@
                 font-size: 6rem;
             }
 
+            .container-halftime {
+                .halftime {
+                    height: 140px;
+                }
+            }
+
             .teams-container {
                 gap: 2rem;
                 max-width: 360px;
@@ -104,6 +116,14 @@
             .tiempo {
                 top: -25%;
                 font-size: 6rem;
+            }
+
+            .container-halftime {
+                top: -35%;
+
+                .halftime {
+                    height: 160px;
+                }
             }
 
             .teams-container {
@@ -149,6 +169,10 @@
                 font-size: 6rem;
             }
 
+            .container-halftime {
+                top: -60%;
+            }
+
             .teams-container {
                 gap: 50px;
                 max-width: 360px;
@@ -190,6 +214,14 @@
             .tiempo {
                 top: -15%;
                 font-size: 8rem;
+            }
+
+            .container-halftime {
+                top: -35%;
+
+                .halftime {
+                    height: 260px;
+                }
             }
 
             .teams-container {
@@ -236,6 +268,14 @@
             .tiempo {
                 top: -30%;
                 font-size: 10rem;
+            }
+
+            .container-halftime {
+                top: -55%;
+
+                .halftime {
+                    height: 300px;
+                }
             }
 
             .teams-container {
@@ -295,6 +335,14 @@
                 top: -10rem;
                 font-size: 10rem;
             }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 380px;
+                }
+            }
         }
 
         .team {
@@ -351,6 +399,15 @@
             .tiempo {
                 top: -10rem;
                 font-size: 12rem;
+            }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 380px;
+                    filter: drop-shadow(5px 4px 2px black);
+                }
             }
         }
 
@@ -409,6 +466,14 @@
             .tiempo {
                 top: -15rem;
                 font-size: 15rem;
+            }
+
+            .container-halftime {
+                top: -70%;
+
+                .halftime {
+                    height: 500px;
+                }
             }
         }
 
@@ -472,6 +537,15 @@
                 top: -16rem;
                 font-size: 26rem;
             }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 1100px;
+                    filter: drop-shadow(12px 10px 8px black);
+                }
+            }
         }
 
         .team {
@@ -502,7 +576,7 @@
         }
     }
 
-    /*---------------------- 2560px x 1440px ----------------------------*/
+    /*---------------------- 1440px x 2560px ----------------------------*/
 
     @media screen and (min-height: 2560px) and (max-height: 3839px) {
         .background {
@@ -536,6 +610,16 @@
                 top: -8rem;
                 font-size: 15rem;
             }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 600px;
+                    filter: drop-shadow(12px 10px 8px black);
+                }
+            }
+
         }
 
         .team {
@@ -598,6 +682,15 @@
                 top: -16rem;
                 font-size: 26rem;
             }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 1100px;
+                    filter: drop-shadow(22px 15px 10px black);
+                }
+            }
         }
 
         .team {
@@ -658,6 +751,15 @@
             .tiempo {
                 top: -30rem;
                 font-size: 55rem;
+            }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 2000px;
+                    filter: drop-shadow(35px 25px 20px black);
+                }
             }
         }
 
