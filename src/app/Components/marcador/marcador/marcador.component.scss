@@ -58,27 +58,25 @@
   position: relative;
   margin: 0 auto;
 
-  .tiempo,
-  .container-halftime {
+  .tiempo {
     position: absolute;
     text-align: center;
     top: -30%;
     left: 0;
     right: 0;
     color: white;
-  }
-
-  .tiempo {
     font-size: 5rem;
   }
 
   .container-halftime {
     width: 100%;
+    position: absolute;
+    text-align: center;
+    top: -50%;
 
     .halftime {
-      font-size: 4rem;
-      height: 50px;
-      filter: drop-shadow(1px 1px 1px rgb(29, 29, 29));
+      height: 120px;
+      filter: drop-shadow(4px 2px 1px black);
     }
   }
 
