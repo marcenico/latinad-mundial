@@ -66,6 +66,12 @@
                 font-size: 3rem;
             }
 
+            .container-halftime {
+                .halftime {
+                    height: 110px;
+                }
+            }
+
             .teams-container {
                 gap: 1rem;
                 max-width: 280px;
@@ -111,6 +117,12 @@
                 font-size: 5rem;
             }
 
+            .container-halftime {
+                .halftime {
+                    height: 140px;
+                }
+            }
+
             .teams-container {
                 gap: 2rem;
                 max-width: 360px;
@@ -142,7 +154,7 @@
         }
 
         .sponsor-marcador {
-            margin: 40px 0 40px 0;
+            margin: 40px 0 50px 0;
 
             img {
                 max-width: 200px;
@@ -153,12 +165,20 @@
         .partidos {
             .tiempo {
                 top: -15%;
-                font-size: 5rem;
+                font-size: 4.5rem;
+            }
+
+            .container-halftime {
+                top: -35%;
+
+                .halftime {
+                    height: 160px;
+                }
             }
 
             .teams-container {
                 max-width: 500px;
-                gap: 2rem;
+                gap: 7rem;
             }
         }
 
@@ -204,6 +224,14 @@
                 font-size: 8rem;
             }
 
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 200px;
+                }
+            }
+
             .teams-container {
                 width: auto;
                 gap: 10rem;
@@ -232,7 +260,7 @@
 
     @media (min-height: 720px) and (max-height: 767px) {
         .sponsor-marcador {
-            margin: 60px 0 60px 0;
+            margin: 60px 0 70px 0;
 
             img {
                 width: 40%;
@@ -249,6 +277,14 @@
             .tiempo {
                 top: -20%;
                 font-size: 6rem;
+            }
+
+            .container-halftime {
+                top: -45%;
+
+                .halftime {
+                    height: 240px;
+                }
             }
 
             .teams-container {
@@ -299,6 +335,15 @@
                 font-size: 8rem;
             }
 
+
+            .container-halftime {
+                top: -50%;
+
+                .halftime {
+                    height: 300px;
+                }
+            }
+
             .teams-container {
                 width: auto;
                 gap: 14rem;
@@ -328,7 +373,7 @@
 
     @media (min-height: 975px) and (max-width: 1920px) {
         .sponsor-marcador {
-            margin-bottom: 100px;
+            margin-bottom: 150px;
 
             img {
                 max-width: 300px;
@@ -346,6 +391,14 @@
             .tiempo {
                 top: -10rem;
                 font-size: 10rem;
+            }
+
+            .container-halftime {
+                top: -60%;
+
+                .halftime {
+                    height: 350px;
+                }
             }
         }
 
@@ -377,13 +430,13 @@
     }
 
     /* ------------------------- Surface Pro ---------------------------------*/
-    @media(min-width: 1368px) and (min-height: 912px) and (max-width: 1920px) {
+    @media(min-width: 1368px) and (min-height: 912px) and (max-width: 1919px) {
         .background {
             background-image: url('../../../../assets/background/background-cancha-horizontal.svg');
         }
 
         .sponsor-marcador {
-            margin-bottom: 10rem;
+            margin-bottom: 150px;
 
             img {
                 max-width: 300px;
@@ -401,6 +454,14 @@
             .tiempo {
                 top: -10rem;
                 font-size: 10rem;
+            }
+
+            .container-halftime {
+                top: -60%;
+
+                .halftime {
+                    height: 350px;
+                }
             }
         }
 
@@ -457,6 +518,15 @@
             .tiempo {
                 top: -10rem;
                 font-size: 12rem;
+            }
+
+            .container-halftime {
+                top: -50%;
+
+                .halftime {
+                    height: 450px;
+                    filter: drop-shadow(12px 10px 5px black);
+                }
             }
         }
 
@@ -517,6 +587,15 @@
             .tiempo {
                 top: -12rem;
                 font-size: 22rem;
+            }
+
+            .container-halftime {
+                top: -35%;
+
+                .halftime {
+                    height: 750px;
+                    filter: drop-shadow(12px 10px 8px black);
+                }
             }
         }
 
@@ -579,6 +658,15 @@
             .tiempo {
                 top: -8rem;
                 font-size: 16rem;
+            }
+
+            .container-halftime {
+                top: -33%;
+
+                .halftime {
+                    height: 600px;
+                    filter: drop-shadow(12px 10px 8px black);
+                }
             }
         }
 
@@ -652,6 +740,18 @@
                 width: 320px;
                 max-width: 320px;
             }
+            
+            .container-halftime {
+                position: relative;
+                top: -3px;
+                width: 320px;
+                max-width: 320px;
+
+                .halftime {
+                    height: 400px;
+                    filter: drop-shadow(12px 10px 8px black);
+                }
+            }
 
             .teams-container {
                 gap: 20px;
@@ -720,6 +820,15 @@
                 top: -12rem;
                 font-size: 26rem;
             }
+
+            .container-halftime {
+                top: -30%;
+
+                .halftime {
+                    height: 900px;
+                    filter: drop-shadow(22px 15px 10px black);
+                }
+            }
         }
 
         .team {
@@ -782,6 +891,15 @@
             .tiempo {
                 top: -20rem;
                 font-size: 56rem;
+            }
+
+            .container-halftime {
+                top: -26%;
+
+                .halftime {
+                    height: 1800px;
+                    filter: drop-shadow(35px 25px 20px black);
+                }
             }
         }
 
