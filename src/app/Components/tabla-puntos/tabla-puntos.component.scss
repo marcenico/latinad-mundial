@@ -31,10 +31,10 @@
   width: 100%;
   min-width: 280px;
   justify-content: center;
-  margin: 10px 0;
+  margin: 20px 0;
   img {
-    width: 200px;
-    filter: drop-shadow(2px 3px 4px #000000b3);
+    width: 150px;
+    filter: drop-shadow(1px 1px 1px #000000b3);
   }
 }
 
@@ -45,6 +45,7 @@
   width: 100%;
   margin: 0 auto;
   color: white;
+  max-width: 530px;
 }
 
 .table-container {
@@ -66,7 +67,8 @@
   flex-direction: column;
   place-content: center;
   width: 100%;
-  gap: 1rem;
+  height: auto;
+  gap: 12px;
   box-shadow: 0px 0px 15px 5px #ffffff63 inset;
   -webkit-box-shadow: 0px 0px 15px 5px #ffffff63 inset;
   -moz-box-shadow: 0px 0px 15px 5px #ffffff63 inset;

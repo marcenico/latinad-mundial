@@ -389,6 +389,7 @@
 
                 .container-title-partidos {
                     margin-bottom: 60px;
+
                     .title-partidos {
                         font-size: 6.5rem;
                     }
@@ -522,6 +523,7 @@
 
             img {
                 min-width: 500px;
+                filter: drop-shadow(6px 5px 4px #000000b3);
             }
         }
 
@@ -564,7 +566,7 @@
                         .container-img {
                             height: 22rem;
                             width: 22rem;
-                            filter: drop-shadow(3px 4px 5px #000000b3);
+                            filter: drop-shadow(3px 3px 3px #000000b3);
                         }
 
                         .img-home {
@@ -674,7 +676,6 @@
         }
 
         .sponsor-proximos-partidos {
-            filter: drop-shadow(25px 5px 5px #000000b3);
             width: 100%;
 
             img {
@@ -846,10 +847,10 @@
         .sponsor-proximos-partidos {
             display: flex;
             margin-top: 800px;
-            filter: drop-shadow(42px 33px 5px #000000b3);
-
+            
             img {
                 min-width: 2000px;
+                filter: drop-shadow(20px 15px 10px #000000b3);
             }
         }
 
@@ -897,7 +898,7 @@
 
                             img {
                                 border: 3rem solid;
-                                filter: drop-shadow(40px 20px 5px #000000b3);
+                                filter: drop-shadow(30px 20px 15px #000000b3);
                             }
                         }
 

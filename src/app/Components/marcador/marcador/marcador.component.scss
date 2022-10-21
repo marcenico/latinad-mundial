@@ -40,7 +40,7 @@
 
   img {
     width: 80%;
-    filter: drop-shadow(3px 4px 1px #000000b3);
+    filter: drop-shadow(1px 1px 1px #000000b3);
     max-width: 120px;
   }
 }
@@ -64,8 +64,20 @@
     top: -30%;
     left: 0;
     right: 0;
-    font-size: 5rem;
     color: white;
+    font-size: 5rem;
+  }
+
+  .container-halftime {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: -30%;
+
+    .halftime {
+      height: 60px;
+      filter: drop-shadow(4px 3px 2px #000000b3);
+    }
   }
 
   .tiempo--color {
@@ -85,7 +97,7 @@
   .escudo {
     display: flex;
     margin: auto;
-    border: 0.5rem solid white;
+    border: 0.3rem solid white;
     border-radius: 50%;
     height: 100px;
     width: 100px;

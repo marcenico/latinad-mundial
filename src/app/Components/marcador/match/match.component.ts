@@ -20,6 +20,7 @@ export class MatchComponent implements OnInit {
   private gameMinutes = 0;
   private isHalfTime = false;
   private intervalSeconds: any;
+  public showHalfTime = false;
 
   constructor(
     private worldCupService: WorldCupService,
@@ -86,6 +87,7 @@ export class MatchComponent implements OnInit {
       if (this.isHalfTime === false) {
         this.gameMinutes = 0;
         this.isHalfTime = true;
+        this.showHalfTime = true;
       }
       return;
     }
